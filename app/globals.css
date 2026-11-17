@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Placeholder styling only. The visual design comes later. */
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin: 1.5em 0 0.5em;
+}
+
+p,
+ul,
+table {
+  margin: 0.75em 0;
+}
+
+ul {
+  padding-left: 1.25em;
+  list-style: disc;
+}
+
+a {
+  text-decoration: underline;
+}
+
+nav ul,
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+table {
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+
+th,
+td {
+  border: 1px solid currentColor;
+  padding: 0.25em 0.5em;
+  text-align: left;
+}

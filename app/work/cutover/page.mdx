@@ -1,0 +1,57 @@
+export const metadata = {
+  title: "cutover: data-migration tie-out kit",
+  description:
+    "Checks a new system against the legacy system it replaced, row by row, and says whether go-live can be signed off. It found 148 of 151 defects planted blind by an agent that never saw the checks.",
+};
+
+# cutover
+
+Checks a new system against the legacy system it replaced, points at every row that doesn't tie out, and says whether go-live can be signed off.
+
+[Code on GitHub](https://github.com/ian-menachery/cutover) · [Try the tie-out](/lab/cutover) · Python, DuckDB SQL, TypeScript · November 2026
+
+## The question
+
+After a data migration, someone has to show that the new system holds what the old one held, transformed the way the mapping spec says. That proof is usually spreadsheets of counts, a few spot checks and a meeting. Can a deterministic kit do the whole tie-out, point every problem at a row, and stay quiet on a clean migration?
+
+I have done narrow versions of this before: at Sun Life, a SQL report that flagged premium overstatements a CRM migration had introduced, and at EY, an audit of role-to-course mappings before an SAP go-live. cutover is the general version, built on synthetic data.
+
+## Approach
+
+A seeded generator builds a fictional insurer's legacy export of accounts and policies, migrates it correctly in plain Python, and injects nine bugs as patches: dropped records, duplicated accounts, a premium doubled by a mapping bug, unmapped plan codes, a day/month date shift, truncated names, lost cross-references, leftover test records and broken parent links.
+
+The checker reads the mapping spec (fields, transforms, value maps, a scope rule that keeps old lapsed policies out, and a register of accepted exceptions) and runs eight checks in DuckDB SQL:
+
+| Check | Rule |
+|---|---|
+| Record counts | in-scope legacy rows, less registered deferrals, match target rows |
+| Key integrity | no blank or duplicate keys |
+| Source orphans | every in-scope legacy record reached the target |
+| Target orphans | every target record traces back to a legacy one |
+| Control totals | count, premium and face amount by product and billing mode, to the cent |
+| Field diffs | every mapped field of every matched record equals its transformed legacy value |
+| Unmapped values | every legacy code has a mapping, and every target value is allowed |
+| Referential integrity | every policy points at an account that exists |
+
+Each finding is a blocker or a warning and names its row in the legacy or target file. Go-live is blocked by any open blocker, or by any check that could not run.
+
+## Results
+
+Four gates, with bars written down before the code.
+
+- On clean migrations, all 20 seeds came back ready to sign off, with no findings beyond the four deferred policies in the register.
+- On known defects, all 19,869 injected instances across 20 seeds were found, with no false positives among 21,679 findings. Each defect was caught by exactly the checks I had predicted.
+- Those two gates are graded against my own generator, which makes them weak evidence. For the third, a separate AI agent that never saw the checks designed 21 defect types and 17 harmless decoys. One run of the frozen checker found 20 of the 21 types and 148 of the 151 instances, and flagged nothing outside the agent's answer key. The bars were 80% and 90%.
+- The TypeScript port behind the demo produces the same report as the Python engine in all 21 defect combinations tested.
+
+## What was hard
+
+The blind round's one miss was target names that kept their legacy padding. The checker trims both sides before comparing, so whitespace the spec says should be gone can never show up as a difference. The same trimming is what kept the decoys quiet, so the fix has to be one-sided. It is logged rather than patched, because a patched checker would need a fresh blind test.
+
+A policy the scope rule excludes, or one deferred in the register, is not missing. Counting it as missing would fail every honest migration.
+
+The blind round also included offsetting one-cent errors and premiums swapped between neighbouring policies. Every control total still ties out, and only the field-by-field comparison catches them.
+
+## Status
+
+Finished inside its time box. The blind test's author was an AI agent from the same model family, not a human reviewer, and the count and total findings in that round were checked by eye rather than scored.

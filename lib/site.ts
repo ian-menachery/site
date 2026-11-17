@@ -56,6 +56,15 @@ export const projects: Project[] = [
     demo: "/lab/calibration",
   },
   {
+    slug: "cutover",
+    title: "cutover",
+    kind: "Data-migration tie-out kit",
+    summary:
+      "Checks a new system against the legacy system it replaced, row by row, and decides whether go-live can be signed off. It found 148 of 151 defects planted blind by an agent that never saw the checks.",
+    repo: "https://github.com/ian-menachery/cutover",
+    demo: "/lab/cutover",
+  },
+  {
     slug: "rentroll",
     title: "rentroll",
     kind: "Rent roll tie-out checker",
@@ -85,6 +94,7 @@ export const demos = [
   { href: "/lab/push-fold", title: "Push/fold explorer", from: "showdown" },
   { href: "/lab/calibration", title: "Calibration explorer", from: "calibration-tracker" },
   { href: "/lab/dcf", title: "DCF sliders", from: "redline" },
+  { href: "/lab/cutover", title: "Migration tie-out", from: "cutover" },
   { href: "/lab/rentroll", title: "Rent roll tie-out", from: "rentroll" },
   { href: "/lab/dealflow", title: "Deal calculator", from: "dealflow" },
 ];

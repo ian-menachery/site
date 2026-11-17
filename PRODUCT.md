@@ -48,7 +48,7 @@ A visit succeeds when the visitor does any of these:
   - Orbit Break, Job Watch/Jobfill and bellwether stay off the site;
   - the redline DCF shows only ULTA and VRTX, as ranges, with no buy/sell framing;
   - the push/fold demo is lookups over showdown's export, never a JavaScript port, and never called "GTO".
-- **Never publish:** anything from `Downloads/Important/`, the transcript, tax files, Job Watch data, RentCast data, `.env` files, or the phone number (the resume copy in `public/` has it removed).
+- **Never publish:** personal documents (IDs, offer letters, transcripts, tax files), job-search data, third-party property data, `.env` files, or the phone number (the resume copy in `public/` has it removed).
 - **Binding on every page** (confirmed 2026-11-17):
   - a reduced-motion fallback for all motion, scroll storytelling and WebGL;
   - a real light theme as well as the dark default;

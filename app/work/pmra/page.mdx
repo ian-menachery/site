@@ -1,5 +1,42 @@
-export const metadata = { title: "pmra" };
+export const metadata = {
+  title: "Prediction Market Research Assistant",
+  description:
+    "A harness built to test whether an LLM with web search can beat Kalshi prices after fees and spread. It can't, and the write-up shows why.",
+};
 
-# pmra
+# Prediction Market Research Assistant
 
-Case study in progress.
+Can an LLM with web search beat prediction-market prices after costs? I built a harness to find out. It can't, and the write-up explains why.
+
+[Code on GitHub](https://github.com/ian-menachery/prediction-market-research-assistant) · [Project site](https://ian-menachery.github.io/prediction-market-research-assistant/) · Python, Flask, React, SQLite, Claude and OpenAI APIs · June to September 2026
+
+## The question
+
+I wrote the hypothesis so it could fail: an LLM with web search can estimate Kalshi outcome probabilities well enough to profit after fees and the bid-ask spread. The kill condition was set in advance. The model needed positive Brier skill and positive net profit in some category, on at least 30 resolved markets. If it missed either, the idea was dead and no money would move.
+
+## Approach
+
+Fetchers pull Kalshi and Polymarket markets into SQLite, an analyzer asks Claude or OpenAI (with web search) for a probability, and Flask serves a React front end. Every simulated trade fills at the far side of the order book and pays Kalshi's fee. Predictions are stored append-only, joined to outcomes and scored by Brier and log loss. There were four falsification passes, with statistics clustered by event so that related markets don't count as independent evidence.
+
+## Results
+
+- Across 4,610 markets in 1,901 events, selling longshots lost 5.8¢ per contract (t = −5.35), and buying favorites made 1.2¢ (t = 1.08, not significant).
+- Across 1,796 events, buying every outcome cost a median $1.07 for a $1 payout, a 7% overround. No executable arbitrage turned up.
+- The model's 13 settled paper trades got the direction right once (0.08), for a net paper loss of $586.82.
+- The whole project cost $6.97 in API calls.
+
+## What I caught
+
+When I probed 6 markets, the model cited outcomes that happened after the market opened in all 6. That look-ahead leak contaminated its apparently decent Brier score of 0.164, so I threw the score out.
+
+Buying deep favorites showed t = 2.64, but the result rested on a handful of losses with heavily skewed payoffs, which makes the t-statistic unreliable. I dropped it.
+
+Every politics market in the sample opened after the model's training cutoff. With web search the model reads the answer, and without it the model is guessing, so a clean backtest of the product on that sample can't exist. The write-up says so.
+
+## What was hard
+
+The 13 paper trades came from only 5 independent events, so the effective sample was tiny. The project also started as a trading tool, and turning it into a falsification study meant rewriting its docs to match.
+
+## Stack
+
+Python, Flask, httpx, Pydantic, SQLite, the OpenAI and Anthropic SDKs and a no-build React front end, with 277 tests.

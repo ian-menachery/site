@@ -1,5 +1,39 @@
-export const metadata = { title: "calibration" };
+export const metadata = {
+  title: "calibration-tracker: are Polymarket prices calibrated?",
+  description:
+    "4,522 Polymarket markets: near resolution prices are almost perfect; a week out, politics carries real signal (Brier 0.106) and sports barely beats a coin flip (0.236).",
+};
 
-# calibration
+# calibration-tracker
 
-Case study in progress.
+When Polymarket says 70%, does it happen 70% of the time? Near resolution, almost exactly. A week out it depends on the category: politics carries real signal, and sports barely beats a coin flip.
+
+[Code on GitHub](https://github.com/ian-menachery/calibration-tracker) · [Try the calibration explorer](/lab/calibration) · Python, pandas, SQLite · May to June 2026
+
+## The question
+
+When a Polymarket binary market trades at X%, does YES resolve X% of the time? And if prices are off in a consistent way, can you trade on it?
+
+## Approach
+
+The pipeline has five resumable SQLite stages: discover markets, fetch tags, fetch prices, extract snapshots and analyze. Snapshots are taken at close and 1 hour, 24 hours and 7 days before resolution; a snapshot outside tolerance is dropped rather than filled in. Calibration uses decile and 5% buckets with 1,000-resample bootstrap intervals, plus Brier score and log loss. A second phase fit a recalibration curve, tested a pre-registered trading rule and compared Polymarket with Kalshi.
+
+## Results
+
+- The sample is 4,522 markets with at least $1M volume, resolved between January 2024 and May 2026.
+- The Brier score is 0.0001 at close, 0.0018 an hour out, 0.163 a day out and 0.185 a week out. A coin flip scores 0.25.
+- A week out, politics scores 0.106 (243 markets), geopolitics 0.140, crypto 0.141 and sports 0.236 (1,475 markets).
+- Prices show a favorite-longshot bias, with a recalibration slope of 0.72 a week out (95% CI 0.65 to 0.78). Favorites win less often than their price says, and longshots win more often.
+- Trading against the bias grossed about 1.7¢ per contract, and a half-spread of 1 to 2¢ wipes that out.
+
+## What didn't work
+
+Out of sample, the recalibration curve didn't improve forecasts: the 24-hour Brier score went from 0.1697 to 0.1699. The live forward test never logged an entry, so realized edge is still unmeasured. Multi-outcome markets, including the 2024 election, are excluded, and the volume floor tilts the sample toward big markets.
+
+## What was hard
+
+API limits shaped the design. A 100,000-record offset cap forced the $1M volume floor, and price history only comes in 14-day windows. Listed end dates also aren't resolution times; one market resolved 27 hours after its listed end. Kalshi's feed was about 99% multi-leg parlays, so matching markets across venues needed per-series discovery.
+
+## Stack
+
+Python, httpx, pandas, NumPy, matplotlib, Pydantic, SQLite and pytest, with 95 tests.

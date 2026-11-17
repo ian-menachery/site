@@ -1,5 +1,31 @@
-export const metadata = { title: "burnout" };
+export const metadata = {
+  title: "Burnout-App: burnout risk classifier",
+  description:
+    "A random forest at macro F1 0.991, and the ablation showing it mostly restates self-reported stress.",
+};
 
-# burnout
+# Burnout-App
 
-Case study in progress.
+A classifier that scores 0.99 macro F1, and an ablation showing why that number shouldn't be taken at face value.
+
+[Code on GitHub](https://github.com/ian-menachery/Burnout-App) · Python, scikit-learn, Streamlit · April to May 2026
+
+## The question
+
+Can work patterns plus one self-reported stress score sort developers into low, medium and high burnout tiers, for a weekly triage list?
+
+## Approach
+
+The data is a public Kaggle dataset of 7,000 developers with 11 features, with the burn rate cut into tiers at the 33rd and 67th percentiles. I compared a logistic regression baseline with a 200-tree class-balanced random forest on a stratified 80/20 split, scored by 5-fold macro F1. An ablation retrains the model without the stress score to see what it really relies on. A Streamlit app scores a single developer.
+
+## Results
+
+The random forest reached macro F1 0.991 ± 0.002 in cross-validation, against 0.945 ± 0.006 for logistic regression. On the test set it caught 351 of 356 high-risk developers (98.6%), and all 5 misses were labelled medium, not low.
+
+## The catch
+
+The stress score carries about 70% of the model's importance. Without it, cross-validated macro F1 falls to 0.757 and high-risk recall to 67%. So the model mostly restates self-reported stress, and the data shows signs of being synthetic (uniform 2% missingness, zero outliers). I report the 0.99 as a finding about the dataset, not as a model ready for real teams.
+
+## Stack
+
+Python, pandas, scikit-learn, matplotlib and Streamlit.

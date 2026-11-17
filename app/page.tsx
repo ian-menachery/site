@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { contact, demos, projects } from "@/lib/site";
 
@@ -90,6 +91,12 @@ export default function Home() {
 
       <section aria-labelledby="about">
         <h2 id="about">About</h2>
+        <Image
+          src="/headshot.jpg"
+          alt="Ian Menachery"
+          width={240}
+          height={240}
+        />
         <p>
           I study data science and economics at Northeastern and graduate in
           December 2026. Outside work: chess, poker, basketball and personal

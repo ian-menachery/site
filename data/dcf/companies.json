@@ -1,0 +1,88 @@
+{
+  "source": "redline data/valuation_demo.db dcf_valuations (ids 21, 22) + config/valuation/assumptions.yaml",
+  "horizon": 5,
+  "companies": [
+    {
+      "ticker": "ULTA",
+      "name": "Ulta Beauty, Inc.",
+      "valuationId": 21,
+      "valuedAt": "2026-07-30T00:16:59.691854+00:00",
+      "fiscalYear": 2026,
+      "assumptions": {
+        "baseRevenue": 12392820000.0,
+        "netDebt": 633700000.0,
+        "sharesDiluted": 44991000.0,
+        "taxRate": 0.21,
+        "wacc": 0.083,
+        "terminalGrowth": 0.025,
+        "revenueGrowth": [
+          0.06,
+          0.05,
+          0.05,
+          0.04,
+          0.04
+        ],
+        "operatingMargin": 0.12,
+        "capexPctRevenue": 0.035,
+        "daPctRevenue": 0.03,
+        "nwcPctRevenue": 0.03,
+        "bear": {
+          "growthDelta": -0.03,
+          "marginDelta": -0.03
+        },
+        "bull": {
+          "growthDelta": 0.03,
+          "marginDelta": 0.02
+        }
+      },
+      "stored": {
+        "perShareBear": 296.9798327597857,
+        "perShareBase": 463.5588055002078,
+        "perShareBull": 620.6023470015728,
+        "enterpriseValue": 21489674218.25985,
+        "terminalValueFraction": 0.766487255462765
+      }
+    },
+    {
+      "ticker": "VRTX",
+      "name": "Vertex Pharmaceuticals Inc",
+      "valuationId": 22,
+      "valuedAt": "2026-07-30T00:17:02.340669+00:00",
+      "fiscalYear": 2025,
+      "assumptions": {
+        "baseRevenue": 12001300000.0,
+        "netDebt": -5387900000.0,
+        "sharesDiluted": 258000000.0,
+        "taxRate": 0.21,
+        "wacc": 0.06,
+        "terminalGrowth": 0.025,
+        "revenueGrowth": [
+          0.1,
+          0.09,
+          0.08,
+          0.07,
+          0.06
+        ],
+        "operatingMargin": 0.35,
+        "capexPctRevenue": 0.04,
+        "daPctRevenue": 0.03,
+        "nwcPctRevenue": 0.03,
+        "bear": {
+          "growthDelta": -0.04,
+          "marginDelta": -0.05
+        },
+        "bull": {
+          "growthDelta": 0.03,
+          "marginDelta": 0.03
+        }
+      },
+      "stored": {
+        "perShareBear": 351.75689122133264,
+        "perShareBase": 483.01430668380004,
+        "perShareBull": 592.4546494635149,
+        "enterpriseValue": 119229791124.42041,
+        "terminalValueFraction": 0.8566899269526246
+      }
+    }
+  ]
+}

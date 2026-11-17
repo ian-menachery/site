@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local tooling (Impeccable design skill, per-machine Claude settings)
+.impeccable/
+.claude/settings.local.json

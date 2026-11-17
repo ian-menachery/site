@@ -1,0 +1,3106 @@
+{
+ "clean": {
+  "stated": {
+   "checks": [
+    {
+     "id": "C1",
+     "name": "unit_count",
+     "status": "pass",
+     "expected": 12.0,
+     "found": 12.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "exact",
+     "refs": [],
+     "message": "Rent roll has 12 rows, matching the stated unit count."
+    },
+    {
+     "id": "C2",
+     "name": "gpr_sum",
+     "status": "pass",
+     "expected": 15600.0,
+     "found": 15600.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "0.5% of stated GPR",
+     "refs": [],
+     "message": "Scheduled rent of 15,600.00 is within tolerance of the stated gross potential rent of 15,600.00."
+    },
+    {
+     "id": "C4",
+     "name": "occupancy_consistency",
+     "status": "pass",
+     "expected": 0.0,
+     "found": 0.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "exact, any row fails the check",
+     "refs": [],
+     "message": "All 12 rows with a known occupancy status agree with their rent."
+    },
+    {
+     "id": "C5",
+     "name": "t12_column_sums",
+     "status": "pass",
+     "expected": 0.0,
+     "found": 0.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "$1.00 absolute",
+     "refs": [],
+     "message": "All 9 checkable line item(s) sum to their stated annual totals."
+    },
+    {
+     "id": "C6",
+     "name": "noi_recompute",
+     "status": "pass",
+     "expected": 89400.0,
+     "found": 89400.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "$1.00 absolute",
+     "refs": [],
+     "message": "Recomputed NOI of 89,400.00 is within tolerance of the stated 89,400.00. Revenue 160,800.00 from 3 line item(s) less expenses 71,400.00 from 6 line item(s)."
+    }
+   ],
+   "stated_sources": [
+    {
+     "field": "total_units",
+     "value": 12.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "gross_potential_rent",
+     "value": 15600.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "gross_rental_income",
+     "value": 187200.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "vacancy_loss",
+     "value": -32400.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "concessions",
+     "value": 0.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "total_operating_revenue",
+     "value": 160800.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "total_operating_expenses",
+     "value": 71400.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "net_operating_income",
+     "value": 89400.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    }
+   ],
+   "warnings": []
+  },
+  "detected": {
+   "checks": [
+    {
+     "id": "C1",
+     "name": "unit_count",
+     "status": "skip",
+     "expected": null,
+     "found": null,
+     "variance": null,
+     "variance_pct": null,
+     "tolerance": "exact",
+     "refs": [],
+     "message": "No stated total unit count found, so the 12 rent roll rows were not verified against anything."
+    },
+    {
+     "id": "C2",
+     "name": "gpr_sum",
+     "status": "skip",
+     "expected": null,
+     "found": null,
+     "variance": null,
+     "variance_pct": null,
+     "tolerance": "0.5% of stated GPR",
+     "refs": [],
+     "message": "No stated gross potential rent found, so the rent roll's scheduled rent was not verified against anything."
+    },
+    {
+     "id": "C4",
+     "name": "occupancy_consistency",
+     "status": "pass",
+     "expected": 0.0,
+     "found": 0.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "exact, any row fails the check",
+     "refs": [],
+     "message": "All 12 rows with a known occupancy status agree with their rent."
+    },
+    {
+     "id": "C5",
+     "name": "t12_column_sums",
+     "status": "pass",
+     "expected": 0.0,
+     "found": 0.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "$1.00 absolute",
+     "refs": [],
+     "message": "All 9 checkable line item(s) sum to their stated annual totals."
+    },
+    {
+     "id": "C6",
+     "name": "noi_recompute",
+     "status": "skip",
+     "expected": null,
+     "found": null,
+     "variance": null,
+     "variance_pct": null,
+     "tolerance": "$1.00 absolute",
+     "refs": [],
+     "message": "No stated net operating income found, so a recomputed NOI was not verified against anything."
+    }
+   ],
+   "stated_sources": [
+    {
+     "field": "total_units",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "gross_potential_rent",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "gross_rental_income",
+     "value": 187200.0,
+     "method": "detected",
+     "source": "t12!\"Gross Rental Income\"",
+     "reason": null
+    },
+    {
+     "field": "vacancy_loss",
+     "value": -32400.0,
+     "method": "detected",
+     "source": "t12!\"Vacancy Loss\"",
+     "reason": null
+    },
+    {
+     "field": "concessions",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "total_operating_revenue",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "total_operating_expenses",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "net_operating_income",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    }
+   ],
+   "warnings": []
+  }
+ },
+ "rent_variance": {
+  "stated": {
+   "checks": [
+    {
+     "id": "C1",
+     "name": "unit_count",
+     "status": "pass",
+     "expected": 12.0,
+     "found": 12.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "exact",
+     "refs": [],
+     "message": "Rent roll has 12 rows, matching the stated unit count."
+    },
+    {
+     "id": "C2",
+     "name": "gpr_sum",
+     "status": "fail",
+     "expected": 15600.0,
+     "found": 15350.0,
+     "variance": -250.0,
+     "variance_pct": -1.6025641025641024,
+     "tolerance": "0.5% of stated GPR",
+     "refs": [
+      "U103"
+     ],
+     "message": "Scheduled rent of 15,350.00 is 1.60% below the stated gross potential rent of 15,600.00. Furthest from their unit_type median: U103."
+    },
+    {
+     "id": "C4",
+     "name": "occupancy_consistency",
+     "status": "pass",
+     "expected": 0.0,
+     "found": 0.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "exact, any row fails the check",
+     "refs": [],
+     "message": "All 12 rows with a known occupancy status agree with their rent."
+    },
+    {
+     "id": "C5",
+     "name": "t12_column_sums",
+     "status": "pass",
+     "expected": 0.0,
+     "found": 0.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "$1.00 absolute",
+     "refs": [],
+     "message": "All 9 checkable line item(s) sum to their stated annual totals."
+    },
+    {
+     "id": "C6",
+     "name": "noi_recompute",
+     "status": "pass",
+     "expected": 89400.0,
+     "found": 89400.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "$1.00 absolute",
+     "refs": [],
+     "message": "Recomputed NOI of 89,400.00 is within tolerance of the stated 89,400.00. Revenue 160,800.00 from 3 line item(s) less expenses 71,400.00 from 6 line item(s)."
+    }
+   ],
+   "stated_sources": [
+    {
+     "field": "total_units",
+     "value": 12.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "gross_potential_rent",
+     "value": 15600.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "gross_rental_income",
+     "value": 187200.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "vacancy_loss",
+     "value": -32400.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "concessions",
+     "value": 0.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "total_operating_revenue",
+     "value": 160800.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "total_operating_expenses",
+     "value": 71400.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "net_operating_income",
+     "value": 89400.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    }
+   ],
+   "warnings": []
+  },
+  "detected": {
+   "checks": [
+    {
+     "id": "C1",
+     "name": "unit_count",
+     "status": "skip",
+     "expected": null,
+     "found": null,
+     "variance": null,
+     "variance_pct": null,
+     "tolerance": "exact",
+     "refs": [],
+     "message": "No stated total unit count found, so the 12 rent roll rows were not verified against anything."
+    },
+    {
+     "id": "C2",
+     "name": "gpr_sum",
+     "status": "skip",
+     "expected": null,
+     "found": null,
+     "variance": null,
+     "variance_pct": null,
+     "tolerance": "0.5% of stated GPR",
+     "refs": [],
+     "message": "No stated gross potential rent found, so the rent roll's scheduled rent was not verified against anything."
+    },
+    {
+     "id": "C4",
+     "name": "occupancy_consistency",
+     "status": "pass",
+     "expected": 0.0,
+     "found": 0.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "exact, any row fails the check",
+     "refs": [],
+     "message": "All 12 rows with a known occupancy status agree with their rent."
+    },
+    {
+     "id": "C5",
+     "name": "t12_column_sums",
+     "status": "pass",
+     "expected": 0.0,
+     "found": 0.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "$1.00 absolute",
+     "refs": [],
+     "message": "All 9 checkable line item(s) sum to their stated annual totals."
+    },
+    {
+     "id": "C6",
+     "name": "noi_recompute",
+     "status": "skip",
+     "expected": null,
+     "found": null,
+     "variance": null,
+     "variance_pct": null,
+     "tolerance": "$1.00 absolute",
+     "refs": [],
+     "message": "No stated net operating income found, so a recomputed NOI was not verified against anything."
+    }
+   ],
+   "stated_sources": [
+    {
+     "field": "total_units",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "gross_potential_rent",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "gross_rental_income",
+     "value": 187200.0,
+     "method": "detected",
+     "source": "t12!\"Gross Rental Income\"",
+     "reason": null
+    },
+    {
+     "field": "vacancy_loss",
+     "value": -32400.0,
+     "method": "detected",
+     "source": "t12!\"Vacancy Loss\"",
+     "reason": null
+    },
+    {
+     "field": "concessions",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "total_operating_revenue",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "total_operating_expenses",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "net_operating_income",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    }
+   ],
+   "warnings": []
+  }
+ },
+ "vacancy_misclass": {
+  "stated": {
+   "checks": [
+    {
+     "id": "C1",
+     "name": "unit_count",
+     "status": "pass",
+     "expected": 12.0,
+     "found": 12.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "exact",
+     "refs": [],
+     "message": "Rent roll has 12 rows, matching the stated unit count."
+    },
+    {
+     "id": "C2",
+     "name": "gpr_sum",
+     "status": "pass",
+     "expected": 15600.0,
+     "found": 15600.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "0.5% of stated GPR",
+     "refs": [],
+     "message": "Scheduled rent of 15,600.00 is within tolerance of the stated gross potential rent of 15,600.00."
+    },
+    {
+     "id": "C4",
+     "name": "occupancy_consistency",
+     "status": "fail",
+     "expected": 0.0,
+     "found": 1.0,
+     "variance": 1.0,
+     "variance_pct": null,
+     "tolerance": "exact, any row fails the check",
+     "refs": [
+      "U202"
+     ],
+     "message": "1 of 12 rows contradict themselves: occupied at zero rent, or vacant carrying rent. U202."
+    },
+    {
+     "id": "C5",
+     "name": "t12_column_sums",
+     "status": "pass",
+     "expected": 0.0,
+     "found": 0.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "$1.00 absolute",
+     "refs": [],
+     "message": "All 9 checkable line item(s) sum to their stated annual totals."
+    },
+    {
+     "id": "C6",
+     "name": "noi_recompute",
+     "status": "pass",
+     "expected": 89400.0,
+     "found": 89400.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "$1.00 absolute",
+     "refs": [],
+     "message": "Recomputed NOI of 89,400.00 is within tolerance of the stated 89,400.00. Revenue 160,800.00 from 3 line item(s) less expenses 71,400.00 from 6 line item(s)."
+    }
+   ],
+   "stated_sources": [
+    {
+     "field": "total_units",
+     "value": 12.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "gross_potential_rent",
+     "value": 15600.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "gross_rental_income",
+     "value": 187200.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "vacancy_loss",
+     "value": -32400.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "concessions",
+     "value": 0.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "total_operating_revenue",
+     "value": 160800.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "total_operating_expenses",
+     "value": 71400.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    },
+    {
+     "field": "net_operating_income",
+     "value": 89400.0,
+     "method": "override",
+     "source": "--stated",
+     "reason": null
+    }
+   ],
+   "warnings": []
+  },
+  "detected": {
+   "checks": [
+    {
+     "id": "C1",
+     "name": "unit_count",
+     "status": "skip",
+     "expected": null,
+     "found": null,
+     "variance": null,
+     "variance_pct": null,
+     "tolerance": "exact",
+     "refs": [],
+     "message": "No stated total unit count found, so the 12 rent roll rows were not verified against anything."
+    },
+    {
+     "id": "C2",
+     "name": "gpr_sum",
+     "status": "skip",
+     "expected": null,
+     "found": null,
+     "variance": null,
+     "variance_pct": null,
+     "tolerance": "0.5% of stated GPR",
+     "refs": [],
+     "message": "No stated gross potential rent found, so the rent roll's scheduled rent was not verified against anything."
+    },
+    {
+     "id": "C4",
+     "name": "occupancy_consistency",
+     "status": "fail",
+     "expected": 0.0,
+     "found": 1.0,
+     "variance": 1.0,
+     "variance_pct": null,
+     "tolerance": "exact, any row fails the check",
+     "refs": [
+      "U202"
+     ],
+     "message": "1 of 12 rows contradict themselves: occupied at zero rent, or vacant carrying rent. U202."
+    },
+    {
+     "id": "C5",
+     "name": "t12_column_sums",
+     "status": "pass",
+     "expected": 0.0,
+     "found": 0.0,
+     "variance": 0.0,
+     "variance_pct": 0.0,
+     "tolerance": "$1.00 absolute",
+     "refs": [],
+     "message": "All 9 checkable line item(s) sum to their stated annual totals."
+    },
+    {
+     "id": "C6",
+     "name": "noi_recompute",
+     "status": "skip",
+     "expected": null,
+     "found": null,
+     "variance": null,
+     "variance_pct": null,
+     "tolerance": "$1.00 absolute",
+     "refs": [],
+     "message": "No stated net operating income found, so a recomputed NOI was not verified against anything."
+    }
+   ],
+   "stated_sources": [
+    {
+     "field": "total_units",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "gross_potential_rent",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "gross_rental_income",
+     "value": 187200.0,
+     "method": "detected",
+     "source": "t12!\"Gross Rental Income\"",
+     "reason": null
+    },
+    {
+     "field": "vacancy_loss",
+     "value": -32400.0,
+     "method": "detected",
+     "source": "t12!\"Vacancy Loss\"",
+     "reason": null
+    },
+    {
+     "field": "concessions",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "total_operating_revenue",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "total_operating_expenses",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    },
+    {
+     "field": "net_operating_income",
+     "value": null,
+     "method": "absent",
+     "source": null,
+     "reason": "no totals row or recognised caption found"
+    }
+   ],
+   "warnings": []
+  }
+ },
+ "edge_cases": {
+  "empty_rent_roll": {
+   "rent_roll": [],
+   "t12": [
+    {
+     "label": "Gross Rental Income",
+     "category": "revenue",
+     "month_01": "15600.00",
+     "month_02": "15600.00",
+     "month_03": "15600.00",
+     "month_04": "15600.00",
+     "month_05": "15600.00",
+     "month_06": "15600.00",
+     "month_07": "15600.00",
+     "month_08": "15600.00",
+     "month_09": "15600.00",
+     "month_10": "15600.00",
+     "month_11": "15600.00",
+     "month_12": "15600.00",
+     "stated_annual_total": "187200.00"
+    },
+    {
+     "label": "Vacancy Loss",
+     "category": "revenue",
+     "month_01": "-2700.00",
+     "month_02": "-2700.00",
+     "month_03": "-2700.00",
+     "month_04": "-2700.00",
+     "month_05": "-2700.00",
+     "month_06": "-2700.00",
+     "month_07": "-2700.00",
+     "month_08": "-2700.00",
+     "month_09": "-2700.00",
+     "month_10": "-2700.00",
+     "month_11": "-2700.00",
+     "month_12": "-2700.00",
+     "stated_annual_total": "-32400.00"
+    },
+    {
+     "label": "Other Income",
+     "category": "revenue",
+     "month_01": "500.00",
+     "month_02": "500.00",
+     "month_03": "500.00",
+     "month_04": "500.00",
+     "month_05": "500.00",
+     "month_06": "500.00",
+     "month_07": "500.00",
+     "month_08": "500.00",
+     "month_09": "500.00",
+     "month_10": "500.00",
+     "month_11": "500.00",
+     "month_12": "500.00",
+     "stated_annual_total": "6000.00"
+    },
+    {
+     "label": "Property Taxes",
+     "category": "expense",
+     "month_01": "2000.00",
+     "month_02": "2000.00",
+     "month_03": "2000.00",
+     "month_04": "2000.00",
+     "month_05": "2000.00",
+     "month_06": "2000.00",
+     "month_07": "2000.00",
+     "month_08": "2000.00",
+     "month_09": "2000.00",
+     "month_10": "2000.00",
+     "month_11": "2000.00",
+     "month_12": "2000.00",
+     "stated_annual_total": "24000.00"
+    },
+    {
+     "label": "Insurance",
+     "category": "expense",
+     "month_01": "700.00",
+     "month_02": "700.00",
+     "month_03": "700.00",
+     "month_04": "700.00",
+     "month_05": "700.00",
+     "month_06": "700.00",
+     "month_07": "700.00",
+     "month_08": "700.00",
+     "month_09": "700.00",
+     "month_10": "700.00",
+     "month_11": "700.00",
+     "month_12": "700.00",
+     "stated_annual_total": "8400.00"
+    },
+    {
+     "label": "Utilities",
+     "category": "expense",
+     "month_01": "1000.00",
+     "month_02": "1050.00",
+     "month_03": "950.00",
+     "month_04": "900.00",
+     "month_05": "800.00",
+     "month_06": "700.00",
+     "month_07": "750.00",
+     "month_08": "800.00",
+     "month_09": "850.00",
+     "month_10": "900.00",
+     "month_11": "1000.00",
+     "month_12": "1100.00",
+     "stated_annual_total": "10800.00"
+    },
+    {
+     "label": "Repairs & Maintenance",
+     "category": "expense",
+     "month_01": "600.00",
+     "month_02": "500.00",
+     "month_03": "700.00",
+     "month_04": "650.00",
+     "month_05": "800.00",
+     "month_06": "750.00",
+     "month_07": "900.00",
+     "month_08": "850.00",
+     "month_09": "600.00",
+     "month_10": "550.00",
+     "month_11": "450.00",
+     "month_12": "450.00",
+     "stated_annual_total": "7800.00"
+    },
+    {
+     "label": "Management Fee",
+     "category": "expense",
+     "month_01": "500.00",
+     "month_02": "500.00",
+     "month_03": "500.00",
+     "month_04": "500.00",
+     "month_05": "500.00",
+     "month_06": "500.00",
+     "month_07": "500.00",
+     "month_08": "500.00",
+     "month_09": "500.00",
+     "month_10": "500.00",
+     "month_11": "500.00",
+     "month_12": "500.00",
+     "stated_annual_total": "6000.00"
+    },
+    {
+     "label": "Payroll",
+     "category": "expense",
+     "month_01": "1200.00",
+     "month_02": "1200.00",
+     "month_03": "1200.00",
+     "month_04": "1200.00",
+     "month_05": "1200.00",
+     "month_06": "1200.00",
+     "month_07": "1200.00",
+     "month_08": "1200.00",
+     "month_09": "1200.00",
+     "month_10": "1200.00",
+     "month_11": "1200.00",
+     "month_12": "1200.00",
+     "stated_annual_total": "14400.00"
+    }
+   ],
+   "override": {
+    "total_units": 12,
+    "gross_potential_rent": 15600.0,
+    "gross_rental_income": 187200.0,
+    "vacancy_loss": -32400.0,
+    "concessions": 0.0,
+    "total_operating_revenue": 160800.0,
+    "total_operating_expenses": 71400.0,
+    "net_operating_income": 89400.0
+   },
+   "report": {
+    "checks": [
+     {
+      "id": "C1",
+      "name": "unit_count",
+      "status": "skip",
+      "expected": null,
+      "found": null,
+      "variance": null,
+      "variance_pct": null,
+      "tolerance": null,
+      "refs": [],
+      "message": "rent roll is empty; no rows to evaluate."
+     },
+     {
+      "id": "C2",
+      "name": "gpr_sum",
+      "status": "skip",
+      "expected": null,
+      "found": null,
+      "variance": null,
+      "variance_pct": null,
+      "tolerance": null,
+      "refs": [],
+      "message": "rent roll is empty; no rows to evaluate."
+     },
+     {
+      "id": "C4",
+      "name": "occupancy_consistency",
+      "status": "skip",
+      "expected": null,
+      "found": null,
+      "variance": null,
+      "variance_pct": null,
+      "tolerance": null,
+      "refs": [],
+      "message": "rent roll is empty; no rows to evaluate."
+     },
+     {
+      "id": "C5",
+      "name": "t12_column_sums",
+      "status": "pass",
+      "expected": 0.0,
+      "found": 0.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "$1.00 absolute",
+      "refs": [],
+      "message": "All 9 checkable line item(s) sum to their stated annual totals."
+     },
+     {
+      "id": "C6",
+      "name": "noi_recompute",
+      "status": "pass",
+      "expected": 89400.0,
+      "found": 89400.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "$1.00 absolute",
+      "refs": [],
+      "message": "Recomputed NOI of 89,400.00 is within tolerance of the stated 89,400.00. Revenue 160,800.00 from 3 line item(s) less expenses 71,400.00 from 6 line item(s)."
+     }
+    ],
+    "stated_sources": [
+     {
+      "field": "total_units",
+      "value": 12.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "gross_potential_rent",
+      "value": 15600.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "gross_rental_income",
+      "value": 187200.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "vacancy_loss",
+      "value": -32400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "concessions",
+      "value": 0.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "total_operating_revenue",
+      "value": 160800.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "total_operating_expenses",
+      "value": 71400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "net_operating_income",
+      "value": 89400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     }
+    ],
+    "warnings": [
+     "rent roll is empty; 3 check(s) that read it were skipped."
+    ]
+   }
+  },
+  "totals_rows_detected": {
+   "rent_roll": [
+    {
+     "unit_id": "U101",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-10-01",
+     "lease_end": "2026-09-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U102",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-11-01",
+     "lease_end": "2026-10-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U103",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-12-01",
+     "lease_end": "2026-11-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U104",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-01-01",
+     "lease_end": "2026-12-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U105",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-02-01",
+     "lease_end": "2027-01-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U106",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-03-01",
+     "lease_end": "2027-02-28",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U107",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-04-01",
+     "lease_end": "2027-03-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U108",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "vacant",
+     "in_place_rent": "0.00",
+     "market_rent": "1200.00",
+     "lease_start": "",
+     "lease_end": "",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U201",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-05-01",
+     "lease_end": "2027-04-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U202",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-06-01",
+     "lease_end": "2027-05-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U203",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-07-01",
+     "lease_end": "2027-06-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U204",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "vacant",
+     "in_place_rent": "0.00",
+     "market_rent": "1500.00",
+     "lease_start": "",
+     "lease_end": "",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "Total",
+     "unit_type": "",
+     "square_feet": "",
+     "occupancy_status": "",
+     "in_place_rent": "12900.00",
+     "market_rent": "15600.00",
+     "lease_start": "",
+     "lease_end": "",
+     "concession_amount": ""
+    }
+   ],
+   "t12": [
+    {
+     "label": "Gross Rental Income",
+     "category": "revenue",
+     "month_01": "15600.00",
+     "month_02": "15600.00",
+     "month_03": "15600.00",
+     "month_04": "15600.00",
+     "month_05": "15600.00",
+     "month_06": "15600.00",
+     "month_07": "15600.00",
+     "month_08": "15600.00",
+     "month_09": "15600.00",
+     "month_10": "15600.00",
+     "month_11": "15600.00",
+     "month_12": "15600.00",
+     "stated_annual_total": "187200.00"
+    },
+    {
+     "label": "Vacancy Loss",
+     "category": "revenue",
+     "month_01": "-2700.00",
+     "month_02": "-2700.00",
+     "month_03": "-2700.00",
+     "month_04": "-2700.00",
+     "month_05": "-2700.00",
+     "month_06": "-2700.00",
+     "month_07": "-2700.00",
+     "month_08": "-2700.00",
+     "month_09": "-2700.00",
+     "month_10": "-2700.00",
+     "month_11": "-2700.00",
+     "month_12": "-2700.00",
+     "stated_annual_total": "-32400.00"
+    },
+    {
+     "label": "Other Income",
+     "category": "revenue",
+     "month_01": "500.00",
+     "month_02": "500.00",
+     "month_03": "500.00",
+     "month_04": "500.00",
+     "month_05": "500.00",
+     "month_06": "500.00",
+     "month_07": "500.00",
+     "month_08": "500.00",
+     "month_09": "500.00",
+     "month_10": "500.00",
+     "month_11": "500.00",
+     "month_12": "500.00",
+     "stated_annual_total": "6000.00"
+    },
+    {
+     "label": "Property Taxes",
+     "category": "expense",
+     "month_01": "2000.00",
+     "month_02": "2000.00",
+     "month_03": "2000.00",
+     "month_04": "2000.00",
+     "month_05": "2000.00",
+     "month_06": "2000.00",
+     "month_07": "2000.00",
+     "month_08": "2000.00",
+     "month_09": "2000.00",
+     "month_10": "2000.00",
+     "month_11": "2000.00",
+     "month_12": "2000.00",
+     "stated_annual_total": "24000.00"
+    },
+    {
+     "label": "Insurance",
+     "category": "expense",
+     "month_01": "700.00",
+     "month_02": "700.00",
+     "month_03": "700.00",
+     "month_04": "700.00",
+     "month_05": "700.00",
+     "month_06": "700.00",
+     "month_07": "700.00",
+     "month_08": "700.00",
+     "month_09": "700.00",
+     "month_10": "700.00",
+     "month_11": "700.00",
+     "month_12": "700.00",
+     "stated_annual_total": "8400.00"
+    },
+    {
+     "label": "Utilities",
+     "category": "expense",
+     "month_01": "1000.00",
+     "month_02": "1050.00",
+     "month_03": "950.00",
+     "month_04": "900.00",
+     "month_05": "800.00",
+     "month_06": "700.00",
+     "month_07": "750.00",
+     "month_08": "800.00",
+     "month_09": "850.00",
+     "month_10": "900.00",
+     "month_11": "1000.00",
+     "month_12": "1100.00",
+     "stated_annual_total": "10800.00"
+    },
+    {
+     "label": "Repairs & Maintenance",
+     "category": "expense",
+     "month_01": "600.00",
+     "month_02": "500.00",
+     "month_03": "700.00",
+     "month_04": "650.00",
+     "month_05": "800.00",
+     "month_06": "750.00",
+     "month_07": "900.00",
+     "month_08": "850.00",
+     "month_09": "600.00",
+     "month_10": "550.00",
+     "month_11": "450.00",
+     "month_12": "450.00",
+     "stated_annual_total": "7800.00"
+    },
+    {
+     "label": "Management Fee",
+     "category": "expense",
+     "month_01": "500.00",
+     "month_02": "500.00",
+     "month_03": "500.00",
+     "month_04": "500.00",
+     "month_05": "500.00",
+     "month_06": "500.00",
+     "month_07": "500.00",
+     "month_08": "500.00",
+     "month_09": "500.00",
+     "month_10": "500.00",
+     "month_11": "500.00",
+     "month_12": "500.00",
+     "stated_annual_total": "6000.00"
+    },
+    {
+     "label": "Payroll",
+     "category": "expense",
+     "month_01": "1200.00",
+     "month_02": "1200.00",
+     "month_03": "1200.00",
+     "month_04": "1200.00",
+     "month_05": "1200.00",
+     "month_06": "1200.00",
+     "month_07": "1200.00",
+     "month_08": "1200.00",
+     "month_09": "1200.00",
+     "month_10": "1200.00",
+     "month_11": "1200.00",
+     "month_12": "1200.00",
+     "stated_annual_total": "14400.00"
+    },
+    {
+     "label": "Net Operating Income:",
+     "category": "",
+     "month_01": "",
+     "month_02": "",
+     "month_03": "",
+     "month_04": "",
+     "month_05": "",
+     "month_06": "",
+     "month_07": "",
+     "month_08": "",
+     "month_09": "",
+     "month_10": "",
+     "month_11": "",
+     "month_12": "",
+     "stated_annual_total": "89,400.00"
+    }
+   ],
+   "override": null,
+   "report": {
+    "checks": [
+     {
+      "id": "C1",
+      "name": "unit_count",
+      "status": "skip",
+      "expected": null,
+      "found": null,
+      "variance": null,
+      "variance_pct": null,
+      "tolerance": "exact",
+      "refs": [],
+      "message": "No stated total unit count found, so the 12 rent roll rows were not verified against anything."
+     },
+     {
+      "id": "C2",
+      "name": "gpr_sum",
+      "status": "skip",
+      "expected": null,
+      "found": null,
+      "variance": null,
+      "variance_pct": null,
+      "tolerance": "0.5% of stated GPR",
+      "refs": [],
+      "message": "No stated gross potential rent found, so the rent roll's scheduled rent was not verified against anything."
+     },
+     {
+      "id": "C4",
+      "name": "occupancy_consistency",
+      "status": "pass",
+      "expected": 0.0,
+      "found": 0.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "exact, any row fails the check",
+      "refs": [],
+      "message": "All 12 rows with a known occupancy status agree with their rent."
+     },
+     {
+      "id": "C5",
+      "name": "t12_column_sums",
+      "status": "pass",
+      "expected": 0.0,
+      "found": 0.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "$1.00 absolute",
+      "refs": [],
+      "message": "All 9 checkable line item(s) sum to their stated annual totals. 1 line item(s) have an incomplete monthly series and were not checked: Net Operating Income:."
+     },
+     {
+      "id": "C6",
+      "name": "noi_recompute",
+      "status": "skip",
+      "expected": null,
+      "found": null,
+      "variance": null,
+      "variance_pct": null,
+      "tolerance": "$1.00 absolute",
+      "refs": [
+       "Net Operating Income:"
+      ],
+      "message": "1 line item(s) have an unknown or missing category: Net Operating Income:. An unclassified line could sit on either side of the equation, so NOI was not recomputed."
+     }
+    ],
+    "stated_sources": [
+     {
+      "field": "total_units",
+      "value": null,
+      "method": "absent",
+      "source": null,
+      "reason": "no totals row or recognised caption found"
+     },
+     {
+      "field": "gross_potential_rent",
+      "value": null,
+      "method": "absent",
+      "source": null,
+      "reason": "conflicting candidates (12,900.00 from rent_roll!row_14, 15,600.00 from rent_roll!row_14); refusing to pick"
+     },
+     {
+      "field": "gross_rental_income",
+      "value": 187200.0,
+      "method": "detected",
+      "source": "t12!\"Gross Rental Income\"",
+      "reason": null
+     },
+     {
+      "field": "vacancy_loss",
+      "value": -32400.0,
+      "method": "detected",
+      "source": "t12!\"Vacancy Loss\"",
+      "reason": null
+     },
+     {
+      "field": "concessions",
+      "value": null,
+      "method": "absent",
+      "source": null,
+      "reason": "no totals row or recognised caption found"
+     },
+     {
+      "field": "total_operating_revenue",
+      "value": null,
+      "method": "absent",
+      "source": null,
+      "reason": "no totals row or recognised caption found"
+     },
+     {
+      "field": "total_operating_expenses",
+      "value": null,
+      "method": "absent",
+      "source": null,
+      "reason": "no totals row or recognised caption found"
+     },
+     {
+      "field": "net_operating_income",
+      "value": 89400.0,
+      "method": "detected",
+      "source": "t12!\"Net Operating Income:\"",
+      "reason": null
+     }
+    ],
+    "warnings": []
+   }
+  },
+  "missing_rent_and_duplicate_unit": {
+   "rent_roll": [
+    {
+     "unit_id": "U101",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-10-01",
+     "lease_end": "2026-09-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U102",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-11-01",
+     "lease_end": "2026-10-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U103",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-12-01",
+     "lease_end": "2026-11-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U104",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-01-01",
+     "lease_end": "2026-12-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U105",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "",
+     "market_rent": "1200.00",
+     "lease_start": "2026-02-01",
+     "lease_end": "2027-01-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U106",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-03-01",
+     "lease_end": "2027-02-28",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U107",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-04-01",
+     "lease_end": "2027-03-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U108",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "vacant",
+     "in_place_rent": "0.00",
+     "market_rent": "1200.00",
+     "lease_start": "",
+     "lease_end": "",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U201",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-05-01",
+     "lease_end": "2027-04-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U202",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-06-01",
+     "lease_end": "2027-05-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U203",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-07-01",
+     "lease_end": "2027-06-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U204",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "vacant",
+     "in_place_rent": "0.00",
+     "market_rent": "1500.00",
+     "lease_start": "",
+     "lease_end": "",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U203",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-07-01",
+     "lease_end": "2027-06-30",
+     "concession_amount": "0.00"
+    }
+   ],
+   "t12": [
+    {
+     "label": "Gross Rental Income",
+     "category": "revenue",
+     "month_01": "15600.00",
+     "month_02": "15600.00",
+     "month_03": "15600.00",
+     "month_04": "15600.00",
+     "month_05": "15600.00",
+     "month_06": "15600.00",
+     "month_07": "15600.00",
+     "month_08": "15600.00",
+     "month_09": "15600.00",
+     "month_10": "15600.00",
+     "month_11": "15600.00",
+     "month_12": "15600.00",
+     "stated_annual_total": "187200.00"
+    },
+    {
+     "label": "Vacancy Loss",
+     "category": "revenue",
+     "month_01": "-2700.00",
+     "month_02": "-2700.00",
+     "month_03": "-2700.00",
+     "month_04": "-2700.00",
+     "month_05": "-2700.00",
+     "month_06": "-2700.00",
+     "month_07": "-2700.00",
+     "month_08": "-2700.00",
+     "month_09": "-2700.00",
+     "month_10": "-2700.00",
+     "month_11": "-2700.00",
+     "month_12": "-2700.00",
+     "stated_annual_total": "-32400.00"
+    },
+    {
+     "label": "Other Income",
+     "category": "revenue",
+     "month_01": "500.00",
+     "month_02": "500.00",
+     "month_03": "500.00",
+     "month_04": "500.00",
+     "month_05": "500.00",
+     "month_06": "500.00",
+     "month_07": "500.00",
+     "month_08": "500.00",
+     "month_09": "500.00",
+     "month_10": "500.00",
+     "month_11": "500.00",
+     "month_12": "500.00",
+     "stated_annual_total": "6000.00"
+    },
+    {
+     "label": "Property Taxes",
+     "category": "expense",
+     "month_01": "2000.00",
+     "month_02": "2000.00",
+     "month_03": "2000.00",
+     "month_04": "2000.00",
+     "month_05": "2000.00",
+     "month_06": "2000.00",
+     "month_07": "2000.00",
+     "month_08": "2000.00",
+     "month_09": "2000.00",
+     "month_10": "2000.00",
+     "month_11": "2000.00",
+     "month_12": "2000.00",
+     "stated_annual_total": "24000.00"
+    },
+    {
+     "label": "Insurance",
+     "category": "expense",
+     "month_01": "700.00",
+     "month_02": "700.00",
+     "month_03": "700.00",
+     "month_04": "700.00",
+     "month_05": "700.00",
+     "month_06": "700.00",
+     "month_07": "700.00",
+     "month_08": "700.00",
+     "month_09": "700.00",
+     "month_10": "700.00",
+     "month_11": "700.00",
+     "month_12": "700.00",
+     "stated_annual_total": "8400.00"
+    },
+    {
+     "label": "Utilities",
+     "category": "expense",
+     "month_01": "1000.00",
+     "month_02": "1050.00",
+     "month_03": "950.00",
+     "month_04": "900.00",
+     "month_05": "800.00",
+     "month_06": "700.00",
+     "month_07": "750.00",
+     "month_08": "800.00",
+     "month_09": "850.00",
+     "month_10": "900.00",
+     "month_11": "1000.00",
+     "month_12": "1100.00",
+     "stated_annual_total": "10800.00"
+    },
+    {
+     "label": "Repairs & Maintenance",
+     "category": "expense",
+     "month_01": "600.00",
+     "month_02": "500.00",
+     "month_03": "700.00",
+     "month_04": "650.00",
+     "month_05": "800.00",
+     "month_06": "750.00",
+     "month_07": "900.00",
+     "month_08": "850.00",
+     "month_09": "600.00",
+     "month_10": "550.00",
+     "month_11": "450.00",
+     "month_12": "450.00",
+     "stated_annual_total": "7800.00"
+    },
+    {
+     "label": "Management Fee",
+     "category": "expense",
+     "month_01": "500.00",
+     "month_02": "500.00",
+     "month_03": "500.00",
+     "month_04": "500.00",
+     "month_05": "500.00",
+     "month_06": "500.00",
+     "month_07": "500.00",
+     "month_08": "500.00",
+     "month_09": "500.00",
+     "month_10": "500.00",
+     "month_11": "500.00",
+     "month_12": "500.00",
+     "stated_annual_total": "6000.00"
+    },
+    {
+     "label": "Payroll",
+     "category": "expense",
+     "month_01": "1200.00",
+     "month_02": "1200.00",
+     "month_03": "1200.00",
+     "month_04": "1200.00",
+     "month_05": "1200.00",
+     "month_06": "1200.00",
+     "month_07": "1200.00",
+     "month_08": "1200.00",
+     "month_09": "1200.00",
+     "month_10": "1200.00",
+     "month_11": "1200.00",
+     "month_12": "1200.00",
+     "stated_annual_total": "14400.00"
+    }
+   ],
+   "override": {
+    "total_units": 12,
+    "gross_potential_rent": 15600.0,
+    "gross_rental_income": 187200.0,
+    "vacancy_loss": -32400.0,
+    "concessions": 0.0,
+    "total_operating_revenue": 160800.0,
+    "total_operating_expenses": 71400.0,
+    "net_operating_income": 89400.0
+   },
+   "report": {
+    "checks": [
+     {
+      "id": "C1",
+      "name": "unit_count",
+      "status": "fail",
+      "expected": 12.0,
+      "found": 13.0,
+      "variance": 1.0,
+      "variance_pct": 8.333333333333332,
+      "tolerance": "exact",
+      "refs": [
+       "stated!total_units",
+       "rent_roll!row_13"
+      ],
+      "message": "Rent roll has 13 rows, 1 more than the stated unit count of 12. 1 row(s) repeat a unit_id seen earlier, which is the most likely cause."
+     },
+     {
+      "id": "C2",
+      "name": "gpr_sum",
+      "status": "skip",
+      "expected": null,
+      "found": null,
+      "variance": null,
+      "variance_pct": null,
+      "tolerance": "0.5% of stated GPR",
+      "refs": [
+       "U105"
+      ],
+      "message": "1 of 13 rows have no scheduled rent to contribute (occupied with no in-place rent, or vacant with no market rent): U105. Comparing a partial sum against a stated total would be a false failure."
+     },
+     {
+      "id": "C4",
+      "name": "occupancy_consistency",
+      "status": "pass",
+      "expected": 0.0,
+      "found": 0.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "exact, any row fails the check",
+      "refs": [],
+      "message": "All 13 rows with a known occupancy status agree with their rent."
+     },
+     {
+      "id": "C5",
+      "name": "t12_column_sums",
+      "status": "pass",
+      "expected": 0.0,
+      "found": 0.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "$1.00 absolute",
+      "refs": [],
+      "message": "All 9 checkable line item(s) sum to their stated annual totals."
+     },
+     {
+      "id": "C6",
+      "name": "noi_recompute",
+      "status": "pass",
+      "expected": 89400.0,
+      "found": 89400.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "$1.00 absolute",
+      "refs": [],
+      "message": "Recomputed NOI of 89,400.00 is within tolerance of the stated 89,400.00. Revenue 160,800.00 from 3 line item(s) less expenses 71,400.00 from 6 line item(s)."
+     }
+    ],
+    "stated_sources": [
+     {
+      "field": "total_units",
+      "value": 12.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "gross_potential_rent",
+      "value": 15600.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "gross_rental_income",
+      "value": 187200.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "vacancy_loss",
+      "value": -32400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "concessions",
+      "value": 0.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "total_operating_revenue",
+      "value": 160800.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "total_operating_expenses",
+      "value": 71400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "net_operating_income",
+      "value": 89400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     }
+    ],
+    "warnings": []
+   }
+  },
+  "revenue_only_t12": {
+   "rent_roll": [
+    {
+     "unit_id": "U101",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-10-01",
+     "lease_end": "2026-09-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U102",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-11-01",
+     "lease_end": "2026-10-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U103",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-12-01",
+     "lease_end": "2026-11-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U104",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-01-01",
+     "lease_end": "2026-12-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U105",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-02-01",
+     "lease_end": "2027-01-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U106",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-03-01",
+     "lease_end": "2027-02-28",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U107",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-04-01",
+     "lease_end": "2027-03-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U108",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "vacant",
+     "in_place_rent": "0.00",
+     "market_rent": "1200.00",
+     "lease_start": "",
+     "lease_end": "",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U201",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-05-01",
+     "lease_end": "2027-04-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U202",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-06-01",
+     "lease_end": "2027-05-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U203",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-07-01",
+     "lease_end": "2027-06-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U204",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "vacant",
+     "in_place_rent": "0.00",
+     "market_rent": "1500.00",
+     "lease_start": "",
+     "lease_end": "",
+     "concession_amount": "0.00"
+    }
+   ],
+   "t12": [
+    {
+     "label": "Gross Rental Income",
+     "category": "revenue",
+     "month_01": "15600.00",
+     "month_02": "15600.00",
+     "month_03": "15600.00",
+     "month_04": "15600.00",
+     "month_05": "15600.00",
+     "month_06": "15600.00",
+     "month_07": "15600.00",
+     "month_08": "15600.00",
+     "month_09": "15600.00",
+     "month_10": "15600.00",
+     "month_11": "15600.00",
+     "month_12": "15600.00",
+     "stated_annual_total": "187200.00"
+    },
+    {
+     "label": "Vacancy Loss",
+     "category": "revenue",
+     "month_01": "-2700.00",
+     "month_02": "-2700.00",
+     "month_03": "-2700.00",
+     "month_04": "-2700.00",
+     "month_05": "-2700.00",
+     "month_06": "-2700.00",
+     "month_07": "-2700.00",
+     "month_08": "-2700.00",
+     "month_09": "-2700.00",
+     "month_10": "-2700.00",
+     "month_11": "-2700.00",
+     "month_12": "-2700.00",
+     "stated_annual_total": "-32400.00"
+    },
+    {
+     "label": "Other Income",
+     "category": "revenue",
+     "month_01": "500.00",
+     "month_02": "500.00",
+     "month_03": "500.00",
+     "month_04": "500.00",
+     "month_05": "500.00",
+     "month_06": "500.00",
+     "month_07": "500.00",
+     "month_08": "500.00",
+     "month_09": "500.00",
+     "month_10": "500.00",
+     "month_11": "500.00",
+     "month_12": "500.00",
+     "stated_annual_total": "6000.00"
+    }
+   ],
+   "override": {
+    "total_units": 12,
+    "gross_potential_rent": 15600.0,
+    "gross_rental_income": 187200.0,
+    "vacancy_loss": -32400.0,
+    "concessions": 0.0,
+    "total_operating_revenue": 160800.0,
+    "total_operating_expenses": 71400.0,
+    "net_operating_income": 89400.0
+   },
+   "report": {
+    "checks": [
+     {
+      "id": "C1",
+      "name": "unit_count",
+      "status": "pass",
+      "expected": 12.0,
+      "found": 12.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "exact",
+      "refs": [],
+      "message": "Rent roll has 12 rows, matching the stated unit count."
+     },
+     {
+      "id": "C2",
+      "name": "gpr_sum",
+      "status": "pass",
+      "expected": 15600.0,
+      "found": 15600.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "0.5% of stated GPR",
+      "refs": [],
+      "message": "Scheduled rent of 15,600.00 is within tolerance of the stated gross potential rent of 15,600.00."
+     },
+     {
+      "id": "C4",
+      "name": "occupancy_consistency",
+      "status": "pass",
+      "expected": 0.0,
+      "found": 0.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "exact, any row fails the check",
+      "refs": [],
+      "message": "All 12 rows with a known occupancy status agree with their rent."
+     },
+     {
+      "id": "C5",
+      "name": "t12_column_sums",
+      "status": "pass",
+      "expected": 0.0,
+      "found": 0.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "$1.00 absolute",
+      "refs": [],
+      "message": "All 3 checkable line item(s) sum to their stated annual totals."
+     },
+     {
+      "id": "C6",
+      "name": "noi_recompute",
+      "status": "skip",
+      "expected": null,
+      "found": null,
+      "variance": null,
+      "variance_pct": null,
+      "tolerance": "$1.00 absolute",
+      "refs": [],
+      "message": "No EXPENSE-category line items present; cannot recompute NOI from 3 line item(s)."
+     }
+    ],
+    "stated_sources": [
+     {
+      "field": "total_units",
+      "value": 12.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "gross_potential_rent",
+      "value": 15600.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "gross_rental_income",
+      "value": 187200.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "vacancy_loss",
+      "value": -32400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "concessions",
+      "value": 0.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "total_operating_revenue",
+      "value": 160800.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "total_operating_expenses",
+      "value": 71400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "net_operating_income",
+      "value": 89400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     }
+    ],
+    "warnings": []
+   }
+  },
+  "t12_month_breach": {
+   "rent_roll": [
+    {
+     "unit_id": "U101",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-10-01",
+     "lease_end": "2026-09-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U102",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-11-01",
+     "lease_end": "2026-10-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U103",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "$1,150.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-12-01",
+     "lease_end": "2026-11-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U104",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-01-01",
+     "lease_end": "2026-12-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U105",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-02-01",
+     "lease_end": "2027-01-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U106",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-03-01",
+     "lease_end": "2027-02-28",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U107",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-04-01",
+     "lease_end": "2027-03-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U108",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "vacant",
+     "in_place_rent": "0.00",
+     "market_rent": "1200.00",
+     "lease_start": "",
+     "lease_end": "",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U201",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-05-01",
+     "lease_end": "2027-04-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U202",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-06-01",
+     "lease_end": "2027-05-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U203",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-07-01",
+     "lease_end": "2027-06-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U204",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "vacant",
+     "in_place_rent": "0.00",
+     "market_rent": "1500.00",
+     "lease_start": "",
+     "lease_end": "",
+     "concession_amount": "0.00"
+    }
+   ],
+   "t12": [
+    {
+     "label": "Gross Rental Income",
+     "category": "revenue",
+     "month_01": "15600.00",
+     "month_02": "15600.00",
+     "month_03": "15600.00",
+     "month_04": "15600.00",
+     "month_05": "15600.00",
+     "month_06": "15600.00",
+     "month_07": "15600.00",
+     "month_08": "15600.00",
+     "month_09": "15600.00",
+     "month_10": "15600.00",
+     "month_11": "15600.00",
+     "month_12": "15600.00",
+     "stated_annual_total": "187200.00"
+    },
+    {
+     "label": "Vacancy Loss",
+     "category": "revenue",
+     "month_01": "(2,700.00)",
+     "month_02": "-2700.00",
+     "month_03": "-2700.00",
+     "month_04": "-2700.00",
+     "month_05": "-2700.00",
+     "month_06": "-2700.00",
+     "month_07": "-2700.00",
+     "month_08": "-2700.00",
+     "month_09": "-2700.00",
+     "month_10": "-2700.00",
+     "month_11": "-2700.00",
+     "month_12": "-2700.00",
+     "stated_annual_total": "-32400.00"
+    },
+    {
+     "label": "Other Income",
+     "category": "revenue",
+     "month_01": "500.00",
+     "month_02": "500.00",
+     "month_03": "500.00",
+     "month_04": "500.00",
+     "month_05": "500.00",
+     "month_06": "500.00",
+     "month_07": "500.00",
+     "month_08": "500.00",
+     "month_09": "500.00",
+     "month_10": "500.00",
+     "month_11": "500.00",
+     "month_12": "500.00",
+     "stated_annual_total": "6000.00"
+    },
+    {
+     "label": "Property Taxes",
+     "category": "expense",
+     "month_01": "2000.00",
+     "month_02": "2000.00",
+     "month_03": "2000.00",
+     "month_04": "2000.00",
+     "month_05": "2000.00",
+     "month_06": "2000.00",
+     "month_07": "2000.00",
+     "month_08": "2000.00",
+     "month_09": "2000.00",
+     "month_10": "2000.00",
+     "month_11": "2000.00",
+     "month_12": "2000.00",
+     "stated_annual_total": "24000.00"
+    },
+    {
+     "label": "Insurance",
+     "category": "expense",
+     "month_01": "700.00",
+     "month_02": "700.00",
+     "month_03": "700.00",
+     "month_04": "700.00",
+     "month_05": "700.00",
+     "month_06": "700.00",
+     "month_07": "700.00",
+     "month_08": "700.00",
+     "month_09": "700.00",
+     "month_10": "700.00",
+     "month_11": "700.00",
+     "month_12": "700.00",
+     "stated_annual_total": "8400.00"
+    },
+    {
+     "label": "Utilities",
+     "category": "expense",
+     "month_01": "1000.00",
+     "month_02": "1050.00",
+     "month_03": "1,000.00",
+     "month_04": "900.00",
+     "month_05": "800.00",
+     "month_06": "700.00",
+     "month_07": "750.00",
+     "month_08": "800.00",
+     "month_09": "850.00",
+     "month_10": "900.00",
+     "month_11": "1000.00",
+     "month_12": "1100.00",
+     "stated_annual_total": "10800.00"
+    },
+    {
+     "label": "Repairs & Maintenance",
+     "category": "expense",
+     "month_01": "600.00",
+     "month_02": "500.00",
+     "month_03": "700.00",
+     "month_04": "650.00",
+     "month_05": "800.00",
+     "month_06": "750.00",
+     "month_07": "900.00",
+     "month_08": "850.00",
+     "month_09": "600.00",
+     "month_10": "550.00",
+     "month_11": "450.00",
+     "month_12": "450.00",
+     "stated_annual_total": "7800.00"
+    },
+    {
+     "label": "Management Fee",
+     "category": "expense",
+     "month_01": "500.00",
+     "month_02": "500.00",
+     "month_03": "500.00",
+     "month_04": "500.00",
+     "month_05": "500.00",
+     "month_06": "500.00",
+     "month_07": "500.00",
+     "month_08": "500.00",
+     "month_09": "500.00",
+     "month_10": "500.00",
+     "month_11": "500.00",
+     "month_12": "500.00",
+     "stated_annual_total": "6000.00"
+    },
+    {
+     "label": "Payroll",
+     "category": "expense",
+     "month_01": "1200.00",
+     "month_02": "1200.00",
+     "month_03": "1200.00",
+     "month_04": "1200.00",
+     "month_05": "1200.00",
+     "month_06": "1200.00",
+     "month_07": "1200.00",
+     "month_08": "1200.00",
+     "month_09": "1200.00",
+     "month_10": "1200.00",
+     "month_11": "1200.00",
+     "month_12": "1200.00",
+     "stated_annual_total": "14400.00"
+    }
+   ],
+   "override": {
+    "total_units": 12,
+    "gross_potential_rent": 15600.0,
+    "gross_rental_income": 187200.0,
+    "vacancy_loss": -32400.0,
+    "concessions": 0.0,
+    "total_operating_revenue": 160800.0,
+    "total_operating_expenses": 71400.0,
+    "net_operating_income": 89400.0
+   },
+   "report": {
+    "checks": [
+     {
+      "id": "C1",
+      "name": "unit_count",
+      "status": "pass",
+      "expected": 12.0,
+      "found": 12.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "exact",
+      "refs": [],
+      "message": "Rent roll has 12 rows, matching the stated unit count."
+     },
+     {
+      "id": "C2",
+      "name": "gpr_sum",
+      "status": "pass",
+      "expected": 15600.0,
+      "found": 15550.0,
+      "variance": -50.0,
+      "variance_pct": -0.3205128205128205,
+      "tolerance": "0.5% of stated GPR",
+      "refs": [],
+      "message": "Scheduled rent of 15,550.00 is within tolerance of the stated gross potential rent of 15,600.00."
+     },
+     {
+      "id": "C4",
+      "name": "occupancy_consistency",
+      "status": "pass",
+      "expected": 0.0,
+      "found": 0.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "exact, any row fails the check",
+      "refs": [],
+      "message": "All 12 rows with a known occupancy status agree with their rent."
+     },
+     {
+      "id": "C5",
+      "name": "t12_column_sums",
+      "status": "fail",
+      "expected": 0.0,
+      "found": 1.0,
+      "variance": 1.0,
+      "variance_pct": null,
+      "tolerance": "$1.00 absolute",
+      "refs": [
+       "Utilities"
+      ],
+      "message": "1 of 9 checkable line item(s) do not sum to their stated annual total: Utilities (+50.00)."
+     },
+     {
+      "id": "C6",
+      "name": "noi_recompute",
+      "status": "pass",
+      "expected": 89400.0,
+      "found": 89400.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "$1.00 absolute",
+      "refs": [],
+      "message": "Recomputed NOI of 89,400.00 is within tolerance of the stated 89,400.00. Revenue 160,800.00 from 3 line item(s) less expenses 71,400.00 from 6 line item(s)."
+     }
+    ],
+    "stated_sources": [
+     {
+      "field": "total_units",
+      "value": 12.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "gross_potential_rent",
+      "value": 15600.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "gross_rental_income",
+      "value": 187200.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "vacancy_loss",
+      "value": -32400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "concessions",
+      "value": 0.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "total_operating_revenue",
+      "value": 160800.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "total_operating_expenses",
+      "value": 71400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "net_operating_income",
+      "value": 89400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     }
+    ],
+    "warnings": []
+   }
+  },
+  "rounding_ties": {
+   "rent_roll": [
+    {
+     "unit_id": "U101",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-10-01",
+     "lease_end": "2026-09-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U102",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2025-11-01",
+     "lease_end": "2026-10-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U103",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.125",
+     "market_rent": "1200.00",
+     "lease_start": "2025-12-01",
+     "lease_end": "2026-11-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U104",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-01-01",
+     "lease_end": "2026-12-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U105",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-02-01",
+     "lease_end": "2027-01-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U106",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-03-01",
+     "lease_end": "2027-02-28",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U107",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1200.00",
+     "market_rent": "1200.00",
+     "lease_start": "2026-04-01",
+     "lease_end": "2027-03-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U108",
+     "unit_type": "1BR",
+     "square_feet": "700",
+     "occupancy_status": "vacant",
+     "in_place_rent": "0.00",
+     "market_rent": "1200.00",
+     "lease_start": "",
+     "lease_end": "",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U201",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-05-01",
+     "lease_end": "2027-04-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U202",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-06-01",
+     "lease_end": "2027-05-31",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U203",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "occupied",
+     "in_place_rent": "1500.00",
+     "market_rent": "1500.00",
+     "lease_start": "2026-07-01",
+     "lease_end": "2027-06-30",
+     "concession_amount": "0.00"
+    },
+    {
+     "unit_id": "U204",
+     "unit_type": "2BR",
+     "square_feet": "950",
+     "occupancy_status": "vacant",
+     "in_place_rent": "0.00",
+     "market_rent": "1500.00",
+     "lease_start": "",
+     "lease_end": "",
+     "concession_amount": "0.00"
+    }
+   ],
+   "t12": [
+    {
+     "label": "Gross Rental Income",
+     "category": "revenue",
+     "month_01": "15600.00",
+     "month_02": "15600.00",
+     "month_03": "15600.00",
+     "month_04": "15600.00",
+     "month_05": "15600.00",
+     "month_06": "15600.00",
+     "month_07": "15600.00",
+     "month_08": "15600.00",
+     "month_09": "15600.00",
+     "month_10": "15600.00",
+     "month_11": "15600.00",
+     "month_12": "15600.00",
+     "stated_annual_total": "187200.00"
+    },
+    {
+     "label": "Vacancy Loss",
+     "category": "revenue",
+     "month_01": "-2700.00",
+     "month_02": "-2700.00",
+     "month_03": "-2700.00",
+     "month_04": "-2700.00",
+     "month_05": "-2700.00",
+     "month_06": "-2700.00",
+     "month_07": "-2700.00",
+     "month_08": "-2700.00",
+     "month_09": "-2700.00",
+     "month_10": "-2700.00",
+     "month_11": "-2700.00",
+     "month_12": "-2700.00",
+     "stated_annual_total": "-32400.00"
+    },
+    {
+     "label": "Other Income",
+     "category": "revenue",
+     "month_01": "500.00",
+     "month_02": "500.00",
+     "month_03": "500.00",
+     "month_04": "500.00",
+     "month_05": "500.00",
+     "month_06": "500.00",
+     "month_07": "500.00",
+     "month_08": "500.00",
+     "month_09": "500.00",
+     "month_10": "500.00",
+     "month_11": "500.00",
+     "month_12": "500.00",
+     "stated_annual_total": "6000.00"
+    },
+    {
+     "label": "Property Taxes",
+     "category": "expense",
+     "month_01": "2000.00",
+     "month_02": "2000.00",
+     "month_03": "2000.00",
+     "month_04": "2000.00",
+     "month_05": "2000.00",
+     "month_06": "2000.00",
+     "month_07": "2000.00",
+     "month_08": "2000.00",
+     "month_09": "2000.00",
+     "month_10": "2000.00",
+     "month_11": "2000.00",
+     "month_12": "2000.00",
+     "stated_annual_total": "24000.00"
+    },
+    {
+     "label": "Insurance",
+     "category": "expense",
+     "month_01": "700.00",
+     "month_02": "700.00",
+     "month_03": "700.00",
+     "month_04": "700.00",
+     "month_05": "700.00",
+     "month_06": "700.00",
+     "month_07": "700.00",
+     "month_08": "700.00",
+     "month_09": "700.00",
+     "month_10": "700.00",
+     "month_11": "700.00",
+     "month_12": "700.00",
+     "stated_annual_total": "8400.00"
+    },
+    {
+     "label": "Utilities",
+     "category": "expense",
+     "month_01": "1000.00",
+     "month_02": "1050.00",
+     "month_03": "950.00",
+     "month_04": "900.00",
+     "month_05": "800.00",
+     "month_06": "700.00",
+     "month_07": "750.00",
+     "month_08": "800.00",
+     "month_09": "850.00",
+     "month_10": "900.00",
+     "month_11": "1000.00",
+     "month_12": "1100.00",
+     "stated_annual_total": "10800.00"
+    },
+    {
+     "label": "Repairs & Maintenance",
+     "category": "expense",
+     "month_01": "600.00",
+     "month_02": "500.00",
+     "month_03": "700.00",
+     "month_04": "650.00",
+     "month_05": "800.00",
+     "month_06": "750.00",
+     "month_07": "900.00",
+     "month_08": "850.00",
+     "month_09": "600.00",
+     "month_10": "550.00",
+     "month_11": "450.00",
+     "month_12": "450.00",
+     "stated_annual_total": "7800.00"
+    },
+    {
+     "label": "Management Fee",
+     "category": "expense",
+     "month_01": "500.00",
+     "month_02": "500.00",
+     "month_03": "500.00",
+     "month_04": "500.00",
+     "month_05": "500.00",
+     "month_06": "500.00",
+     "month_07": "500.00",
+     "month_08": "500.00",
+     "month_09": "500.00",
+     "month_10": "500.00",
+     "month_11": "500.00",
+     "month_12": "500.00",
+     "stated_annual_total": "6000.00"
+    },
+    {
+     "label": "Payroll",
+     "category": "expense",
+     "month_01": "1201.625",
+     "month_02": "1200.00",
+     "month_03": "1200.00",
+     "month_04": "1200.00",
+     "month_05": "1200.00",
+     "month_06": "1200.00",
+     "month_07": "1200.00",
+     "month_08": "1200.00",
+     "month_09": "1200.00",
+     "month_10": "1200.00",
+     "month_11": "1200.00",
+     "month_12": "1200.00",
+     "stated_annual_total": "14400.00"
+    }
+   ],
+   "override": {
+    "total_units": 12,
+    "gross_potential_rent": 15600.0,
+    "gross_rental_income": 187200.0,
+    "vacancy_loss": -32400.0,
+    "concessions": 0.0,
+    "total_operating_revenue": 160800.0,
+    "total_operating_expenses": 71400.0,
+    "net_operating_income": 89400.0
+   },
+   "report": {
+    "checks": [
+     {
+      "id": "C1",
+      "name": "unit_count",
+      "status": "pass",
+      "expected": 12.0,
+      "found": 12.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "exact",
+      "refs": [],
+      "message": "Rent roll has 12 rows, matching the stated unit count."
+     },
+     {
+      "id": "C2",
+      "name": "gpr_sum",
+      "status": "pass",
+      "expected": 15600.0,
+      "found": 15600.125,
+      "variance": 0.125,
+      "variance_pct": 0.0008012820512820513,
+      "tolerance": "0.5% of stated GPR",
+      "refs": [],
+      "message": "Scheduled rent of 15,600.12 is within tolerance of the stated gross potential rent of 15,600.00."
+     },
+     {
+      "id": "C4",
+      "name": "occupancy_consistency",
+      "status": "pass",
+      "expected": 0.0,
+      "found": 0.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "exact, any row fails the check",
+      "refs": [],
+      "message": "All 12 rows with a known occupancy status agree with their rent."
+     },
+     {
+      "id": "C5",
+      "name": "t12_column_sums",
+      "status": "fail",
+      "expected": 0.0,
+      "found": 1.0,
+      "variance": 1.0,
+      "variance_pct": null,
+      "tolerance": "$1.00 absolute",
+      "refs": [
+       "Payroll"
+      ],
+      "message": "1 of 9 checkable line item(s) do not sum to their stated annual total: Payroll (+1.62)."
+     },
+     {
+      "id": "C6",
+      "name": "noi_recompute",
+      "status": "pass",
+      "expected": 89400.0,
+      "found": 89400.0,
+      "variance": 0.0,
+      "variance_pct": 0.0,
+      "tolerance": "$1.00 absolute",
+      "refs": [],
+      "message": "Recomputed NOI of 89,400.00 is within tolerance of the stated 89,400.00. Revenue 160,800.00 from 3 line item(s) less expenses 71,400.00 from 6 line item(s)."
+     }
+    ],
+    "stated_sources": [
+     {
+      "field": "total_units",
+      "value": 12.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "gross_potential_rent",
+      "value": 15600.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "gross_rental_income",
+      "value": 187200.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "vacancy_loss",
+      "value": -32400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "concessions",
+      "value": 0.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "total_operating_revenue",
+      "value": 160800.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "total_operating_expenses",
+      "value": 71400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     },
+     {
+      "field": "net_operating_income",
+      "value": 89400.0,
+      "method": "override",
+      "source": "--stated",
+      "reason": null
+     }
+    ],
+    "warnings": []
+   }
+  }
+ }
+}

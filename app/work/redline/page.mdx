@@ -1,5 +1,44 @@
-export const metadata = { title: "redline" };
+export const metadata = {
+  title: "redline: SEC filing monitor and valuation engine",
+  description:
+    "A scheduled EDGAR pipeline that flags the disclosure changes worth reading, checks insider trades, and values a company with a DCF only where free cash flow fits.",
+};
 
 # redline
 
-Case study in progress.
+Watches SEC filings for the changes an analyst would flag, and values a company only where the valuation method fits.
+
+[Code on GitHub](https://github.com/ian-menachery/redline) · [Try the DCF sliders](/lab/dcf) · Python, Pydantic, SQLite, OpenAI and Anthropic APIs, Streamlit · May to September 2026
+
+## The question
+
+Can a pipeline that diffs filings quarter over quarter surface the disclosure changes an analyst would flag, without burying them in copy-paste? And once pre-scheduled 10b5-1 plan trades are excluded, does joining insider trades add anything?
+
+## Approach
+
+redline polls EDGAR every 15 minutes for 8 companies across 4 sectors. Each new filing is diffed against the last one in three stages: normalize the text and drop changes under 22 words, pass the rest through a cheap model gate (gpt-4o-mini), then have a stronger model (gpt-4o) summarize each change and score its materiality. Form 4 insider trades within 14 days of a filing are pulled in, with 10b5-1 plan trades removed.
+
+For valuation it rebuilds free cash flow from the XBRL financial statements and runs bear, base and bull DCFs. When a company's 8-K earnings release gives revenue guidance, that figure sets year-one growth. Every valuation is written as a new row, so each number traces back to the filing behind it. An evaluation harness grades the system against events registered before it ran.
+
+## Results
+
+- On filings it had never seen (8 filings from 5 companies), guidance extraction scored precision 1.000 and recall 1.000 for revenue guidance, the one figure the DCF uses. Across every figure the pipeline acts on, precision was 0.818 and recall 0.871.
+- Free cash flow reconstruction validated for 6 of 6 companies.
+- Of 12 pre-registered events, 3 have been graded so far, and 2 of those passed.
+- The whole build used $2.00 of LLM calls, under a $3 hard cap.
+
+## What didn't work
+
+One pre-registered insider-trading event failed because its criterion contradicted the 10b5-1 filter I had already locked, and it stays reported as a fail. The cheap gate over-flags: it marks 56% of changes substantive, where I marked about 29% by hand. A reverse-DCF sanity check passed 1 of 4 against a bar of 3, so four high-growth companies are monitored but not valued. Banks are excluded because free cash flow doesn't describe them.
+
+## What was hard
+
+Forward guidance almost never appears in the 10-K and 10-Q text the pipeline diffs, and a detector aimed there mostly found false positives. Guidance lives in the 8-K earnings exhibit, so the extractor moved there.
+
+One company's segment revenue was once read as its total revenue, which led to a guard that accepts only company-wide annual figures.
+
+The type checker looked clean only because an old version of the EDGAR library shipped no type information. Upgrading the library surfaced real bugs.
+
+## Stack
+
+Python, Pydantic, SQLite, edgartools, the OpenAI and Anthropic SDKs, Streamlit and pytest, with CI on Python 3.11 and 3.12.

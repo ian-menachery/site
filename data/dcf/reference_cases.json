@@ -1,0 +1,726 @@
+{
+ "source": "redline.valuation.models.to_dcf_inputs + redline.valuation.dcf.value_dcf, via scripts/export_dcf_reference.py",
+ "horizon": 5,
+ "cases": [
+  {
+   "ticker": "ULTA",
+   "overrides": {},
+   "expected": {
+    "bear": {
+     "perShare": 296.9798327597857,
+     "enterpriseValue": 13995119655.69552,
+     "equityValue": 13361419655.69552,
+     "terminalValueFraction": 0.7555669071664118
+    },
+    "base": {
+     "perShare": 463.5588055002078,
+     "enterpriseValue": 21489674218.25985,
+     "equityValue": 20855974218.25985,
+     "terminalValueFraction": 0.766487255462765
+    },
+    "bull": {
+     "perShare": 620.6023470015728,
+     "enterpriseValue": 28555220193.94776,
+     "equityValue": 27921520193.94776,
+     "terminalValueFraction": 0.7765979145639286
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "wacc": 0.063
+   },
+   "expected": {
+    "bear": {
+     "perShare": 459.9349622698898,
+     "enterpriseValue": 21326633887.48461,
+     "equityValue": 20692933887.48461,
+     "terminalValueFraction": 0.8307064605022662
+    },
+    "base": {
+     "perShare": 717.1365138413149,
+     "enterpriseValue": 32898388894.2346,
+     "equityValue": 32264688894.2346,
+     "terminalValueFraction": 0.838842637618446
+    },
+    "bull": {
+     "perShare": 961.6806771231228,
+     "enterpriseValue": 43900675344.44642,
+     "equityValue": 43266975344.44642,
+     "terminalValueFraction": 0.846312761485967
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "wacc": 0.10300000000000001
+   },
+   "expected": {
+    "bear": {
+     "perShare": 217.5621050885924,
+     "enterpriseValue": 10422036670.040861,
+     "equityValue": 9788336670.040861,
+     "terminalValueFraction": 0.6884859135360261
+    },
+    "base": {
+     "perShare": 340.0917405998167,
+     "enterpriseValue": 15934767501.326355,
+     "equityValue": 15301067501.326355,
+     "terminalValueFraction": 0.701434544565797
+    },
+    "bull": {
+     "perShare": 454.6742521813092,
+     "enterpriseValue": 21089949279.889282,
+     "equityValue": 20456249279.889282,
+     "terminalValueFraction": 0.713516975357228
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "terminalGrowth": 0.0
+   },
+   "expected": {
+    "bear": {
+     "perShare": 222.18176044481027,
+     "enterpriseValue": 10629879584.172459,
+     "equityValue": 9996179584.172459,
+     "terminalValueFraction": 0.6781835245705549
+    },
+    "base": {
+     "perShare": 347.04547109944974,
+     "enterpriseValue": 16247622790.235344,
+     "equityValue": 15613922790.235344,
+     "terminalValueFraction": 0.6911478761722144
+    },
+    "bull": {
+     "perShare": 463.7385964012297,
+     "enterpriseValue": 21497763190.687725,
+     "equityValue": 20864063190.687725,
+     "terminalValueFraction": 0.703257697797253
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "terminalGrowth": 0.04
+   },
+   "expected": {
+    "bear": {
+     "perShare": 383.60643744085036,
+     "enterpriseValue": 17892537226.9013,
+     "equityValue": 17258837226.9013,
+     "terminalValueFraction": 0.8088102129599292
+    },
+    "base": {
+     "perShare": 598.4975044108531,
+     "enterpriseValue": 27560701220.948696,
+     "equityValue": 26927001220.948696,
+     "terminalValueFraction": 0.8179250678098609
+    },
+    "bull": {
+     "perShare": 802.2724581619701,
+     "enterpriseValue": 36728740165.1652,
+     "equityValue": 36095040165.1652,
+     "terminalValueFraction": 0.8263132437233855
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "growthShift": -0.05
+   },
+   "expected": {
+    "bear": {
+     "perShare": 240.43106236597,
+     "enterpriseValue": 11450933926.907356,
+     "equityValue": 10817233926.907356,
+     "terminalValueFraction": 0.73473788221205
+    },
+    "base": {
+     "perShare": 375.83169604875724,
+     "enterpriseValue": 17542743836.929638,
+     "equityValue": 16909043836.929638,
+     "terminalValueFraction": 0.7474073578592056
+    },
+    "bull": {
+     "perShare": 504.75729983246754,
+     "enterpriseValue": 23343235676.762547,
+     "equityValue": 22709535676.762547,
+     "terminalValueFraction": 0.7591170829663579
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "growthShift": 0.04
+   },
+   "expected": {
+    "bear": {
+     "perShare": 349.59089979545564,
+     "enterpriseValue": 16362144172.697344,
+     "equityValue": 15728444172.697344,
+     "terminalValueFraction": 0.7701407016270314
+    },
+    "base": {
+     "perShare": 545.24511587549,
+     "enterpriseValue": 25164823008.35417,
+     "equityValue": 24531123008.35417,
+     "terminalValueFraction": 0.7798605710235418
+    },
+    "bull": {
+     "perShare": 728.2712517458011,
+     "enterpriseValue": 33399351887.295338,
+     "equityValue": 32765651887.295338,
+     "terminalValueFraction": 0.7888744413222349
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "growthShift": -0.12
+   },
+   "expected": {
+    "bear": {
+     "perShare": 176.22951952518983,
+     "enterpriseValue": 8562442312.957815,
+     "equityValue": 7928742312.957815,
+     "terminalValueFraction": 0.6997402458409826
+    },
+    "base": {
+     "perShare": 276.33710139915894,
+     "enterpriseValue": 13066382529.04956,
+     "equityValue": 12432682529.04956,
+     "terminalValueFraction": 0.7154027541761302
+    },
+    "bull": {
+     "perShare": 373.02238418436724,
+     "enterpriseValue": 17416350086.838867,
+     "equityValue": 16782650086.838867,
+     "terminalValueFraction": 0.7298565047341063
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "operatingMargin": 0.05
+   },
+   "expected": {
+    "bear": {
+     "perShare": 35.320545111663534,
+     "enterpriseValue": 2222806645.118854,
+     "equityValue": 1589106645.118854,
+     "terminalValueFraction": 0.7593019184094485
+    },
+    "base": {
+     "perShare": 165.41118108879778,
+     "enterpriseValue": 8075714448.3661,
+     "equityValue": 7442014448.3661,
+     "terminalValueFraction": 0.7672548949453244
+    },
+    "bull": {
+     "perShare": 281.7861279021944,
+     "enterpriseValue": 13311539680.447626,
+     "equityValue": 12677839680.447626,
+     "terminalValueFraction": 0.7769984262731695
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "operatingMargin": 0.45
+   },
+   "expected": {
+    "bear": {
+     "perShare": 1530.5164745295046,
+     "enterpriseValue": 69493166705.55695,
+     "equityValue": 68859466705.55695,
+     "terminalValueFraction": 0.7550037010047982
+    },
+    "base": {
+     "perShare": 1869.1118920111414,
+     "enterpriseValue": 84726913133.47327,
+     "equityValue": 84093213133.47327,
+     "terminalValueFraction": 0.766142324028637
+    },
+    "bull": {
+     "perShare": 2217.878808470071,
+     "enterpriseValue": 100418285471.87697,
+     "equityValue": 99784585471.87697,
+     "terminalValueFraction": 0.7763476227726552
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "wacc": 0.093,
+    "terminalGrowth": 0.03,
+    "growthShift": -0.02,
+    "operatingMargin": 0.15
+   },
+   "expected": {
+    "bear": {
+     "perShare": 339.37656299065605,
+     "enterpriseValue": 15902590945.512606,
+     "equityValue": 15268890945.512606,
+     "terminalValueFraction": 0.7284995361161177
+    },
+    "base": {
+     "perShare": 490.98974183322645,
+     "enterpriseValue": 22723819474.81869,
+     "equityValue": 22090119474.81869,
+     "terminalValueFraction": 0.7408529323318849
+    },
+    "bull": {
+     "perShare": 636.3817048437165,
+     "enterpriseValue": 29265149282.62365,
+     "equityValue": 28631449282.62365,
+     "terminalValueFraction": 0.7522511961442883
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "wacc": 0.068,
+    "terminalGrowth": 0.015,
+    "growthShift": 0.06,
+    "operatingMargin": 0.07999999999999999
+   },
+   "expected": {
+    "bear": {
+     "perShare": 211.93811386428044,
+     "enterpriseValue": 10169007680.867842,
+     "equityValue": 9535307680.867842,
+     "terminalValueFraction": 0.7955173606691238
+    },
+    "base": {
+     "perShare": 423.44796799685236,
+     "enterpriseValue": 19685047528.146385,
+     "equityValue": 19051347528.146385,
+     "terminalValueFraction": 0.8037045962809943
+    },
+    "bull": {
+     "perShare": 615.7719669176872,
+     "enterpriseValue": 28337896563.593666,
+     "equityValue": 27704196563.593666,
+     "terminalValueFraction": 0.8115022284997683
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "wacc": 0.051,
+    "terminalGrowth": 0.05
+   },
+   "expected": {
+    "bear": {
+     "perShare": 16292.426894842345,
+     "enterpriseValue": 733646278425.8519,
+     "equityValue": 733012578425.8519,
+     "terminalValueFraction": 0.994912656122682
+    },
+    "base": {
+     "perShare": 25379.32575214186,
+     "enterpriseValue": 1142474944914.6145,
+     "equityValue": 1141841244914.6145,
+     "terminalValueFraction": 0.9951996520630122
+    },
+    "bull": {
+     "perShare": 34164.576640451516,
+     "enterpriseValue": 1537732167630.5542,
+     "equityValue": 1537098467630.5542,
+     "terminalValueFraction": 0.9954585112971136
+    }
+   }
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "wacc": 0.04,
+    "terminalGrowth": 0.04
+   },
+   "error": "terminal_growth >= wacc"
+  },
+  {
+   "ticker": "ULTA",
+   "overrides": {
+    "wacc": 0.04,
+    "terminalGrowth": 0.045,
+    "growthShift": 0.02
+   },
+   "error": "terminal_growth >= wacc"
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {},
+   "expected": {
+    "bear": {
+     "perShare": 351.75689122133264,
+     "enterpriseValue": 85365377935.10382,
+     "equityValue": 90753277935.10382,
+     "terminalValueFraction": 0.8471062952418733
+    },
+    "base": {
+     "perShare": 483.01430668380004,
+     "enterpriseValue": 119229791124.42041,
+     "equityValue": 124617691124.42041,
+     "terminalValueFraction": 0.8566899269526246
+    },
+    "bull": {
+     "perShare": 592.4546494635149,
+     "enterpriseValue": 147465399561.58685,
+     "equityValue": 152853299561.58685,
+     "terminalValueFraction": 0.8631330887991979
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "wacc": 0.039999999999999994
+   },
+   "expected": {
+    "bear": {
+     "perShare": 793.7687706964579,
+     "enterpriseValue": 199404442839.68613,
+     "equityValue": 204792342839.68613,
+     "terminalValueFraction": 0.9307311758606227
+    },
+    "base": {
+     "perShare": 1107.151783945338,
+     "enterpriseValue": 280257260257.89716,
+     "equityValue": 285645160257.89716,
+     "terminalValueFraction": 0.935386260808385
+    },
+    "bull": {
+     "perShare": 1370.0329616454435,
+     "enterpriseValue": 348080604104.5244,
+     "equityValue": 353468504104.5244,
+     "terminalValueFraction": 0.9384853312982593
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "wacc": 0.08
+   },
+   "expected": {
+    "bear": {
+     "perShare": 231.2185336748356,
+     "enterpriseValue": 54266481688.10759,
+     "equityValue": 59654381688.10759,
+     "terminalValueFraction": 0.7723317965166931
+    },
+    "base": {
+     "perShare": 312.9453965927,
+     "enterpriseValue": 75352012320.9166,
+     "equityValue": 80739912320.9166,
+     "terminalValueFraction": 0.7856506830529598
+    },
+    "bull": {
+     "perShare": 380.6886650063059,
+     "enterpriseValue": 92829775571.62692,
+     "equityValue": 98217675571.62692,
+     "terminalValueFraction": 0.7946877181126859
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "terminalGrowth": 0.0
+   },
+   "expected": {
+    "bear": {
+     "perShare": 230.9836480323242,
+     "enterpriseValue": 54205881192.339645,
+     "equityValue": 59593781192.339645,
+     "terminalValueFraction": 0.7592174759734348
+    },
+    "base": {
+     "perShare": 312.4219787202691,
+     "enterpriseValue": 75216970509.82944,
+     "equityValue": 80604870509.82944,
+     "terminalValueFraction": 0.7728327801605479
+    },
+    "bull": {
+     "perShare": 379.876339506566,
+     "enterpriseValue": 92620195592.69403,
+     "equityValue": 98008095592.69403,
+     "terminalValueFraction": 0.782087118065009
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "terminalGrowth": 0.04
+   },
+   "expected": {
+    "bear": {
+     "perShare": 569.1487289615477,
+     "enterpriseValue": 141452472072.0793,
+     "equityValue": 146840372072.0793,
+     "terminalValueFraction": 0.9077299343066632
+    },
+    "base": {
+     "perShare": 790.0804970181558,
+     "enterpriseValue": 198452868230.6842,
+     "equityValue": 203840768230.6842,
+     "terminalValueFraction": 0.9138998079100471
+    },
+    "bull": {
+     "perShare": 975.0956073860233,
+     "enterpriseValue": 246186766705.594,
+     "equityValue": 251574666705.594,
+     "terminalValueFraction": 0.918016983540294
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "growthShift": -0.05
+   },
+   "expected": {
+    "bear": {
+     "perShare": 285.5880950116021,
+     "enterpriseValue": 68293828512.99335,
+     "equityValue": 73681728512.99335,
+     "terminalValueFraction": 0.8331535916163475
+    },
+    "base": {
+     "perShare": 392.7239961076068,
+     "enterpriseValue": 95934890995.76256,
+     "equityValue": 101322790995.76256,
+     "terminalValueFraction": 0.8444472116532269
+    },
+    "bull": {
+     "perShare": 482.8330853737762,
+     "enterpriseValue": 119183036026.43427,
+     "equityValue": 124570936026.43427,
+     "terminalValueFraction": 0.8520078068320897
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "growthShift": 0.04
+   },
+   "expected": {
+    "bear": {
+     "perShare": 414.05995100267785,
+     "enterpriseValue": 101439567358.69089,
+     "equityValue": 106827467358.69089,
+     "terminalValueFraction": 0.8567316452189472
+    },
+    "base": {
+     "perShare": 567.6208804890184,
+     "enterpriseValue": 141058287166.16675,
+     "equityValue": 146446187166.16675,
+     "terminalValueFraction": 0.8651731877989709
+    },
+    "bull": {
+     "perShare": 694.8047038656725,
+     "enterpriseValue": 173871713597.3435,
+     "equityValue": 179259613597.3435,
+     "terminalValueFraction": 0.8708678435682049
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "growthShift": -0.12
+   },
+   "expected": {
+    "bear": {
+     "perShare": 211.75614831386278,
+     "enterpriseValue": 49245186264.9766,
+     "equityValue": 54633086264.9766,
+     "terminalValueFraction": 0.8091523992984113
+    },
+    "base": {
+     "perShare": 291.275260774747,
+     "enterpriseValue": 69761117279.88472,
+     "equityValue": 75149017279.88472,
+     "terminalValueFraction": 0.8235092299052879
+    },
+    "bull": {
+     "perShare": 359.02136451080673,
+     "enterpriseValue": 87239612043.78813,
+     "equityValue": 92627512043.78813,
+     "terminalValueFraction": 0.8330655403879035
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "operatingMargin": 0.05
+   },
+   "expected": {
+    "bear": {
+     "perShare": 5.275430508630159,
+     "enterpriseValue": -4026838928.773419,
+     "equityValue": 1361061071.226581,
+     "terminalValueFraction": 0.8398080092420338
+    },
+    "base": {
+     "perShare": 69.28817259706666,
+     "enterpriseValue": 12488448530.0432,
+     "equityValue": 17876348530.043198,
+     "terminalValueFraction": 0.8587231096381518
+    },
+    "bull": {
+     "perShare": 121.54039631441987,
+     "enterpriseValue": 25969522249.120327,
+     "equityValue": 31357422249.120327,
+     "terminalValueFraction": 0.8640399770095926
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "operatingMargin": 0.45
+   },
+   "expected": {
+    "bear": {
+     "perShare": 467.2507114588999,
+     "enterpriseValue": 115162783556.39618,
+     "equityValue": 120550683556.39618,
+     "terminalValueFraction": 0.8470212300808613
+    },
+    "base": {
+     "perShare": 620.9230180460446,
+     "enterpriseValue": 154810238655.87952,
+     "equityValue": 160198138655.87952,
+     "terminalValueFraction": 0.8566352550791946
+    },
+    "bull": {
+     "perShare": 749.42606717988,
+     "enterpriseValue": 187964025332.40903,
+     "equityValue": 193351925332.40903,
+     "terminalValueFraction": 0.8630913229107241
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "wacc": 0.06999999999999999,
+    "terminalGrowth": 0.03,
+    "growthShift": -0.02,
+    "operatingMargin": 0.38
+   },
+   "expected": {
+    "bear": {
+     "perShare": 308.67024284622573,
+     "enterpriseValue": 74249022654.32623,
+     "equityValue": 79636922654.32623,
+     "terminalValueFraction": 0.8209984536963014
+    },
+    "base": {
+     "perShare": 417.55471781534754,
+     "enterpriseValue": 102341217196.35966,
+     "equityValue": 107729117196.35966,
+     "terminalValueFraction": 0.8324138369540526
+    },
+    "bull": {
+     "perShare": 508.5886617319571,
+     "enterpriseValue": 125827974726.84492,
+     "equityValue": 131215874726.84492,
+     "terminalValueFraction": 0.8400914219213342
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "wacc": 0.045,
+    "terminalGrowth": 0.015,
+    "growthShift": 0.06,
+    "operatingMargin": 0.31
+   },
+   "expected": {
+    "bear": {
+     "perShare": 466.96793153974636,
+     "enterpriseValue": 115089826337.25456,
+     "equityValue": 120477726337.25456,
+     "terminalValueFraction": 0.8804319585748056
+    },
+    "base": {
+     "perShare": 655.5724934752877,
+     "enterpriseValue": 163749803316.62424,
+     "equityValue": 169137703316.62424,
+     "terminalValueFraction": 0.8872933844345072
+    },
+    "bull": {
+     "perShare": 811.2357921378486,
+     "enterpriseValue": 203910934371.56494,
+     "equityValue": 209298834371.56494,
+     "terminalValueFraction": 0.8919252861297142
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "wacc": 0.051,
+    "terminalGrowth": 0.05
+   },
+   "expected": {
+    "bear": {
+     "perShare": 10559.716334256007,
+     "enterpriseValue": 2719018914238.05,
+     "equityValue": 2724406814238.05,
+     "terminalValueFraction": 0.9950769632959515
+    },
+    "base": {
+     "perShare": 14901.676885155877,
+     "enterpriseValue": 3839244736370.2163,
+     "equityValue": 3844632636370.2163,
+     "terminalValueFraction": 0.9954326244436255
+    },
+    "bull": {
+     "perShare": 18559.745823636662,
+     "enterpriseValue": 4783026522498.259,
+     "equityValue": 4788414422498.259,
+     "terminalValueFraction": 0.9956675035315861
+    }
+   }
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "wacc": 0.04,
+    "terminalGrowth": 0.04
+   },
+   "error": "terminal_growth >= wacc"
+  },
+  {
+   "ticker": "VRTX",
+   "overrides": {
+    "wacc": 0.04,
+    "terminalGrowth": 0.045,
+    "growthShift": 0.02
+   },
+   "error": "terminal_growth >= wacc"
+  }
+ ]
+}

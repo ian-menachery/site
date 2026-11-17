@@ -1,5 +1,48 @@
-export const metadata = { title: "showdown" };
+export const metadata = {
+  title: "showdown: heads-up poker lab",
+  description:
+    "A poker lab where every part is checked against an outside answer: a CFR solver bit-identical to OpenSpiel, an exact preflop equity matrix, and push/fold solved at every depth from 1 to 20 big blinds.",
+};
 
 # showdown
 
-Case study in progress.
+A heads-up poker lab where every part is checked against someone else's answer before the next part gets built.
+
+[Code on GitHub](https://github.com/ian-menachery/showdown) · [Try the push/fold explorer](/lab/push-fold) · Python, NumPy, Rust · November 2026
+
+## The question
+
+Poker solvers are easy to get subtly wrong. A bug in the equity engine hides inside the solver, and a bug in the solver hides inside the bot. So each part of this lab has its own correctness check against an outside answer, and I wrote every bar down before writing any code.
+
+## Approach
+
+- The solver runs CFR and CFR+ with an exact best response. I checked it first on Kuhn poker, whose value is known to be −1/18, then on Leduc poker against Google DeepMind's OpenSpiel.
+- A hand-equity engine builds a 169×169 preflop equity matrix, checked against an independent hand evaluator and a published exact table.
+- Push/fold (the small blind shoves or folds) is solved on that matrix at every stack depth from 1 to 20 big blinds and compared with a commercial reference.
+- A bot you can play against and a hand-history analyzer that grades decisions each have their own check.
+
+A failed check blocks the next phase. A bar changes only through a dated amendment, and never because something failed it.
+
+## Results
+
+- On Leduc the solver is bit-identical to OpenSpiel at all 200 iterations (9,457 nodes, 936 information sets). It was faster than OpenSpiel's Python implementation in every recorded run, by 3.6× to 11.5×.
+- The exact preflop matrix covers all 2,598,960 boards, reduced to 134,459 suit classes, and matches the published exact table in 28,561 of 28,561 cells, to the integer.
+- Push/fold exploitability is at most 3.6e-6 big blinds at every depth, and the solution agrees with the reference in all 40 pre-registered comparisons (the pusher and the caller at each of 20 depths).
+- Over 20,000 hands the bot's realized result sat 0.19 standard errors from the solver's value, against a bar of 3.
+- The analyzer got 945 of 945 statistics exact on a hand-built fixture and parsed all 10,000 hands of the public Pluribus dataset.
+
+## What didn't work
+
+Solving flops fast enough for interactive use failed its speed bar with both open-source solvers I tried, so that idea stopped there. An exploit test, which asked whether the model bluffs less against an opponent who never folds, passed on 3 of 10 flops against a bar of 8. The model's ranges cause it, not a bug, so the claim stays unvalidated. I also first wrote the Leduc speedup as 10× to 40×; the measured range across runs is 3.6× to 11.5×, and the docs now say that.
+
+## What was hard
+
+Matching OpenSpiel bit for bit meant chasing a one-ulp difference that grew about 1.24× per iteration. It came from summation order and from Python 3.12's new compensated `sum`.
+
+I first ruled an exact equity matrix too expensive. Relabelling suits brought the exact computation down to the cost of the Monte Carlo version, so I reversed that decision.
+
+The poker rules library split pots without any warning when a hand history left out show actions. The analyzer's check caught it.
+
+## Stack
+
+Python, NumPy, pokerkit and eval7, with OpenSpiel and phevaluator used only as test oracles, plus a small Rust bridge. Built in a 40-hour time box.

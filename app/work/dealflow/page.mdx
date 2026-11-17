@@ -1,5 +1,37 @@
-export const metadata = { title: "dealflow" };
+export const metadata = {
+  title: "dealflow: deal underwriting engine",
+  description:
+    "Scores and ranks property and small-business acquisitions behind swappable data sources, within a 50-call monthly API quota.",
+};
 
 # dealflow
 
-Case study in progress.
+A deal-underwriting engine that scores and ranks acquisitions, built so the data source can change without touching the math.
+
+Private repository · [Try the deal calculator](/lab/dealflow) · Python, pandas, SQLite · June to July 2026
+
+## The question
+
+It started as a way to find motivated sellers and became something narrower: given a candidate property, what does it earn, how far can I trust the inputs, and when could I afford it?
+
+## Approach
+
+The engine sits behind two interfaces. One supplies property facts and the other decides which properties to look at, and the underwriting engine imports neither concrete provider. Small-business acquisitions reuse the same ranker and capital allocator with a different engine, which showed the interfaces hold.
+
+Every number carries a confidence level, so a seller-reported figure is never treated as a verified one. A run makes at most 25 live calls against a 50-call monthly API limit, and a capital allocator works out when you could afford each deal. The metrics are NOI, cap rate, cash-on-cash return, debt service coverage, owner-earnings yield and the mortgage payment.
+
+## Results
+
+The 163 tests run offline in about a second. The default assumes rent is 0.7% of price everywhere; in a zip code where it's really 0.55%, correcting it moves the owner-earnings yield from 7.75% to 6.09%.
+
+## What didn't work
+
+The property-data API turned out to return neither price nor rent, so those had to come from elsewhere. A pipeline only amplifies the deal flow you feed it. Seller-reported earnings cap every small-business row at low confidence, by design.
+
+## What was hard
+
+Each formula had to put capex and debt service in the right place: NOI excludes both, and cash-on-cash subtracts both. Debt service coverage for an all-cash deal is undefined, and the engine reports it as not applicable instead of 0.
+
+## Status
+
+The code is private. The demo runs the same metric formulas on made-up inputs.

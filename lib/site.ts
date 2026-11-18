@@ -65,6 +65,14 @@ export const projects: Project[] = [
     demo: "/lab/cutover",
   },
   {
+    slug: "deskcheck",
+    title: "deskcheck",
+    kind: "Helpdesk agent with an eval harness",
+    summary:
+      "An IT/HR helpdesk agent that only acts through validated tools. On 60 blind, messier cases a rule router took 5 wrong actions; Claude took none in 600 runs.",
+    demo: "/lab/deskcheck",
+  },
+  {
     slug: "rentroll",
     title: "rentroll",
     kind: "Rent roll tie-out checker",
@@ -95,6 +103,7 @@ export const demos = [
   { href: "/lab/calibration", title: "Calibration explorer", from: "calibration-tracker" },
   { href: "/lab/dcf", title: "DCF sliders", from: "redline" },
   { href: "/lab/cutover", title: "Migration tie-out", from: "cutover" },
+  { href: "/lab/deskcheck", title: "Helpdesk agent replay", from: "deskcheck" },
   { href: "/lab/rentroll", title: "Rent roll tie-out", from: "rentroll" },
   { href: "/lab/dealflow", title: "Deal calculator", from: "dealflow" },
 ];

@@ -1,0 +1,39 @@
+export const metadata = {
+  title: "deskcheck: a helpdesk agent with an eval harness",
+  description:
+    "An IT/HR helpdesk agent that only acts through validated tools, measured against a rule-based router on frozen cases. 0 wrong actions in 600 model runs.",
+};
+
+# deskcheck
+
+An IT and HR helpdesk agent that acts only through code-checked tools, plus the eval that decides whether to trust it.
+
+Private repository · [Replay the recorded runs](/lab/deskcheck) · Python, Claude API, Vitest · November 2026
+
+## The question
+
+At EY I built two Copilot Studio agents for an SAP S/4HANA implementation team. They routed requests through fixed Power Automate flows instead of letting the model write free text into systems, and they replaced manual onboarding, offboarding and access requests with flows. deskcheck asks whether that design holds up when it is measured: does a Claude model on validated tools beat a plain rule-based router without taking more wrong actions? A wrong action is a write that code let through but shouldn't have happened, like offboarding the wrong Sam. It is the expensive error, so it is reported on its own line.
+
+## Approach
+
+The company is made up: 41 employees, 13 systems, 16 policies. The agent has two read tools, four write tools and a final reply. Every write passes a validator that checks the record, the status, eligibility, dates and whether the requester is allowed, and the requester's identity comes from the session, not from the message. Escalating to a human or declining counts as correct when the labels say so.
+
+I wrote 130 labelled cases in nine categories and froze them by hash before any prompt existed, then tuned the prompt on 40 dev cases only, on Haiku 5.5, for three rounds. The first rule-based router I wrote scored 36 of 40 on dev. It was echoing phrasings I remembered from the test set, so I threw it out unrun. A separate agent rewrote it with no access to the test cases. The gates, the bars and a $10 spending cap were in SCOPE.md before any code.
+
+## Results
+
+| | Clean test set (90) | Wrong actions | Blind, messier set (60) | Wrong actions |
+|---|---|---|---|---|
+| Rule router | 94.4% | 0 | 73.3% | 5 |
+| Haiku 5.5 | 97.8% (3 reps) | 0 | 97.2% (3 reps) | 0 |
+| Opus 5.5 | 98.9% | 0 | 96.7% | 0 |
+
+On my own test set the router tied the models, so both models failed Gate 2. Its pre-registered bar, beat the router by 15 points, was out of reach. That told me the case set was too clean, so I added a gate. A fresh agent that had never seen my cases wrote 60 messier messages with typos, forwarded emails, relative dates and several asks at once, and every agent ran on them once. The router fell to 73% and took five wrong actions, one of them offboarding the person a resignation letter was addressed to instead of the person resigning. Both models passed every bar, with no wrong actions in any of 600 runs. Haiku did about as well as Opus at roughly a fiftieth of the cost. Total spend was $5.23.
+
+## What was hard
+
+Keeping the comparison honest took more work than the agent. The router written after the cases had to go, and the second router and the second case set came from agents that never saw the first set. Several pre-registered checks turned out stricter than the behaviour they meant to catch. Four "invented policy" flags were replies that cited the nearest policy while saying it didn't cover the question, and one Gate 3 label rejects a sensible extra escalation. I report those as written rather than re-scoring after the fact.
+
+## Status
+
+All gates have run. The cases are synthetic and the labels model-written, with 30 of them reviewed by hand, and each case is one message, so multi-turn behaviour isn't measured. The demo replays recorded traces and calls no model.

@@ -70,6 +70,7 @@ export const projects: Project[] = [
     kind: "Helpdesk agent with an eval harness",
     summary:
       "An IT/HR helpdesk agent that only acts through validated tools. On 60 blind, messier cases a rule router took 5 wrong actions; Claude took none in 600 runs.",
+    repo: "https://github.com/ian-menachery/deskcheck",
     demo: "/lab/deskcheck",
   },
   {

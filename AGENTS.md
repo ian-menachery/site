@@ -12,3 +12,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 Design skill: Impeccable, installed for this repo only. Which command fits which task, its token
 cost and its guardrails: `docs/impeccable.md`. Case-study prose goes through Humanizer instead.
+Visual system: `DESIGN.md`; read it before any UI change. Home page brief: `.impeccable/surfaces/home.md`.
+
+## Verify
+
+Before saying a change is done, run `npm run lint && npm test` and name its pass/fail line.

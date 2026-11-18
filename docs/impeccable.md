@@ -28,4 +28,10 @@ Narrow targets ("the project grid", "the hero") cost far less than whole pages. 
 - `DO_NOT_TRACK=1` turns telemetry off; `IMPECCABLE_LIVE_COPY_AGENT=chat` keeps live mode inside the chat instead of launching a bypass-permissions agent.
 - Don't run `impeccable login`, `/impeccable hooks on`, or `npx impeccable ...`.
 - The first command downloads its engine binary to `%USERPROFILE%\.impeccable\bin\`. If Windows Defender flags it, uninstall: `claude plugin uninstall impeccable@impeccable --scope local`.
-- Add `.impeccable/` and `.claude/settings.local.json` to `.gitignore`.
+- `.gitignore` ignores `.impeccable/*` except `surfaces/` (surface briefs) and `design.json` (the DESIGN.md token sidecar), which are committed; `.claude/settings.local.json` stays ignored.
+
+## In this environment (2026-11-18)
+
+- The launcher (`scripts/impeccable`) is absent from the plugin cache and the engine binary is not run, so `concept-seed` and the detector never run. Read the references directly; record a skipped roll in the surface brief as `seed: none (roll skipped)` with the reason.
+- The shipped subagents `impeccable:impeccable-finish-reviewer` and `impeccable:impeccable-documenter` work in sessions started after the plugin install; use them for the finish review and DESIGN.md.
+- The visual system is in `DESIGN.md`; the home page's brief is `.impeccable/surfaces/home.md`.

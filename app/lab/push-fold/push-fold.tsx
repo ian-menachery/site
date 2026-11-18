@@ -83,11 +83,11 @@ function Chart({ data }: { data: PushFoldData }) {
               <button
                 key={name}
                 type="button"
-                aria-label={`${name}: ${verb(position)} ${pct(freq)}`}
+                aria-label={`${name} ${whole}: ${verb(position)} ${pct(freq)}`}
                 aria-pressed={name === hand}
                 onClick={() => setHand(name)}
-                className={`flex flex-col items-center py-1 ${name === hand ? "outline-2" : ""}`}
-                style={{ backgroundColor: `rgb(220 38 38 / ${freq})` }}
+                className="cell flex flex-col items-center py-1"
+                style={{ backgroundColor: `color-mix(in oklab, var(--heat) ${Math.round(freq * 100)}%, var(--ground-2))` }}
               >
                 <span>{name}</span>
                 <span>{whole}</span>

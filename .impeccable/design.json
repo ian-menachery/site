@@ -1,0 +1,845 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-18T17:37:26.712Z",
+  "title": "Design System: Ian Menachery",
+  "extensions": {
+    "colorMeta": {
+      "china-marker": {
+        "role": "primary",
+        "displayName": "China Marker Yellow",
+        "canonical": "#f2c94c",
+        "cssVar": "--china",
+        "theme": "both",
+        "tonalRamp": [
+          "oklch(15.0% 0.045 90.5)",
+          "oklch(26.4% 0.099 90.5)",
+          "oklch(37.9% 0.141 90.5)",
+          "oklch(49.3% 0.146 90.5)",
+          "oklch(60.7% 0.146 90.5)",
+          "oklch(72.1% 0.141 90.5)",
+          "oklch(83.6% 0.099 90.5)",
+          "oklch(95.0% 0.045 90.5)"
+        ]
+      },
+      "grease": {
+        "role": "secondary",
+        "displayName": "Grease Pencil Red",
+        "canonical": "#d42a20",
+        "cssVar": "--grease",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.056 29.0)",
+          "oklch(26.4% 0.132 29.0)",
+          "oklch(37.9% 0.190 29.0)",
+          "oklch(49.3% 0.206 29.0)",
+          "oklch(60.7% 0.206 29.0)",
+          "oklch(72.1% 0.190 29.0)",
+          "oklch(83.6% 0.132 29.0)",
+          "oklch(95.0% 0.056 29.0)"
+        ]
+      },
+      "grease-light": {
+        "role": "secondary",
+        "displayName": "Grease Pencil Red (print)",
+        "canonical": "#c8211a",
+        "cssVar": "--grease",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.055 28.8)",
+          "oklch(26.4% 0.129 28.8)",
+          "oklch(37.9% 0.186 28.8)",
+          "oklch(49.3% 0.201 28.8)",
+          "oklch(60.7% 0.201 28.8)",
+          "oklch(72.1% 0.186 28.8)",
+          "oklch(83.6% 0.129 28.8)",
+          "oklch(95.0% 0.055 28.8)"
+        ]
+      },
+      "edge-amber": {
+        "role": "tertiary",
+        "displayName": "Edge-Print Amber",
+        "canonical": "#d9a046",
+        "cssVar": "--edge",
+        "theme": "both",
+        "tonalRamp": [
+          "oklch(15.0% 0.042 75.9)",
+          "oklch(26.4% 0.088 75.9)",
+          "oklch(37.9% 0.124 75.9)",
+          "oklch(49.3% 0.125 75.9)",
+          "oklch(60.7% 0.125 75.9)",
+          "oklch(72.1% 0.124 75.9)",
+          "oklch(83.6% 0.088 75.9)",
+          "oklch(95.0% 0.042 75.9)"
+        ]
+      },
+      "heat": {
+        "role": "data",
+        "displayName": "Heat",
+        "canonical": "#b8241b",
+        "cssVar": "--heat",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.052 29.0)",
+          "oklch(26.4% 0.120 29.0)",
+          "oklch(37.9% 0.173 29.0)",
+          "oklch(49.3% 0.185 29.0)",
+          "oklch(60.7% 0.185 29.0)",
+          "oklch(72.1% 0.173 29.0)",
+          "oklch(83.6% 0.120 29.0)",
+          "oklch(95.0% 0.052 29.0)"
+        ]
+      },
+      "heat-light": {
+        "role": "data",
+        "displayName": "Heat (print)",
+        "canonical": "#e0645a",
+        "cssVar": "--heat",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.047 26.9)",
+          "oklch(26.4% 0.105 26.9)",
+          "oklch(37.9% 0.150 26.9)",
+          "oklch(49.3% 0.157 26.9)",
+          "oklch(60.7% 0.157 26.9)",
+          "oklch(72.1% 0.150 26.9)",
+          "oklch(83.6% 0.105 26.9)",
+          "oklch(95.0% 0.047 26.9)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Darkroom Black",
+        "canonical": "#161411",
+        "cssVar": "--ground",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.007 78.2)",
+          "oklch(26.4% 0.007 78.2)",
+          "oklch(37.9% 0.007 78.2)",
+          "oklch(49.3% 0.007 78.2)",
+          "oklch(60.7% 0.007 78.2)",
+          "oklch(72.1% 0.007 78.2)",
+          "oklch(83.6% 0.007 78.2)",
+          "oklch(95.0% 0.007 78.2)"
+        ]
+      },
+      "ground-2": {
+        "role": "neutral",
+        "displayName": "Tray",
+        "canonical": "#201d19",
+        "cssVar": "--ground-2",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.009 75.2)",
+          "oklch(26.4% 0.009 75.2)",
+          "oklch(37.9% 0.009 75.2)",
+          "oklch(49.3% 0.009 75.2)",
+          "oklch(60.7% 0.009 75.2)",
+          "oklch(72.1% 0.009 75.2)",
+          "oklch(83.6% 0.009 75.2)",
+          "oklch(95.0% 0.009 75.2)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#ece9e3",
+        "cssVar": "--ink",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.009 84.6)",
+          "oklch(26.4% 0.009 84.6)",
+          "oklch(37.9% 0.009 84.6)",
+          "oklch(49.3% 0.009 84.6)",
+          "oklch(60.7% 0.009 84.6)",
+          "oklch(72.1% 0.009 84.6)",
+          "oklch(83.6% 0.009 84.6)",
+          "oklch(95.0% 0.009 84.6)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Pencil Grey",
+        "canonical": "#aba59b",
+        "cssVar": "--ink-2",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.016 80.7)",
+          "oklch(26.4% 0.016 80.7)",
+          "oklch(37.9% 0.016 80.7)",
+          "oklch(49.3% 0.016 80.7)",
+          "oklch(60.7% 0.016 80.7)",
+          "oklch(72.1% 0.016 80.7)",
+          "oklch(83.6% 0.016 80.7)",
+          "oklch(95.0% 0.016 80.7)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "#38332c",
+        "cssVar": "--rule",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.014 76.4)",
+          "oklch(26.4% 0.014 76.4)",
+          "oklch(37.9% 0.014 76.4)",
+          "oklch(49.3% 0.014 76.4)",
+          "oklch(60.7% 0.014 76.4)",
+          "oklch(72.1% 0.014 76.4)",
+          "oklch(83.6% 0.014 76.4)",
+          "oklch(95.0% 0.014 76.4)"
+        ]
+      },
+      "hole": {
+        "role": "neutral",
+        "displayName": "Sprocket",
+        "canonical": "#e9e6de",
+        "cssVar": "--hole",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.011 89.7)",
+          "oklch(26.4% 0.011 89.7)",
+          "oklch(37.9% 0.011 89.7)",
+          "oklch(49.3% 0.011 89.7)",
+          "oklch(60.7% 0.011 89.7)",
+          "oklch(72.1% 0.011 89.7)",
+          "oklch(83.6% 0.011 89.7)",
+          "oklch(95.0% 0.011 89.7)"
+        ]
+      },
+      "ground-light": {
+        "role": "neutral",
+        "displayName": "Print White",
+        "canonical": "#f7f7f4",
+        "cssVar": "--ground",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.004 106.5)",
+          "oklch(26.4% 0.004 106.5)",
+          "oklch(37.9% 0.004 106.5)",
+          "oklch(49.3% 0.004 106.5)",
+          "oklch(60.7% 0.004 106.5)",
+          "oklch(72.1% 0.004 106.5)",
+          "oklch(83.6% 0.004 106.5)",
+          "oklch(95.0% 0.004 106.5)"
+        ]
+      },
+      "ground-2-light": {
+        "role": "neutral",
+        "displayName": "Tray (print)",
+        "canonical": "#ebeae5",
+        "cssVar": "--ground-2",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.007 97.4)",
+          "oklch(26.4% 0.007 97.4)",
+          "oklch(37.9% 0.007 97.4)",
+          "oklch(49.3% 0.007 97.4)",
+          "oklch(60.7% 0.007 97.4)",
+          "oklch(72.1% 0.007 97.4)",
+          "oklch(83.6% 0.007 97.4)",
+          "oklch(95.0% 0.007 97.4)"
+        ]
+      },
+      "ink-light": {
+        "role": "neutral",
+        "displayName": "Ink (print)",
+        "canonical": "#121110",
+        "cssVar": "--ink",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 67.7)",
+          "oklch(26.4% 0.003 67.7)",
+          "oklch(37.9% 0.003 67.7)",
+          "oklch(49.3% 0.003 67.7)",
+          "oklch(60.7% 0.003 67.7)",
+          "oklch(72.1% 0.003 67.7)",
+          "oklch(83.6% 0.003 67.7)",
+          "oklch(95.0% 0.003 67.7)"
+        ]
+      },
+      "ink-2-light": {
+        "role": "neutral",
+        "displayName": "Pencil Grey (print)",
+        "canonical": "#57534c",
+        "cssVar": "--ink-2",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.012 81.8)",
+          "oklch(26.4% 0.012 81.8)",
+          "oklch(37.9% 0.012 81.8)",
+          "oklch(49.3% 0.012 81.8)",
+          "oklch(60.7% 0.012 81.8)",
+          "oklch(72.1% 0.012 81.8)",
+          "oklch(83.6% 0.012 81.8)",
+          "oklch(95.0% 0.012 81.8)"
+        ]
+      },
+      "rule-light": {
+        "role": "neutral",
+        "displayName": "Rule (print)",
+        "canonical": "#d3d0c9",
+        "cssVar": "--rule",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.010 87.5)",
+          "oklch(26.4% 0.010 87.5)",
+          "oklch(37.9% 0.010 87.5)",
+          "oklch(49.3% 0.010 87.5)",
+          "oklch(60.7% 0.010 87.5)",
+          "oklch(72.1% 0.010 87.5)",
+          "oklch(83.6% 0.010 87.5)",
+          "oklch(95.0% 0.010 87.5)"
+        ]
+      },
+      "film": {
+        "role": "neutral",
+        "displayName": "Film Black",
+        "canonical": "#050404",
+        "cssVar": "--film",
+        "theme": "both",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 17.6)",
+          "oklch(26.4% 0.003 17.6)",
+          "oklch(37.9% 0.003 17.6)",
+          "oklch(49.3% 0.003 17.6)",
+          "oklch(60.7% 0.003 17.6)",
+          "oklch(72.1% 0.003 17.6)",
+          "oklch(83.6% 0.003 17.6)",
+          "oklch(95.0% 0.003 17.6)"
+        ]
+      },
+      "on-film": {
+        "role": "neutral",
+        "displayName": "On-Film",
+        "canonical": "#ece9e3",
+        "cssVar": "--on-film",
+        "theme": "both",
+        "tonalRamp": [
+          "oklch(15.0% 0.009 84.6)",
+          "oklch(26.4% 0.009 84.6)",
+          "oklch(37.9% 0.009 84.6)",
+          "oklch(49.3% 0.009 84.6)",
+          "oklch(60.7% 0.009 84.6)",
+          "oklch(72.1% 0.009 84.6)",
+          "oklch(83.6% 0.009 84.6)",
+          "oklch(95.0% 0.009 84.6)"
+        ]
+      },
+      "window": {
+        "role": "neutral",
+        "displayName": "Light-Table Window",
+        "canonical": "#e2e0da",
+        "cssVar": "--window",
+        "theme": "both",
+        "tonalRamp": [
+          "oklch(15.0% 0.008 91.5)",
+          "oklch(26.4% 0.008 91.5)",
+          "oklch(37.9% 0.008 91.5)",
+          "oklch(49.3% 0.008 91.5)",
+          "oklch(60.7% 0.008 91.5)",
+          "oklch(72.1% 0.008 91.5)",
+          "oklch(83.6% 0.008 91.5)",
+          "oklch(95.0% 0.008 91.5)"
+        ]
+      },
+      "window-ink": {
+        "role": "neutral",
+        "displayName": "Window Ink",
+        "canonical": "#151413",
+        "cssVar": "--window-ink",
+        "theme": "both",
+        "tonalRamp": [
+          "oklch(15.0% 0.003 67.7)",
+          "oklch(26.4% 0.003 67.7)",
+          "oklch(37.9% 0.003 67.7)",
+          "oklch(49.3% 0.003 67.7)",
+          "oklch(60.7% 0.003 67.7)",
+          "oklch(72.1% 0.003 67.7)",
+          "oklch(83.6% 0.003 67.7)",
+          "oklch(95.0% 0.003 67.7)"
+        ]
+      },
+      "window-ink-2": {
+        "role": "neutral",
+        "displayName": "Window Ink Secondary",
+        "canonical": "#5d5953",
+        "cssVar": "--window-ink-2",
+        "theme": "both",
+        "tonalRamp": [
+          "oklch(15.0% 0.011 78.2)",
+          "oklch(26.4% 0.011 78.2)",
+          "oklch(37.9% 0.011 78.2)",
+          "oklch(49.3% 0.011 78.2)",
+          "oklch(60.7% 0.011 78.2)",
+          "oklch(72.1% 0.011 78.2)",
+          "oklch(83.6% 0.011 78.2)",
+          "oklch(95.0% 0.011 78.2)"
+        ]
+      },
+      "cat-politics": {
+        "role": "data",
+        "displayName": "Politics",
+        "canonical": "#3987e5",
+        "cssVar": "--cat-politics",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.048 255.1)",
+          "oklch(26.4% 0.107 255.1)",
+          "oklch(37.9% 0.153 255.1)",
+          "oklch(49.3% 0.161 255.1)",
+          "oklch(60.7% 0.161 255.1)",
+          "oklch(72.1% 0.153 255.1)",
+          "oklch(83.6% 0.107 255.1)",
+          "oklch(95.0% 0.048 255.1)"
+        ]
+      },
+      "cat-sports": {
+        "role": "data",
+        "displayName": "Sports",
+        "canonical": "#d95926",
+        "cssVar": "--cat-sports",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.050 40.1)",
+          "oklch(26.4% 0.114 40.1)",
+          "oklch(37.9% 0.163 40.1)",
+          "oklch(49.3% 0.173 40.1)",
+          "oklch(60.7% 0.173 40.1)",
+          "oklch(72.1% 0.163 40.1)",
+          "oklch(83.6% 0.114 40.1)",
+          "oklch(95.0% 0.050 40.1)"
+        ]
+      },
+      "cat-geopolitics": {
+        "role": "data",
+        "displayName": "Geopolitics",
+        "canonical": "#199e70",
+        "cssVar": "--cat-geopolitics",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.042 163.1)",
+          "oklch(26.4% 0.090 163.1)",
+          "oklch(37.9% 0.126 163.1)",
+          "oklch(49.3% 0.128 163.1)",
+          "oklch(60.7% 0.128 163.1)",
+          "oklch(72.1% 0.126 163.1)",
+          "oklch(83.6% 0.090 163.1)",
+          "oklch(95.0% 0.042 163.1)"
+        ]
+      },
+      "cat-crypto": {
+        "role": "data",
+        "displayName": "Crypto",
+        "canonical": "#c98500",
+        "cssVar": "--cat-crypto",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.045 73.2)",
+          "oklch(26.4% 0.097 73.2)",
+          "oklch(37.9% 0.138 73.2)",
+          "oklch(49.3% 0.143 73.2)",
+          "oklch(60.7% 0.143 73.2)",
+          "oklch(72.1% 0.138 73.2)",
+          "oklch(83.6% 0.097 73.2)",
+          "oklch(95.0% 0.045 73.2)"
+        ]
+      },
+      "cat-entertainment": {
+        "role": "data",
+        "displayName": "Entertainment",
+        "canonical": "#d55181",
+        "cssVar": "--cat-entertainment",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.050 0.8)",
+          "oklch(26.4% 0.113 0.8)",
+          "oklch(37.9% 0.161 0.8)",
+          "oklch(49.3% 0.171 0.8)",
+          "oklch(60.7% 0.171 0.8)",
+          "oklch(72.1% 0.161 0.8)",
+          "oklch(83.6% 0.113 0.8)",
+          "oklch(95.0% 0.050 0.8)"
+        ]
+      },
+      "cat-other": {
+        "role": "data",
+        "displayName": "Other",
+        "canonical": "#9085e9",
+        "cssVar": "--cat-other",
+        "theme": "dark",
+        "tonalRamp": [
+          "oklch(15.0% 0.045 286.8)",
+          "oklch(26.4% 0.099 286.8)",
+          "oklch(37.9% 0.140 286.8)",
+          "oklch(49.3% 0.145 286.8)",
+          "oklch(60.7% 0.145 286.8)",
+          "oklch(72.1% 0.140 286.8)",
+          "oklch(83.6% 0.099 286.8)",
+          "oklch(95.0% 0.045 286.8)"
+        ]
+      },
+      "cat-politics-light": {
+        "role": "data",
+        "displayName": "Politics (print)",
+        "canonical": "#2a78d6",
+        "cssVar": "--cat-politics",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.048 255.5)",
+          "oklch(26.4% 0.108 255.5)",
+          "oklch(37.9% 0.154 255.5)",
+          "oklch(49.3% 0.163 255.5)",
+          "oklch(60.7% 0.163 255.5)",
+          "oklch(72.1% 0.154 255.5)",
+          "oklch(83.6% 0.108 255.5)",
+          "oklch(95.0% 0.048 255.5)"
+        ]
+      },
+      "cat-sports-light": {
+        "role": "data",
+        "displayName": "Sports (print)",
+        "canonical": "#eb6834",
+        "cssVar": "--cat-sports",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.050 40.6)",
+          "oklch(26.4% 0.115 40.6)",
+          "oklch(37.9% 0.165 40.6)",
+          "oklch(49.3% 0.175 40.6)",
+          "oklch(60.7% 0.175 40.6)",
+          "oklch(72.1% 0.165 40.6)",
+          "oklch(83.6% 0.115 40.6)",
+          "oklch(95.0% 0.050 40.6)"
+        ]
+      },
+      "cat-geopolitics-light": {
+        "role": "data",
+        "displayName": "Geopolitics (print)",
+        "canonical": "#1baf7a",
+        "cssVar": "--cat-geopolitics",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.044 162.1)",
+          "oklch(26.4% 0.096 162.1)",
+          "oklch(37.9% 0.136 162.1)",
+          "oklch(49.3% 0.141 162.1)",
+          "oklch(60.7% 0.141 162.1)",
+          "oklch(72.1% 0.136 162.1)",
+          "oklch(83.6% 0.096 162.1)",
+          "oklch(95.0% 0.044 162.1)"
+        ]
+      },
+      "cat-crypto-light": {
+        "role": "data",
+        "displayName": "Crypto (print)",
+        "canonical": "#eda100",
+        "cssVar": "--cat-crypto",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.048 75.1)",
+          "oklch(26.4% 0.107 75.1)",
+          "oklch(37.9% 0.153 75.1)",
+          "oklch(49.3% 0.161 75.1)",
+          "oklch(60.7% 0.161 75.1)",
+          "oklch(72.1% 0.153 75.1)",
+          "oklch(83.6% 0.107 75.1)",
+          "oklch(95.0% 0.048 75.1)"
+        ]
+      },
+      "cat-entertainment-light": {
+        "role": "data",
+        "displayName": "Entertainment (print)",
+        "canonical": "#e87ba4",
+        "cssVar": "--cat-entertainment",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.045 357.4)",
+          "oklch(26.4% 0.097 357.4)",
+          "oklch(37.9% 0.137 357.4)",
+          "oklch(49.3% 0.141 357.4)",
+          "oklch(60.7% 0.141 357.4)",
+          "oklch(72.1% 0.137 357.4)",
+          "oklch(83.6% 0.097 357.4)",
+          "oklch(95.0% 0.045 357.4)"
+        ]
+      },
+      "cat-other-light": {
+        "role": "data",
+        "displayName": "Other (print)",
+        "canonical": "#6250d6",
+        "cssVar": "--cat-other",
+        "theme": "light",
+        "tonalRamp": [
+          "oklch(15.0% 0.054 283.4)",
+          "oklch(26.4% 0.127 283.4)",
+          "oklch(37.9% 0.183 283.4)",
+          "oklch(49.3% 0.197 283.4)",
+          "oklch(60.7% 0.197 283.4)",
+          "oklch(72.1% 0.183 283.4)",
+          "oklch(83.6% 0.127 283.4)",
+          "oklch(95.0% 0.054 283.4)"
+        ]
+      },
+      "fail-bg": {
+        "role": "status",
+        "displayName": "Fail wash",
+        "cssVar": "--fail-bg",
+        "theme": "dark"
+      },
+      "warn-bg": {
+        "role": "status",
+        "displayName": "Warn wash",
+        "cssVar": "--warn-bg",
+        "theme": "dark"
+      },
+      "ready-bg": {
+        "role": "status",
+        "displayName": "Ready wash",
+        "cssVar": "--ready-bg",
+        "theme": "dark"
+      },
+      "fail-bg-light": {
+        "role": "status",
+        "displayName": "Fail wash (print)",
+        "cssVar": "--fail-bg",
+        "theme": "light"
+      },
+      "warn-bg-light": {
+        "role": "status",
+        "displayName": "Warn wash (print)",
+        "cssVar": "--warn-bg",
+        "theme": "light"
+      },
+      "ready-bg-light": {
+        "role": "status",
+        "displayName": "Ready wash (print)",
+        "cssVar": "--ready-bg",
+        "theme": "light"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name on home only; case-study and demo h1 run the same voice a step down."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Home section titles."
+      },
+      "headline-chapter": {
+        "displayName": "Chapter headline",
+        "purpose": "Story chapter headings beside the pinned strip."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Index-row titles."
+      },
+      "title-section": {
+        "displayName": "Section title",
+        "purpose": "Case-study h2, where margin marks attach."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Hero line (max 30ch) and a case study's first paragraph."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default serif text."
+      },
+      "body-reading": {
+        "displayName": "Reading",
+        "purpose": "Case-study column from 720px, 68ch."
+      },
+      "ui": {
+        "displayName": "UI",
+        "purpose": "Buttons, captions, link lists, inputs and tables, with tabular figures."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase meta lines, table heads, legends; beneath or inline, never above a heading."
+      },
+      "edge-print": {
+        "displayName": "Edge print",
+        "purpose": "Film manufacturer printing and frame numbers, on film only."
+      },
+      "china-note": {
+        "displayName": "China note",
+        "purpose": "KEEP / DIDN'T HOLD on the strip's lower rebate, rotated -4deg."
+      }
+    },
+    "shadows": [
+      {
+        "name": "loupe",
+        "value": "drop-shadow(0 calc(1.2 * var(--u)) calc(1.4 * var(--u)) rgb(0 0 0 / 0.5))",
+        "purpose": "The WebGL lens resting on the strip (a CSS filter)."
+      },
+      {
+        "name": "range-thumb",
+        "value": "0 1px 3px rgb(0 0 0 / 0.4)",
+        "purpose": "Demo slider knob."
+      }
+    ],
+    "motion": [
+      {
+        "name": "develop",
+        "value": "520ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Theme switch view transition: the new theme clips up from the bottom. Off under reduced motion."
+      },
+      {
+        "name": "state-change",
+        "value": "120ms ease-out",
+        "purpose": "Button background, color and border swaps."
+      },
+      {
+        "name": "strip-hold",
+        "value": "0.55",
+        "purpose": "Share of each frame's scroll during which the pinned strip holds before advancing."
+      },
+      {
+        "name": "mark-draw",
+        "value": "stroke-dashoffset 1 to 0; a cross's second stroke starts at 44% (span 0.56)",
+        "purpose": "Grease marks drawing on as frames pass the reading position; all drawn under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "film",
+        "value": "720px"
+      },
+      {
+        "name": "grid",
+        "value": "900px"
+      },
+      {
+        "name": "margin",
+        "value": "1100px"
+      }
+    ],
+    "filmUnits": {
+      "u": "6px, clamp(6px, 1.1svh, 9px) from 720px",
+      "mu": "6px fixed (masthead and footer rebates)",
+      "stripHeight": "35u",
+      "sprocketBand": "5.5u",
+      "pitch": "38u",
+      "window": "36u x 24u"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Resume and other main actions; swaps to solid china yellow on hover.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Resume (PDF)</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:.5em;min-height:46px;padding:0 20px;font-family:var(--font-display);font-weight:700;font-size:.9375rem;letter-spacing:.01em;border:1.5px solid var(--ink);border-radius:2px;color:var(--ink);background:transparent;text-decoration:none;cursor:pointer;transition:background-color 120ms ease-out,color 120ms ease-out,border-color 120ms ease-out}.ds-btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px}.ds-btn-primary{background:var(--ink);color:var(--ground)}.ds-btn-primary:hover{background:var(--china);border-color:var(--china);color:var(--film)}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Secondary action beside the primary; fills with the tray on hover.",
+      "html": "<a class=\"ds-btn ds-btn-quiet\" href=\"#\">Contact</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:.5em;min-height:46px;padding:0 20px;font-family:var(--font-display);font-weight:700;font-size:.9375rem;letter-spacing:.01em;border:1.5px solid var(--ink);border-radius:2px;color:var(--ink);background:transparent;text-decoration:none;cursor:pointer;transition:background-color 120ms ease-out,color 120ms ease-out,border-color 120ms ease-out}.ds-btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px}.ds-btn-quiet:hover{background:var(--ground-2)}"
+    },
+    {
+      "name": "Demo Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Number, text and select inputs in demos.",
+      "html": "<label class=\"ds-label\">Stack (bb) <input class=\"ds-input\" type=\"number\" value=\"10\"></label>",
+      "css": ".ds-label{font-family:var(--font-display);font-size:.9375rem;color:var(--ink)}.ds-input{font-family:var(--font-display);font-size:.9375rem;font-variant-numeric:tabular-nums;color:var(--ink);background:var(--ground-2);border:1px solid var(--rule);border-radius:2px;padding:6px 8px;min-height:36px}.ds-input:hover{border-color:var(--ink-2)}.ds-input:focus-visible{outline:2px solid var(--focus);outline-offset:3px}"
+    },
+    {
+      "name": "Rebate Masthead",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Film rebate across the top: sprocket band, amber name, condensed caps nav.",
+      "html": "<header class=\"ds-rebate\"><nav class=\"ds-nav\"><a class=\"ds-name\" href=\"#\">Ian Menachery</a><span><a href=\"#\">Work</a><a href=\"#\">Lab</a><a href=\"#\">Resume</a><a href=\"#\">Contact</a></span></nav></header>",
+      "css": ".ds-rebate{position:relative;background:var(--film);color:var(--on-film);padding:24px 16px 10px}.ds-rebate::before{content:\"\";position:absolute;inset-inline:0;top:0;height:24px;background:var(--hole);-webkit-mask:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4.75 4'%3E%3Crect x='1.385' y='.7' width='1.98' height='2.6' rx='.42'/%3E%3C/svg%3E\") 0 0 / 28.5px 24px repeat-x;mask:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4.75 4'%3E%3Crect x='1.385' y='.7' width='1.98' height='2.6' rx='.42'/%3E%3C/svg%3E\") 0 0 / 28.5px 24px repeat-x}.ds-nav{display:flex;justify-content:space-between;align-items:center;gap:12px}.ds-nav span{display:flex;gap:14px}.ds-nav a{color:inherit;font-family:var(--font-display);font-variation-settings:'wdth' 70;font-weight:600;text-transform:uppercase;letter-spacing:.07em;font-size:.8125rem;text-decoration:none;padding-block:6px}.ds-nav a:hover{text-decoration:underline;text-decoration-color:var(--edge);text-decoration-thickness:2px}.ds-nav .ds-name{color:var(--edge)}.ds-nav a:focus-visible{outline:2px solid var(--focus);outline-offset:3px}"
+    },
+    {
+      "name": "Index Row",
+      "kind": "card",
+      "refersTo": "title",
+      "description": "Ruled editorial index row: title, caps kind below, serif summary, text links.",
+      "html": "<ul class=\"ds-index\"><li class=\"ds-row\"><div><p class=\"ds-title\"><a href=\"#\">Project title</a></p><p class=\"ds-caps\">Kind</p></div><p class=\"ds-sum\">One-line summary of the question and what the result was.</p><p class=\"ds-links\"><a href=\"#\">Case study</a><a href=\"#\">Demo</a></p></li></ul>",
+      "css": ".ds-index{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}.ds-row{display:grid;gap:6px 40px;padding:22px 0 24px;border-bottom:1px solid var(--rule);color:var(--ink);font-family:var(--font-text)}.ds-title{font-family:var(--font-display);font-weight:700;font-size:1.375rem;line-height:1.15;letter-spacing:-.01em;margin:0}.ds-title a{color:inherit;text-decoration:none}.ds-title a:hover{text-decoration:underline;text-decoration-color:var(--link-line);text-decoration-thickness:3px}.ds-caps{font-family:var(--font-display);font-variation-settings:'wdth' 72;font-weight:600;text-transform:uppercase;letter-spacing:.07em;font-size:.8125rem;color:var(--ink-2);margin:6px 0 0}.ds-sum{max-width:60ch;margin:0}.ds-links{display:flex;gap:4px 18px;font-family:var(--font-display);font-weight:600;font-size:.9375rem;margin:0}.ds-links a{color:inherit;text-decoration-color:var(--link-line);text-decoration-thickness:1.5px;text-underline-offset:.22em}.ds-links a:hover{text-decoration-thickness:3px}.ds-links a:focus-visible,.ds-title a:focus-visible{outline:2px solid var(--focus);outline-offset:3px}"
+    },
+    {
+      "name": "Film Frame",
+      "kind": "custom",
+      "refersTo": "frame-window",
+      "description": "One frame of the strip: lit window, amber frame number, china note, grease loop.",
+      "html": "<div class=\"ds-frame\"><div class=\"ds-window\"></div><span class=\"ds-num\">7</span><span class=\"ds-note\">Keep</span><svg class=\"ds-mark\" viewBox=\"0 0 38 35\"><ellipse cx=\"19\" cy=\"17.5\" rx=\"18.4\" ry=\"13.1\"/></svg></div>",
+      "css": ".ds-frame{--u:6px;position:relative;width:calc(38*var(--u));height:calc(35*var(--u));background:var(--film)}.ds-window{position:absolute;left:var(--u);top:calc(5.5*var(--u));width:calc(36*var(--u));height:calc(24*var(--u));border-radius:calc(.5*var(--u));background:var(--window)}.ds-num{position:absolute;left:calc(2*var(--u));top:calc(29.9*var(--u));font-family:var(--font-display);font-variation-settings:'wdth' 62;font-weight:600;font-size:calc(1.3*var(--u));letter-spacing:.12em;color:var(--edge)}.ds-note{position:absolute;right:calc(2.2*var(--u));top:calc(29.4*var(--u));font-family:var(--font-display);font-variation-settings:'wdth' 80;font-weight:800;font-size:calc(2.3*var(--u));line-height:1;text-transform:uppercase;color:var(--china);transform:rotate(-4deg);transform-origin:right center}.ds-mark{position:absolute;inset:0;width:100%;height:100%;overflow:visible;fill:none;stroke:var(--grease);stroke-width:.62;stroke-linecap:round}"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "chip",
+      "refersTo": "button-primary",
+      "description": "Demo mode switch; the pressed segment fills Ink.",
+      "html": "<div class=\"ds-seg\"><button aria-pressed=\"true\">All</button><button aria-pressed=\"false\">Politics</button><button aria-pressed=\"false\">Sports</button></div>",
+      "css": ".ds-seg{display:flex;flex-wrap:wrap}.ds-seg button{font-family:var(--font-display);font-weight:700;font-size:.9375rem;min-height:40px;padding:0 16px;border:1.5px solid var(--ink);border-radius:0;margin-left:-1.5px;background:transparent;color:var(--ink);cursor:pointer;transition:background-color 120ms ease-out,color 120ms ease-out}.ds-seg button:first-child{margin-left:0;border-radius:2px 0 0 2px}.ds-seg button:last-child{border-radius:0 2px 2px 0}.ds-seg button:hover{background:var(--ground-2)}.ds-seg button[aria-pressed=\"true\"]{background:var(--ink);color:var(--ground)}.ds-seg button:focus-visible{outline:2px solid var(--focus);outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Editor's Contact Sheet",
+    "overview": "The site is a sheet of film an editor has gone over with a grease pencil. Black 35 mm strips with sprocket holes, amber edge print and frame numbers, frames lit like a light table; keepers looped in red, the claims that didn't hold crossed out and left in place. Dark is the darkroom (warm black ground, the default); light is the print (white paper). The film itself is black in both, so switching theme changes the room, never the material.\n\nDensity is editorial. Big condensed Archivo headings, a serif reading column, ruled index rows, and very little chrome. Ornament comes only from the film's own furniture: sprocket rebates on the masthead, footer and case-study meta line, edge print, grease marks, yellow china-marker notes. Motion is one authored moment, the pinned strip advancing frame by frame with its marks drawing on, plus the \"develop\" wipe when the theme changes. Nothing else animates in.\n\nHonesty is the visual idea. A crossed-out frame and a cross in a case study's margin are a finding, styled with the same care as a kept one.",
+    "keyCharacteristics": [
+      "Two themes, one film: black strips (#050404) never change; only ground, ink and marks' surroundings flip.",
+      "Everything on the film is sized in film units (`--u`, one millimetre of 35 mm film).",
+      "Grease red marks verdicts; china-marker yellow carries notes, focus, selection and the primary hover.",
+      "Archivo for display, UI and condensed edge print; Source Serif 4 for reading.",
+      "Flat, ruled, opaque. Depth comes from film on ground, not shadows."
+    ],
+    "rules": [
+      {
+        "name": "The Same Film Rule",
+        "body": "Film, on-film text, the window, edge amber and china yellow are identical in both themes. A theme swaps the room, never the strip.",
+        "section": "colors"
+      },
+      {
+        "name": "The Grease Is A Verdict Rule",
+        "body": "Red grease marks one thing: a judgment on a claim (loop = held, cross = didn't hold), plus light-mode links and focus. It is never decoration, a fill, or body text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Width Axis Rule",
+        "body": "Condense Archivo through `wdth`, never a second family: 72 for labels, 70 in the masthead nav, 62 for edge print, 80 for china notes. Headings stay at full width.",
+        "section": "typography"
+      },
+      {
+        "name": "The Label Sits Below Rule",
+        "body": "A caps label sits beneath or inline with what it describes: the degree line under the name, the kind under an index title, \"Frame N\" ahead of its caption. It never sits above a heading.",
+        "section": "typography"
+      },
+      {
+        "name": "The Only Lifted Objects Rule",
+        "body": "Cards, text, buttons and sections never cast shadows. A shadow means a physical tool sitting on the sheet.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** size anything on film in film units (`--u`, 6px rising to 9px) so holes, windows, edge print and notes keep their proportions.",
+      "**Do** keep film Film Black in both themes and let only ground, ink and marks' surroundings change.",
+      "**Do** mark claims with grease: a loop for held, a cross for didn't hold, and leave crossed frames on the sheet.",
+      "**Do** separate list items with 1px horizontal rules and keep the work list an editorial index.",
+      "**Do** label every chart series in text and back it with a table; color is never the only encoding.",
+      "**Do** give every motion a reduced-motion state: static scrollable strip, all marks drawn, no pin, no view transition.",
+      "**Do** build Read and Operate styles on these tokens, adding no new colors or font families."
+    ],
+    "donts": [
+      "**Don't** put a caps label, badge or eyebrow above a heading.",
+      "**Don't** use gradients, gradient text or glassmorphism; film, paper and the tray are flat and opaque.",
+      "**Don't** add grain or noise to the film; edge print and grease carry its texture.",
+      "**Don't** fade or slide sections in on scroll; the strip is the one authored motion.",
+      "**Don't** box lists into cards or give them colored left borders.",
+      "**Don't** let a button fade on hover; it swaps to a solid fill.",
+      "**Don't** set headings or accent words in serif italic; headings are Archivo.",
+      "**Don't** add an icon set; the theme switch's inline half-disc is the only icon.",
+      "**Don't** cast shadows from anything but the loupe and the range thumb."
+    ]
+  }
+}

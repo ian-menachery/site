@@ -12,10 +12,13 @@ export default function Lab() {
         Each demo runs in your browser on data exported from the project it
         comes from. Tests check the numbers against the original Python.
       </p>
-      <ul>
+      <ul className="index">
         {demos.map((d) => (
-          <li key={d.href}>
-            <Link href={d.href}>{d.title}</Link> (from {d.from})
+          <li key={d.href} className="index-row compact">
+            <p className="index-title">
+              <Link href={d.href}>{d.title}</Link>
+            </p>
+            <p className="caps">From {d.from}</p>
           </li>
         ))}
       </ul>

@@ -15,4 +15,4 @@ npm test        # demo math checked against the Python originals
   the current resume.
 - `docs/story.md`: the approved story and sitemap.
 
-Styling is a placeholder until the visual design pass.
+Visual system: `DESIGN.md` (tokens, type, components, rules). Home page brief: `.impeccable/surfaces/home.md`.

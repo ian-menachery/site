@@ -29,15 +29,16 @@ export type CalibrationData = {
 
 const ALL = "all";
 const HORIZONS: Record<string, string> = { close: "At close", "1h": "1 hour", "24h": "24 hours", "7d": "7 days" };
-// Okabe-Ito: distinguishable with common color-vision deficiencies. Placeholder until the design pass.
+// Theme colours live in globals.css (--cat-*): fixed per category, validated for
+// colour-vision deficiency on both themes' surfaces.
 const COLORS: Record<string, string> = {
-  [ALL]: "#000000",
-  crypto: "#e69f00",
-  entertainment: "#cc79a7",
-  geopolitics: "#009e73",
-  other: "#999999",
-  politics: "#0072b2",
-  sports: "#d55e00",
+  [ALL]: "var(--cat-all)",
+  crypto: "var(--cat-crypto)",
+  entertainment: "var(--cat-entertainment)",
+  geopolitics: "var(--cat-geopolitics)",
+  other: "var(--cat-other)",
+  politics: "var(--cat-politics)",
+  sports: "var(--cat-sports)",
 };
 const label = (s: string) => (s === ALL ? "All markets" : s[0].toUpperCase() + s.slice(1));
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
@@ -67,7 +68,7 @@ export default function CalibrationExplorer({ data }: { data: CalibrationData })
 
   return (
     <section aria-label="Calibration explorer">
-      <div role="group" aria-label="Time before resolution">
+      <div role="group" aria-label="Time before resolution" className="segmented">
         {data.snapshots.map((s) => (
           <button key={s} type="button" aria-pressed={s === snap} onClick={() => setSnap(s)}>
             {HORIZONS[s]}
@@ -102,13 +103,13 @@ export default function CalibrationExplorer({ data }: { data: CalibrationData })
         style={{ width: "100%", maxWidth: 520, height: "auto", display: "block", overflow: "visible" }}
       >
         {GRID.map((g) => (
-          <g key={g} stroke="#e5e5e5" strokeWidth={0.5}>
+          <g key={g} style={{ stroke: "var(--rule)" }} strokeWidth={0.5}>
             <line x1={x(g)} x2={x(g)} y1={y(0)} y2={y(1)} />
             <line x1={x(0)} x2={x(1)} y1={y(g)} y2={y(g)} />
           </g>
         ))}
         {TICKS.map((t) => (
-          <g key={t} fontSize={10} fill="#555">
+          <g key={t} fontSize={10} style={{ fill: "var(--ink-2)" }}>
             <text x={x(t)} y={y(0) + 14} textAnchor="middle">
               {Math.round(t * 100)}%
             </text>
@@ -117,19 +118,19 @@ export default function CalibrationExplorer({ data }: { data: CalibrationData })
             </text>
           </g>
         ))}
-        <text x={x(0.5)} y={T + H + 32} textAnchor="middle" fontSize={11}>
+        <text x={x(0.5)} y={T + H + 32} textAnchor="middle" fontSize={11} style={{ fill: "var(--ink-2)" }}>
           Average price (predicted probability)
         </text>
-        <text transform={`translate(11 ${y(0.5)}) rotate(-90)`} textAnchor="middle" fontSize={11}>
+        <text transform={`translate(11 ${y(0.5)}) rotate(-90)`} textAnchor="middle" fontSize={11} style={{ fill: "var(--ink-2)" }}>
           Share resolved Yes
         </text>
-        <line x1={x(0)} y1={y(0)} x2={x(1)} y2={y(1)} stroke="#888" strokeDasharray="4 3" />
+        <line x1={x(0)} y1={y(0)} x2={x(1)} y2={y(1)} style={{ stroke: "var(--ink-2)" }} strokeDasharray="4 3" />
         {keys
           .filter((k) => shown.includes(k))
           .map((k) => {
             const s = seriesFor(k);
             return (
-              <g key={k} stroke={COLORS[k]} fill={COLORS[k]}>
+              <g key={k} style={{ stroke: COLORS[k], fill: COLORS[k] }}>
                 {s.n.map((n, i) => {
                   if (n === 0) return null;
                   const [p, r, lo, hi] = [s.meanPredicted[i]!, s.realizedRate[i]!, s.ciLo[i]!, s.ciHi[i]!];

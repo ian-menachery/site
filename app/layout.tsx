@@ -1,9 +1,23 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Archivo, Source_Serif_4 } from "next/font/google";
 import Link from "next/link";
 import { contact } from "@/lib/site";
+import ThemeToggle from "@/components/theme-toggle";
 import "./globals.css";
 
 const host = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+
+const archivo = Archivo({
+  subsets: ["latin"],
+  axes: ["wdth"],
+  variable: "--font-archivo",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  axes: ["opsz"],
+  variable: "--font-serif",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(host ? `https://${host}` : "http://localhost:3000"),
@@ -21,32 +35,55 @@ export const metadata: Metadata = {
   twitter: { card: "summary" },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#161411",
+};
+
+// Runs before paint so a saved light theme never flashes dark first.
+const themeScript = `try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${archivo.variable} ${sourceSerif.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
-        <nav aria-label="Main">
+        <a className="skip" href="#main">
+          Skip to content
+        </a>
+        <header className="masthead rebate rebate-top">
+          <nav aria-label="Main">
+            <Link href="/" className="masthead-name">
+              Ian Menachery
+            </Link>
+            <ul>
+              <li>
+                <Link href="/work">Work</Link>
+              </li>
+              <li>
+                <Link href="/lab">Lab</Link>
+              </li>
+              <li>
+                <a href={contact.resume}>Resume</a>
+              </li>
+              <li>
+                <Link href="/#contact">Contact</Link>
+              </li>
+            </ul>
+          </nav>
+          <ThemeToggle />
+        </header>
+        <main id="main">{children}</main>
+        <footer className="site-footer rebate rebate-bottom">
           <ul>
             <li>
-              <Link href="/">Ian Menachery</Link>
+              <a href={`mailto:${contact.email}`}>{contact.email}</a>
             </li>
-            <li>
-              <Link href="/work">Work</Link>
-            </li>
-            <li>
-              <Link href="/lab">Lab</Link>
-            </li>
-            <li>
-              <a href={contact.resume}>Resume</a>
-            </li>
-            <li>
-              <Link href="/#contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-        <main>{children}</main>
-        <footer>
-          <ul>
             <li>
               <a href={contact.linkedin}>LinkedIn</a>
             </li>
@@ -54,7 +91,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <a href={contact.github}>GitHub</a>
             </li>
             <li>
-              <a href={`mailto:${contact.email}`}>{contact.email}</a>
+              <a href={contact.resume}>Resume (PDF)</a>
             </li>
           </ul>
         </footer>

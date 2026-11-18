@@ -21,9 +21,9 @@ export type Demo = {
   defects: Defect[];
 };
 
-const BLOCKED_BG = "rgba(220, 38, 38, 0.22)";
-const READY_BG = "rgba(22, 163, 74, 0.22)";
-const WARN_BG = "rgba(234, 179, 8, 0.25)";
+const BLOCKED_BG = "var(--fail-bg)";
+const READY_BG = "var(--ready-bg)";
+const WARN_BG = "var(--warn-bg)";
 const SHOWN = 50; // findings listed per check; the rest are counted
 
 function ref(f: Finding) {

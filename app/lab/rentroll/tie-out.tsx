@@ -20,8 +20,8 @@ export type Fixture = {
 };
 
 const EDITABLE = new Set(["in_place_rent", "market_rent"]);
-const FAIL_BG = "rgba(220, 38, 38, 0.22)";
-const SKIP_BG = "rgba(234, 179, 8, 0.25)";
+const FAIL_BG = "var(--fail-bg)";
+const SKIP_BG = "var(--warn-bg)";
 const READS_RENT_ROLL = new Set(CHECKS.filter((c) => c.requires.includes("rent_roll")).map((c) => c.id));
 
 type Flag = { id: string; status: CheckResult["status"] };
@@ -172,7 +172,7 @@ export default function TieOut({ fixtures }: { fixtures: Record<string, Fixture>
       </table>
 
       <h2>T12</h2>
-      <table>
+      <table tabIndex={0} aria-label="T12">
         <thead>
           <tr>
             {t12Columns.map((c) => (

@@ -270,7 +270,7 @@ Nearly square. Buttons, inputs, fieldsets, the rebated meta line and the roll fr
 
 ## Components
 
-The shared furniture (tokens, masthead, footer, buttons, film strip, loupe, index lists, grease marks) belongs to the system. The Read block (case-study prose) and the Operate block (demo controls) are owned and extended separately and may move into their own stylesheets (`app/work/prose.css`, `app/lab/lab.css`); they build on these tokens and add no new colors or families.
+The shared furniture (tokens, masthead, footer, buttons, film strip, loupe, index lists, grease marks) belongs to the system. The Read block (case-study prose) and the Operate block (demo controls) are owned and extended separately and live in their own stylesheets (`app/work/prose.css`, `app/lab/lab.css`), loaded from the /work and /lab layouts; they build on these tokens and add no new colors or families.
 
 ### Buttons
 - **Shape:** squared off (2px), 1.5px Ink border, 46px tall, 20px sides; demo buttons 40px tall, 16px sides.

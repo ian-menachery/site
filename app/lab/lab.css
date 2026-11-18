@@ -1,0 +1,343 @@
+/* Demos (Operate). Built on the tokens and shared pieces in app/globals.css. */
+
+.lab {
+  max-width: calc(72ch + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 40px var(--gutter) 24px;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 720px) {
+  .lab {
+    padding-top: 64px;
+  }
+}
+
+.lab h1 {
+  font-weight: 800;
+  font-size: clamp(2.375rem, 9vw, 4.25rem);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  margin-bottom: 20px;
+}
+
+.lab h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 2em 0 0.6em;
+}
+
+.lab h3 {
+  font-weight: 700;
+  font-size: 1.1875rem;
+  margin: 1.4em 0 0.4em;
+}
+
+.lab p,
+.lab ul,
+.lab ol,
+.lab table,
+.lab fieldset {
+  margin-bottom: 0.9em;
+}
+
+.lab > p,
+.lab section > p {
+  max-width: 68ch;
+}
+
+.lab ul > li {
+  margin-bottom: 0.35em;
+}
+
+.lab label {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+}
+
+.lab fieldset {
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 10px 16px 14px;
+}
+
+.lab legend {
+  font-family: var(--font-display);
+  font-variation-settings: "wdth" 72;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  padding: 0 6px;
+}
+
+.lab input[type="radio"],
+.lab input[type="checkbox"] {
+  accent-color: var(--ctl);
+  width: 1.05em;
+  height: 1.05em;
+  vertical-align: -0.12em;
+}
+
+.lab input[type="number"],
+.lab input[type="text"],
+.lab input:not([type]),
+.lab select {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  background: var(--ground-2);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 6px 8px;
+  min-height: 36px;
+  max-width: 100%;
+}
+
+.lab input[type="number"]:hover,
+.lab input[type="text"]:hover,
+.lab input:not([type]):hover,
+.lab select:hover {
+  border-color: var(--ink-2);
+}
+
+/* Editable cells (rent roll): keep rows close to the height of plain rows. */
+.lab td input:not([type]) {
+  min-height: 30px;
+  padding: 3px 6px;
+}
+
+/* Input grids (deal calculator). */
+.lab .fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  gap: 0 24px;
+}
+
+.lab .fields p {
+  margin-bottom: 14px;
+}
+
+.lab button {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1.5px solid var(--ink);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 120ms ease-out, color 120ms ease-out;
+}
+
+.lab button:hover:not(:disabled) {
+  background: var(--ground-2);
+}
+
+.lab button:disabled {
+  cursor: not-allowed;
+  border-color: var(--rule);
+  color: var(--ink-2);
+}
+
+.lab button.cell {
+  min-height: 0;
+  padding: 4px 0;
+  border: 0;
+  border-radius: 0;
+  font-weight: 600;
+  font-variation-settings: "wdth" 70;
+  font-size: clamp(0.625rem, 2.8vw, 0.8125rem);
+  line-height: 1.25;
+}
+
+.lab button.cell[aria-pressed="true"] {
+  outline: 2px solid var(--ink);
+  outline-offset: -2px;
+  position: relative;
+  z-index: 1;
+}
+
+.segmented {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.segmented button {
+  border-radius: 0;
+  margin-left: -1.5px;
+}
+
+.segmented button:first-child {
+  margin-left: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.segmented button:last-child {
+  border-radius: 0 2px 2px 0;
+}
+
+.lab .segmented button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--ground);
+}
+
+.lab input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  height: 32px;
+  width: min(100%, 28rem);
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.lab input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: var(--rule);
+  border-radius: 2px;
+}
+
+.lab input[type="range"]::-moz-range-track {
+  height: 4px;
+  background: var(--rule);
+  border-radius: 2px;
+}
+
+.lab input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: -8px;
+  border-radius: 50%;
+  background: var(--ctl);
+  border: 2px solid var(--ground);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.4);
+}
+
+.lab input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--ctl);
+  border: 2px solid var(--ground);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.4);
+}
+
+.lab svg text {
+  font-family: var(--font-display);
+}
+
+/* Tables. Column headers take the caps label style; row headers label data. */
+.lab table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+}
+
+.lab th,
+.lab td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px 14px 8px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.lab th:last-child,
+.lab td:last-child {
+  padding-right: 0;
+}
+
+.lab thead th {
+  font-variation-settings: "wdth" 72;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  border-bottom-color: var(--ink-2);
+}
+
+.lab tbody th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Record tables (rent roll, T12): one line per record; the table scrolls instead. */
+.lab table.nowrap td {
+  white-space: nowrap;
+}
+
+/* Exception reports (migration tie-out): a drawn disclosure caret, not the browser's. */
+.lab summary {
+  list-style: none;
+  cursor: pointer;
+  padding-block: 4px;
+}
+
+.lab summary::-webkit-details-marker {
+  display: none;
+}
+
+.lab summary::before {
+  content: "";
+  display: inline-block;
+  width: 0.45em;
+  height: 0.45em;
+  margin: 0 0.6em 0.12em 0.1em;
+  border-right: 2px solid var(--ink-2);
+  border-bottom: 2px solid var(--ink-2);
+  transform: rotate(-45deg);
+  transition: transform 120ms ease-out;
+}
+
+.lab details[open] > summary::before {
+  transform: rotate(45deg);
+}
+
+.lab summary:hover::before {
+  border-color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lab summary::before {
+    transition: none;
+  }
+}
+
+/* Quoted text inside a demo: a requester's message, an agent's reply. */
+.lab blockquote {
+  margin: 0 0 1em;
+  padding: 12px 16px;
+  background: var(--ground-2);
+  border-radius: 2px;
+  max-width: 68ch;
+}
+
+/* Tool calls and results in a trace. */
+.lab code {
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font-size: 0.84em;
+  overflow-wrap: anywhere;
+}
+
+.lab ol {
+  list-style: decimal;
+  padding-left: 1.6em;
+}
+
+.lab ol > li {
+  padding: 4px 6px;
+  margin-bottom: 2px;
+  border-radius: 2px;
+}

@@ -88,9 +88,9 @@ export default function CalibrationExplorer({ data }: { data: CalibrationData })
         {keys.map((k) => (
           <label key={k} style={{ display: "inline-block", marginRight: "1rem" }}>
             <input type="checkbox" checked={shown.includes(k)} onChange={() => toggle(k)} />{" "}
-            <span aria-hidden="true" style={{ color: COLORS[k] }}>
-              {"●"}
-            </span>{" "}
+            <svg aria-hidden="true" width="10" height="10" viewBox="0 0 10 10" style={{ display: "inline", verticalAlign: "0" }}>
+              <circle cx="5" cy="5" r="4.5" style={{ fill: COLORS[k] }} />
+            </svg>{" "}
             {label(k)}
           </label>
         ))}

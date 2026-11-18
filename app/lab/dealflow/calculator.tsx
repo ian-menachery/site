@@ -39,7 +39,7 @@ export default function Calculator({ defaults }: { defaults: DealInputs }) {
 
   return (
     <>
-      <form onSubmit={(e) => e.preventDefault()}>
+      <form className="fields" onSubmit={(e) => e.preventDefault()}>
         {FIELDS.map((f) => (
           <p key={f.key}>
             <label>

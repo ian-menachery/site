@@ -138,7 +138,7 @@ export default function TieOut({ fixtures }: { fixtures: Record<string, Fixture>
 
       <h2>Rent roll</h2>
       <p>Rent cells are editable; the checks re-run as you type. Highlighted rows are cited by a failing (red) or skipped (amber) check.</p>
-      <table>
+      <table className="nowrap">
         <thead>
           <tr>
             {rentColumns.map((c) => (
@@ -172,7 +172,7 @@ export default function TieOut({ fixtures }: { fixtures: Record<string, Fixture>
       </table>
 
       <h2>T12</h2>
-      <table tabIndex={0} aria-label="T12">
+      <table className="nowrap" tabIndex={0} aria-label="T12">
         <thead>
           <tr>
             {t12Columns.map((c) => (

@@ -74,7 +74,7 @@ function Chart({ data }: { data: PushFoldData }) {
         <div
           role="group"
           aria-label={`How often each hand should ${verb(position)} at ${depth} bb`}
-          className="grid min-w-[30rem] grid-cols-[repeat(13,minmax(0,1fr))] gap-px text-xs"
+          className="grid min-w-[19rem] grid-cols-[repeat(13,minmax(0,1fr))] gap-px text-xs"
         >
           {CLASS_NAMES.map((name) => {
             const { freq } = equilibrium(data, depth, position, name);

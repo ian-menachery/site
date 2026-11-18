@@ -133,13 +133,13 @@ function Replay({ trace }: { trace: Trace }) {
 
   return (
     <>
-      <p>
+      <div role="group" aria-label="Agent" className="segmented">
         {agents.map((a) => (
           <button key={a} type="button" aria-pressed={a === agent} onClick={() => pick(a)}>
-            {a} {trace.agents[a].grade.ok ? "✓" : "✗"}
+            {a}: {trace.agents[a].grade.ok ? "correct" : "wrong"}
           </button>
         ))}
-      </p>
+      </div>
       <ol>
         {steps.slice(0, shown).map((s, i) => {
           if (s.role === "tool_call" && s.name === "reply") return null;
@@ -192,13 +192,13 @@ export default function DeskcheckDemo({ results, traces }: { results: Results; t
   return (
     <>
       <h2>Results</h2>
-      <p>
+      <div role="group" aria-label="Case set" className="segmented">
         {(Object.keys(SETS) as ("test" | "gate3")[]).map((s) => (
           <button key={s} type="button" aria-pressed={s === set} onClick={() => setSet(s)}>
             {SETS[s].label}
           </button>
         ))}
-      </p>
+      </div>
       <ResultsTable results={results} set={set} />
       <p>
         Recomputed in your browser from {results.rows.length} graded runs. Total API spend for the

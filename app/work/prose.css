@@ -1,9 +1,10 @@
 /* Case studies (Read). Built on the tokens and shared pieces in app/globals.css. */
 
+/* Same column as the masthead and home; the reading measure is capped on the text itself. */
 .prose {
-  max-width: calc(68ch + 2 * var(--gutter));
+  max-width: calc(var(--col) + 2 * var(--gutter));
   margin: 0 auto;
-  padding: 40px var(--gutter) 24px;
+  padding: 36px var(--gutter) 24px;
   font-size: 1.125rem;
   line-height: 1.65;
 }
@@ -15,69 +16,45 @@
   }
 }
 
+.prose > * {
+  max-width: 68ch;
+}
+
 .prose > h1 {
-  font-weight: 800;
-  font-size: clamp(2.5rem, 10vw, 4.75rem);
-  line-height: 0.95;
-  letter-spacing: -0.04em;
-  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: clamp(2.25rem, 7vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  margin-bottom: 16px;
   overflow-wrap: break-word;
 }
 
 .prose > h1 + p {
-  font-size: clamp(1.25rem, 4.4vw, 1.5rem);
-  line-height: 1.42;
-  margin-bottom: 24px;
+  font-size: clamp(1.1875rem, 4vw, 1.3125rem);
+  line-height: 1.5;
+  margin-bottom: 14px;
 }
 
-/* The links + stack + date line becomes the film's edge print. */
+/* The links, stack and date line. */
 .prose > h1 + p + p {
-  position: relative;
-  background: var(--film);
-  color: var(--on-film);
-  padding: calc(4 * var(--mu) + 4px) 14px 14px;
-  margin: 0 calc(-1 * var(--gutter)) 40px;
   font-family: var(--font-display);
-  font-variation-settings: "wdth" 72;
-  font-weight: 600;
-  font-size: 0.8125rem;
-  line-height: 1.7;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
-
-.prose > h1 + p + p::before {
-  content: "";
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  height: calc(4 * var(--mu));
-  background: var(--hole);
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4.75 4'%3E%3Crect x='1.385' y='.7' width='1.98' height='2.6' rx='.42'/%3E%3C/svg%3E")
-    0 0 / calc(4.75 * var(--mu)) calc(4 * var(--mu)) repeat-x;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4.75 4'%3E%3Crect x='1.385' y='.7' width='1.98' height='2.6' rx='.42'/%3E%3C/svg%3E")
-    0 0 / calc(4.75 * var(--mu)) calc(4 * var(--mu)) repeat-x;
+  font-weight: 500;
+  font-size: 0.90625rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin-bottom: 40px;
 }
 
 .prose > h1 + p + p a {
-  color: var(--edge);
-  text-decoration-color: var(--edge);
-}
-
-@media (min-width: 720px) {
-  .prose > h1 + p + p {
-    margin-inline: 0;
-    border-radius: 2px;
-  }
+  color: var(--ink);
 }
 
 .prose h2 {
-  position: relative;
-  font-weight: 700;
-  font-size: 1.625rem;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-  margin: 2.1em 0 0.55em;
+  font-weight: 650;
+  font-size: 1.375rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 2em 0 0.5em;
 }
 
 .prose p,
@@ -89,17 +66,17 @@
 
 .prose ul > li {
   position: relative;
-  padding-left: 1.3em;
-  margin-bottom: 0.5em;
+  padding-left: 1.2em;
+  margin-bottom: 0.45em;
 }
 
 .prose ul > li::before {
   content: "";
   position: absolute;
-  left: 0.15em;
+  left: 0.1em;
   top: 0.8em;
-  width: 0.6em;
-  height: 2px;
+  width: 0.5em;
+  height: 1.5px;
   background: var(--ink-2);
 }
 
@@ -113,34 +90,7 @@
   font-size: 0.88em;
   background: var(--ground-2);
   padding: 0.1em 0.35em;
-  border-radius: 3px;
-}
-
-.margin-mark {
-  display: inline-block;
-  width: 1.15em;
-  height: 1.15em;
-  margin-right: 0.35em;
-  vertical-align: -0.12em;
-}
-
-@media (min-width: 1100px) {
-  .margin-mark {
-    position: absolute;
-    left: -2.2em;
-    top: -0.2em;
-    width: 1.6em;
-    height: 1.6em;
-    margin: 0;
-  }
-}
-
-.margin-mark path {
-  fill: none;
-  stroke: var(--grease);
-  stroke-width: 2.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  border-radius: 4px;
 }
 
 .prose table {
@@ -163,11 +113,8 @@
 }
 
 .prose thead th {
-  font-variation-settings: "wdth" 72;
   font-weight: 600;
-  font-size: 0.8125rem;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
+  font-size: 0.875rem;
   color: var(--ink-2);
   border-bottom-color: var(--ink-2);
 }

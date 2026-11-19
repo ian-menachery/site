@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { demos } from "@/lib/site";
+import Arrow from "@/components/arrow";
 
 export const metadata: Metadata = { title: "Lab" };
 
@@ -12,13 +13,16 @@ export default function Lab() {
         Each demo runs in your browser on data exported from the project it
         comes from. Tests check the numbers against the original Python.
       </p>
-      <ul className="index">
+      <ul className="list">
         {demos.map((d) => (
-          <li key={d.href} className="index-row compact">
-            <p className="index-title">
-              <Link href={d.href}>{d.title}</Link>
+          <li key={d.href}>
+            <p className="item-title">
+              <Link href={d.href}>
+                {d.title}
+                <Arrow />
+              </Link>
             </p>
-            <p className="caps">From {d.from}</p>
+            <p className="item-side">From {d.from}</p>
           </li>
         ))}
       </ul>

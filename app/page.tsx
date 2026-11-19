@@ -1,97 +1,128 @@
+import { ViewTransition } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { contact, demos, projects } from "@/lib/site";
-import { chapters, frames } from "@/lib/frames";
-import FilmStrip from "@/components/strip/film-strip";
-import ProjectIndex from "@/components/project-index";
-import { loop } from "@/components/strip/marks";
+import HomeEv from "@/components/home-ev";
+import Arrow from "@/components/arrow";
 
-const headshotMark = loop(5, 50, 50, 40, 41);
+const experience = [
+  {
+    org: "EY",
+    role: "Technology Consulting Intern, New York",
+    when: "Jun–Aug 2026",
+    what: "Built two Copilot Studio agents on Power Automate flows for an SAP S/4HANA implementation team.",
+  },
+  {
+    org: "Sun Life",
+    role: "Reporting Analyst Co-op, Wellesley Hills",
+    when: "Jul–Dec 2025",
+    what: "Fixed figures in recurring reports and automated cross-sell reporting in SQL.",
+  },
+  {
+    org: "Knack",
+    role: "Economics & Data Science Tutor, Boston",
+    when: "Mar 2024 – Apr 2026",
+    what: "80+ hours of tutoring, rated 4.97/5.",
+  },
+  {
+    org: "Northeastern University",
+    role: "B.S. Data Science and B.S. Economics",
+    when: "December 2026",
+    what: "",
+  },
+];
 
 export default function Home() {
   return (
-    <>
-      <header className="hero">
+    <div className="page home">
+      <header className="intro">
         <h1>Ian Menachery</h1>
-        <p className="caps meta">
-          <span>Data Science + Economics ·</span> <span>Northeastern University ·</span>{" "}
-          <span>December 2026</span>
+        <p className="degree">Data Science + Economics, Northeastern University, December 2026</p>
+        <p className="roles">Open to full-time 2027 roles in AI solutions, consulting, analytics and data science.</p>
+        <p className="actions">
+          <a className="btn btn-primary" href={contact.resume}>
+            Resume (PDF)
+          </a>
+          <Link className="btn btn-quiet" href="#contact">
+            Contact
+          </Link>
         </p>
-        <p className="lede">
-          I make data and AI dependable: I automate the tedious part, test the
-          claims, and explain what the numbers mean.
-        </p>
-        <div>
-          <p className="roles">
-            Open to full-time 2027 roles in AI solutions, consulting, analytics
-            and data science.
-          </p>
-          <p className="actions">
-            <a className="btn btn-primary" href={contact.resume}>
-              Resume (PDF)
-            </a>
-            <Link className="btn btn-quiet" href="#contact">
-              Contact
-            </Link>
-          </p>
-        </div>
       </header>
 
-      <FilmStrip frames={frames} chapters={chapters} />
-
-      <section className="section" aria-labelledby="work">
-        <h2 id="work" className="section-title">
-          Selected work
+      <section className="section" aria-labelledby="experience">
+        <h2 id="experience" className="section-title">
+          Experience
         </h2>
-        <ProjectIndex projects={projects} />
+        <ul className="list">
+          {experience.map((x) => (
+            <li key={x.org}>
+              <p className="item-title">
+                {x.org} <span className="role">· {x.role}</span>
+              </p>
+              <p className="item-side">{x.when}</p>
+              {x.what && <p className="item-desc">{x.what}</p>}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="section" aria-labelledby="projects">
+        <h2 id="projects" className="section-title">
+          Projects
+        </h2>
+        <ul className="list">
+          {projects.map((p) => (
+            <li key={p.slug}>
+              <p className="item-title">
+                <Link href={`/work/${p.slug}`}>
+                  <ViewTransition name={`project-${p.slug}`} share="morph" default="none">
+                    <span className="vt">{p.title}</span>
+                  </ViewTransition>
+                  <Arrow />
+                </Link>
+              </p>
+              <p className="item-side">
+                {p.demo && (
+                  <Link href={p.demo} className="ui-link">
+                    Demo
+                  </Link>
+                )}
+                {p.repo ? (
+                  <a href={p.repo} className="ui-link">
+                    Code
+                  </a>
+                ) : (
+                  <span>Private repo</span>
+                )}
+              </p>
+              <p className="item-desc">{p.kind}</p>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="section" aria-labelledby="lab">
         <h2 id="lab" className="section-title">
           Lab
         </h2>
-        <p className="intro">
-          Live demos that run in your browser, built from each project&apos;s own
-          data. Tests check the numbers against the original Python.
+        <p className="section-note">
+          Demos that run in your browser on each project&apos;s own data. Below is showdown&apos;s push/fold
+          solution: the EV of going all in with each hand, in big blinds. Shaded hands beat folding.
         </p>
-        <ul className="index">
+        <HomeEv />
+        <ul className="list" style={{ marginTop: 28 }}>
           {demos.map((d) => (
-            <li key={d.href} className="index-row compact">
-              <p className="index-title">
-                <Link href={d.href}>{d.title}</Link>
+            <li key={d.href}>
+              <p className="item-title">
+                <Link href={d.href}>
+                  {d.title}
+                  <Arrow />
+                </Link>
               </p>
-              <p className="caps">From {d.from}</p>
+              <p className="item-side">From {d.from}</p>
             </li>
           ))}
         </ul>
-      </section>
-
-      <section className="section" aria-labelledby="experience">
-        <h2 id="experience" className="section-title">
-          Experience
-        </h2>
-        <dl className="cv">
-          <div>
-            <dt>EY</dt>
-            <dd>Technology Consulting Intern, New York</dd>
-            <dd>Jun–Aug 2026</dd>
-          </div>
-          <div>
-            <dt>Sun Life</dt>
-            <dd>Reporting Analyst Co-op, Wellesley Hills</dd>
-            <dd>Jul 2025 – Jan 2026</dd>
-          </div>
-          <div>
-            <dt>Knack</dt>
-            <dd>Economics &amp; Data Science Tutor, Boston (80+ hours, 4.97/5)</dd>
-            <dd>Mar 2024 – Apr 2026</dd>
-          </div>
-          <div>
-            <dt>Northeastern University</dt>
-            <dd>B.S. Data Science and B.S. Economics</dd>
-            <dd>December 2026</dd>
-          </div>
-        </dl>
       </section>
 
       <section className="section" aria-labelledby="about">
@@ -99,19 +130,10 @@ export default function Home() {
           About
         </h2>
         <div className="about">
-          <figure className="roll">
-            <span className="edge-print" aria-hidden="true">
-              Ian Menachery · Dec 2025
-            </span>
-            <Image src="/headshot.jpg" alt="Ian Menachery" width={800} height={800} sizes="(min-width: 900px) 340px, 90vw" />
-            <svg className="mark" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <path d={headshotMark.d} />
-            </svg>
-          </figure>
+          <Image src="/headshot.jpg" alt="Ian Menachery" width={800} height={800} sizes="104px" />
           <p>
-            I study data science and economics at Northeastern and graduate in
-            December 2026. Outside work: chess, poker, basketball and personal
-            finance.
+            I study data science and economics at Northeastern and graduate in December 2026. Outside work: chess,
+            poker, basketball and personal finance.
           </p>
         </div>
       </section>
@@ -135,6 +157,6 @@ export default function Home() {
           </li>
         </ul>
       </section>
-    </>
+    </div>
   );
 }

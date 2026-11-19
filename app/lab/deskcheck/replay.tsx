@@ -44,7 +44,8 @@ function ResultsTable({ results, set }: { results: Results; set: "test" | "gate3
   const routerRun = runs.find(([, r]) => !r.model)?.[0];
   const router = routerRun ? summarize(rows[routerRun]) : null;
   return (
-    <table>
+    // Focusable so keyboard users can scroll it sideways on a phone.
+    <table tabIndex={0}>
       <thead>
         <tr>
           <th>Agent</th>

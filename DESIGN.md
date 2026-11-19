@@ -1,41 +1,47 @@
 ---
 name: Ian Menachery
-description: An editor's contact sheet of checked claims, keepers circled and failures crossed out and left on the sheet.
+description: Minimal black and white with a soft cobalt accent, one centred column of what Ian has done.
 colors:
-  china-marker: "#f2c94c"
-  grease: "#d42a20"
-  grease-light: "#c8211a"
-  edge-amber: "#d9a046"
-  heat: "#b8241b"
-  heat-light: "#e0645a"
-  ground: "#161411"
-  ground-2: "#201d19"
-  ink: "#ece9e3"
-  ink-2: "#aba59b"
-  rule: "#38332c"
-  hole: "#e9e6de"
-  ground-light: "#f7f7f4"
-  ground-2-light: "#ebeae5"
-  ink-light: "#121110"
-  ink-2-light: "#57534c"
-  rule-light: "#d3d0c9"
-  film: "#050404"
-  on-film: "#ece9e3"
-  window: "#e2e0da"
-  window-ink: "#151413"
-  window-ink-2: "#5d5953"
+  ground: "#0b0b0b"
+  ground-2: "#161616"
+  ink: "#ededeb"
+  ink-2: "#9d9d99"
+  rule: "#232323"
+  accent: "#a3b3e6"
+  on-accent: "#0b1030"
+  accent-text: "#aebce9"
+  link-line: "#6b6b68"
+  link-hover: "#8a9bd3"
+  focus: "#a3b3e6"
+  ctl: "#a3b3e6"
+  heat: "#4a5fb0"
+  ground-light: "#ffffff"
+  ground-2-light: "#f3f3f1"
+  ink-light: "#141414"
+  ink-2-light: "#5e5e5a"
+  rule-light: "#e7e7e4"
+  accent-light: "#3f58b8"
+  on-accent-light: "#ffffff"
+  accent-text-light: "#3f58b8"
+  link-line-light: "#a3a39f"
+  link-hover-light: "#3f58b8"
+  focus-light: "#3f58b8"
+  ctl-light: "#3f58b8"
+  heat-light: "#4a62bd"
   fail-bg: "rgb(212 42 32 / 0.28)"
   warn-bg: "rgb(242 201 76 / 0.2)"
   ready-bg: "rgb(126 178 116 / 0.22)"
   fail-bg-light: "rgb(200 33 26 / 0.16)"
   warn-bg-light: "rgb(214 160 20 / 0.22)"
   ready-bg-light: "rgb(60 130 60 / 0.16)"
+  cat-all: "#ededeb"
   cat-politics: "#3987e5"
   cat-sports: "#d95926"
   cat-geopolitics: "#199e70"
   cat-crypto: "#c98500"
   cat-entertainment: "#d55181"
   cat-other: "#9085e9"
+  cat-all-light: "#141414"
   cat-politics-light: "#2a78d6"
   cat-sports-light: "#eb6834"
   cat-geopolitics-light: "#1baf7a"
@@ -45,39 +51,65 @@ colors:
 typography:
   display:
     fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
-    fontSize: "clamp(3.4rem, 15.5vw, 6rem)"
-    fontWeight: 800
-    lineHeight: 0.9
-    letterSpacing: "-0.04em"
+    fontSize: "clamp(2.5rem, 9vw, 3.5rem)"
+    fontWeight: 700
+    lineHeight: 1
+    letterSpacing: "-0.035em"
   headline:
     fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
-    fontSize: "clamp(2.125rem, 7vw, 3.75rem)"
-    fontWeight: 800
-    lineHeight: 0.98
-    letterSpacing: "-0.035em"
-  headline-chapter:
-    fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
-    fontSize: "clamp(2rem, 6.4vw, 3.25rem)"
-    fontWeight: 800
+    fontSize: "clamp(2.25rem, 7vw, 3.25rem)"
+    fontWeight: 700
     lineHeight: 1
-    letterSpacing: "-0.03em"
+    letterSpacing: "-0.035em"
   title:
     fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
     fontSize: "1.375rem"
-    fontWeight: 700
-    lineHeight: 1.15
+    fontWeight: 650
+    lineHeight: 1.2
     letterSpacing: "-0.01em"
-  title-section:
+  title-item:
     fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
-    fontSize: "1.625rem"
-    fontWeight: 700
-    lineHeight: 1.15
-    letterSpacing: "-0.015em"
+    fontSize: "1.03125rem"
+    fontWeight: 600
+    lineHeight: 1.35
+    letterSpacing: "-0.005em"
+  name-mark:
+    fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
+    fontSize: "0.96875rem"
+    fontWeight: 650
+    lineHeight: 1
+  meta:
+    fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
+    fontSize: "0.96875rem"
+    fontWeight: 500
+    lineHeight: 1.5
+  label:
+    fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
+    fontSize: "0.90625rem"
+    fontWeight: 600
+    lineHeight: 1.3
+  ui:
+    fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
+    fontSize: "0.90625rem"
+    fontWeight: 500
+    lineHeight: 1.4
+  button:
+    fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
+    fontSize: "0.90625rem"
+    fontWeight: 600
+    lineHeight: 1
+  data-cell:
+    fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
+    fontSize: "clamp(0.5rem, 2.3vw, 0.75rem)"
+    fontWeight: 600
+    lineHeight: 1.1
+    fontFeature: "tnum"
+    fontVariation: "'wdth' 75"
   lede:
     fontFamily: "Source Serif 4, Georgia, Times New Roman, serif"
-    fontSize: "clamp(1.25rem, 4.6vw, 1.625rem)"
+    fontSize: "clamp(1.1875rem, 4vw, 1.3125rem)"
     fontWeight: 400
-    lineHeight: 1.38
+    lineHeight: 1.5
   body:
     fontFamily: "Source Serif 4, Georgia, Times New Roman, serif"
     fontSize: "1.0625rem"
@@ -88,82 +120,72 @@ typography:
     fontSize: "1.1875rem"
     fontWeight: 400
     lineHeight: 1.65
-  ui:
-    fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
-    fontSize: "0.9375rem"
-    fontWeight: 600
-    lineHeight: 1.4
-    fontFeature: "tnum"
-  label:
-    fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
-    fontSize: "0.8125rem"
-    fontWeight: 600
-    letterSpacing: "0.07em"
-    fontVariation: "'wdth' 72"
-  edge-print:
-    fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
-    fontSize: "calc(1.3 * var(--u))"
-    fontWeight: 600
-    lineHeight: 1
-    letterSpacing: "0.12em"
-    fontVariation: "'wdth' 62"
-  china-note:
-    fontFamily: "Archivo, Arial Narrow, Arial, sans-serif"
-    fontSize: "calc(2.3 * var(--u))"
-    fontWeight: 800
-    lineHeight: 1
-    letterSpacing: "0.02em"
-    fontVariation: "'wdth' 80"
 rounded:
   hairline: "2px"
-  code: "3px"
-  window: "calc(0.5 * var(--u))"
+  code: "4px"
+  control: "6px"
+  photo: "8px"
   round: "50%"
 spacing:
-  film-unit: "6px"
-  gutter: "16px"
-  gutter-wide: "32px"
-  section: "72px"
-  page: "1280px"
+  gutter: "20px"
+  gutter-wide: "40px"
+  column: "760px"
+  reading: "68ch"
+  operate: "68ch"
+  row: "12px"
+  section: "28px"
+  footer: "72px"
 components:
   button-primary:
     backgroundColor: "{colors.ink}"
     textColor: "{colors.ground}"
-    typography: "{typography.ui}"
-    rounded: "{rounded.hairline}"
-    padding: "0 20px"
-    height: "46px"
+    typography: "{typography.button}"
+    rounded: "{rounded.control}"
+    padding: "0 16px"
+    height: "40px"
   button-primary-hover:
-    backgroundColor: "{colors.china-marker}"
-    textColor: "{colors.film}"
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.on-accent}"
   button-quiet:
     textColor: "{colors.ink}"
-    typography: "{typography.ui}"
-    rounded: "{rounded.hairline}"
-    padding: "0 20px"
-    height: "46px"
+    typography: "{typography.button}"
+    rounded: "{rounded.control}"
+    padding: "0 16px"
+    height: "40px"
   button-quiet-hover:
     backgroundColor: "{colors.ground-2}"
   input-field:
     backgroundColor: "{colors.ground-2}"
     textColor: "{colors.ink}"
     typography: "{typography.ui}"
-    rounded: "{rounded.hairline}"
+    rounded: "{rounded.control}"
     padding: "6px 8px"
     height: "36px"
   nav-link:
-    textColor: "{colors.on-film}"
-    typography: "{typography.label}"
-    padding: "6px 0"
-  rebate:
-    backgroundColor: "{colors.film}"
-    textColor: "{colors.on-film}"
-  frame-window:
-    backgroundColor: "{colors.window}"
-    textColor: "{colors.window-ink}"
-    rounded: "{rounded.window}"
-    width: "calc(36 * var(--u))"
-    height: "calc(24 * var(--u))"
+    textColor: "{colors.ink-2}"
+    typography: "{typography.ui}"
+    padding: "4px 0"
+  nav-link-hover:
+    textColor: "{colors.ink}"
+  list-title:
+    textColor: "{colors.ink}"
+    typography: "{typography.title-item}"
+  list-title-hover:
+    textColor: "{colors.accent-text}"
+  segment-pressed:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.ground}"
+    typography: "{typography.button}"
+    rounded: "{rounded.control}"
+  ev-cell:
+    textColor: "{colors.ink}"
+    typography: "{typography.data-cell}"
+  ev-cell-cold:
+    textColor: "{colors.ink-2}"
+  theme-toggle:
+    textColor: "{colors.ink-2}"
+    rounded: "{rounded.round}"
+    size: "32px"
   code-inline:
     backgroundColor: "{colors.ground-2}"
     rounded: "{rounded.code}"
@@ -174,158 +196,134 @@ components:
 
 ## Overview
 
-**Creative North Star: "The Editor's Contact Sheet"**
+**Creative North Star: "The Plain Record"**
 
-The site is a sheet of film an editor has gone over with a grease pencil. Black 35 mm strips with sprocket holes, amber edge print and frame numbers, frames lit like a light table; keepers looped in red, the claims that didn't hold crossed out and left in place. Dark is the darkroom (warm black ground, the default); light is the print (white paper). The film itself is black in both, so switching theme changes the room, never the material.
+Minimal black and white with a soft cobalt accent. Dark is the default and light is a real theme with its own values, not an inversion. Archivo carries names, headings and UI; Source Serif 4 carries reading. The page is one centred column, stacked in order: the name, a degree line, a roles line, Resume and Contact, then short Experience and Projects lists. Home leads with what Ian has done and keeps prose to a sentence where a sentence will do.
 
-Density is editorial. Big condensed Archivo headings, a serif reading column, ruled index rows, and very little chrome. Ornament comes only from the film's own furniture: sprocket rebates on the masthead, footer and case-study meta line, edge print, grease marks, yellow china-marker notes. Motion is one authored moment, the pinned strip advancing frame by frame with its marks drawing on, plus the "develop" wipe when the theme changes. Nothing else animates in.
+Density is quiet. Ruled lists, small grey section titles, generous space around the name, and almost no chrome. The cobalt is rare on purpose: it appears on hover, focus, selection, the primary button's hover fill, and the push/fold heat. Everything else is ink on ground.
 
-Honesty is the visual idea. A crossed-out frame and a cross in a case study's margin are a finding, styled with the same care as a kept one.
+Motion is a handful of small, specific moments. A one-time intro entrance on the first visit to home, in which the name only moves and never starts invisible, so it paints at once and LCP is not delayed. A project title that morphs into its case-study heading through React's `<ViewTransition>` (name `project-<slug>`, `share="morph"`). Hover details: the arrow nudges and the underline draws across. The theme switch wipes the new theme up from the bottom, scoped to `[data-theming]` so navigation keeps its own transition. And a live push/fold EV grid on home. All of it is off under `prefers-reduced-motion`.
 
 **Key Characteristics:**
-- Two themes, one film: black strips (#050404) never change; only ground, ink and marks' surroundings flip.
-- Everything on the film is sized in film units (`--u`, one millimetre of 35 mm film).
-- Grease red marks verdicts; china-marker yellow carries notes, focus, selection and the primary hover.
-- Archivo for display, UI and condensed edge print; Source Serif 4 for reading.
-- Flat, ruled, opaque. Depth comes from film on ground, not shadows.
+- Black, white and one soft cobalt; dark by default, with a real light theme.
+- Archivo for names, headings and UI; Source Serif 4 for reading.
+- One centred 760px column with ruled lists and no cards.
+- Flat and opaque: no shadows anywhere.
+- Small, authored motion, every piece of it off under reduced motion.
 
 ## Colors
 
-A warm neutral room around black film, with three marking colors taken from an editor's kit: amber edge print, red grease pencil, yellow china marker.
+Near-black and near-white neutrals with one desaturated cobalt that is lighter and softer in the dark theme and deeper in the light one.
 
 ### Primary
-- **China Marker Yellow** (`china-marker`): the editor's notes (KEEP, DIDN'T HOLD) rotated on the black rebate, text selection, the skip link, the primary button's hover fill, and focus and control accent in the dark theme. Same value in both themes, because it only ever sits on film or as a solid fill.
-
-### Secondary
-- **Grease Pencil Red** (`grease`, `grease-light` in the print): the loops and crosses on frames, the margin marks beside Results and What didn't work, and in light mode the link underline, focus ring and control accent. A stroke, never a fill or a text color.
-
-### Tertiary
-- **Edge-Print Amber** (`edge-amber`): edge print, frame numbers, the masthead name, link underlines on the rebate, and link underlines in the dark theme. It is the film's own manufacturer printing, so it lives on black.
+- **Soft Cobalt** (`accent`, #a3b3e6 dark, #3f58b8 light): text selection, the skip link, the primary button's hover fill, the focus ring (`focus`) and form-control accent (`ctl`), which take the same value. Text on it uses **Cobalt Ink** (`on-accent`, #0b1030 dark, #ffffff light), 9.0:1 dark and 6.4:1 light.
+- **Cobalt Text** (`accent-text`, #aebce9 dark, #3f58b8 light): list titles and their arrows on hover. 10.5:1 on the dark ground and 6.4:1 on the light.
+- **Cobalt Underline** (`link-hover`, #8a9bd3 dark, #3f58b8 light): the underline colour a link takes on hover, and the line that draws under UI links.
 
 ### Neutral
-- **Darkroom Black** (`ground`) / **Print White** (`ground-light`): the page ground in each theme.
-- **Tray** (`ground-2` / `ground-2-light`): the one raised neutral: inputs, inline code, quiet-button hover, the heatmap's zero end.
-- **Ink** (`ink` / `ink-light`) and **Pencil Grey** (`ink-2` / `ink-2-light`): text and secondary text (meta lines, table heads, list dashes). Pencil Grey measures 7.5:1 on the darkroom and 7.1:1 on the print.
-- **Rule** (`rule` / `rule-light`): every 1px divider, input border and range track.
-- **Film Black** (`film`) with **On-Film** text (`on-film`): strips, rebates, the 6x6 roll frame and the case-study meta line. Theme-invariant.
-- **Sprocket** (`hole`): the punched holes; in the print they show the paper (#f7f7f4).
-- **Light-Table Window** (`window`) with **Window Ink** (`window-ink`, `window-ink-2`): the lit frame and what is printed on it.
+- **Off-Black** (`ground`, #0b0b0b) and **Paper White** (`ground-light`, #ffffff): the page ground.
+- **Raised Grey** (`ground-2`, #161616 / #f3f3f1): the one raised neutral. Inputs, inline code, blockquotes in demos, the quiet button's hover, and the cool end of the heat mix.
+- **Bone** (`ink`, #ededeb) and **Near-Black** (`ink-light`, #141414): text, the primary button fill, pressed segments. 16.8:1 dark and 18.4:1 light.
+- **Graphite** (`ink-2`, #9d9d99 / #5e5e5a): secondary text. Section titles, degree and roles lines, dates, list descriptions, nav and footer links at rest, table heads. 7.2:1 dark and 6.5:1 light.
+- **Hairline** (`rule`, #232323 / #e7e7e4): every 1px divider, button and input border, fieldset, and range track.
+- **Underline Grey** (`link-line`, #6b6b68 / #a3a39f): the resting underline under body links.
 
 ### Data and status
-- **Status washes** (`fail-bg`, `warn-bg`, `ready-bg`, each with a `-light` value): translucent row and cell fills in the demos' tie-out tables. They tint a labelled cell; the label carries the meaning.
-- **Heat** (`heat` / `heat-light`): the push/fold frequency heatmap, mixed in OKLab from Tray to Heat by frequency, with the value printed in each cell.
-- **Category series** (`cat-*`, each with a `-light` value; `cat-all` uses Ink): fixed per category in the calibration explorer. Politics, sports and geopolitics, the first three slots, pass all-pairs CVD separation in both themes. On the darkroom every slot clears 4.6:1. On the print, sports (2.98:1), geopolitics (2.62:1), crypto (2.02:1) and entertainment (2.51:1) measure under 3:1 against the paper; they are relieved by visible legend labels and the Brier table, never by color alone.
+- **Heat** (`heat`, #4a5fb0 dark, #4a62bd light): the push/fold grid's shading, mixed in sRGB from Raised Grey toward Heat. A hand that beats folding starts at 20% and rises with its EV gain, capped at 80% heat, so ink on the hottest cell stays AA: 6.5:1 dark and 4.8:1 light.
+- **Status washes** (`fail-bg`, `warn-bg`, `ready-bg`, each with a `-light` value): translucent fills on table rows, cells and verdict lines in the demos. The text label always carries the meaning.
+- **Category series** (`cat-*`, each with a `-light` value; `cat-all` matches Ink): fixed per category in the calibration explorer, with every series named in a text legend.
 
 ### Named Rules
-**The Same Film Rule.** Film, on-film text, the window, edge amber and china yellow are identical in both themes. A theme swaps the room, never the strip.
+**The One Blue Rule.** Cobalt is the only hue outside the demos' data and status colours. It marks interaction (hover, focus, selection, pressed fill) and the EV heat, never decoration or a heading.
 
-**The Grease Is A Verdict Rule.** Red grease marks one thing: a judgment on a claim (loop = held, cross = didn't hold), plus light-mode links and focus. It is never decoration, a fill, or body text.
+**The Real Light Theme Rule.** Each theme sets its own values for every token. Light is tuned for white paper (a deeper cobalt, a darker Graphite), never computed by inverting dark.
 
 ## Typography
 
 **Display Font:** Archivo, variable with the `wdth` axis (with Arial Narrow, Arial, sans-serif)
 **Body Font:** Source Serif 4, variable with `opsz` and optical sizing on (with Georgia, Times New Roman, serif)
-**Label/Mono Font:** Archivo condensed through `wdth` for labels and edge print; `ui-monospace, Cascadia Mono, Consolas` only for inline code
+**Label/Mono Font:** `ui-monospace, Cascadia Mono, Consolas, monospace`, for inline code only
 
-**Character:** A heavy, tight grotesque that condenses into film-stock lettering, set against a calm book serif. One family does headings, UI and the film's printing by moving along its width axis.
+**Character:** A firm, tightly tracked grotesque for names and controls beside a calm book serif for anything meant to be read through.
 
 ### Hierarchy
-- **Display** (800, clamp(3.4rem, 15.5vw, 6rem), 0.9): the name on home only. Case-study h1 (clamp(2.5rem, 10vw, 4.75rem), 0.95) and demo h1 (clamp(2.375rem, 9vw, 4.25rem), 0.96) are the same voice a step down.
-- **Headline** (800, clamp(2.125rem, 7vw, 3.75rem), 0.98, -0.035em): home section titles. Chapter headings beside the strip run a step smaller (clamp(2rem, 6.4vw, 3.25rem), 1).
-- **Title** (700, 1.375rem, 1.15): index-row titles; CV terms at 1.125rem; case-study h2 at 1.625rem; demo h2 at 1.5rem.
-- **Lede** (Serif 400, clamp(1.25rem, 4.6vw, 1.625rem), 1.38, max 30ch): the hero line and the first paragraph of a case study.
-- **Body** (Serif 400, 1.0625rem, 1.6): default. Reading columns step up: chapters 1.125rem/1.62 at 66ch, case studies 1.125rem rising to 1.1875rem at 720px, 1.65, 68ch.
-- **UI** (Archivo 500-700, 0.9375rem): buttons, links lists, captions, inputs, tables (tabular figures).
-- **Label** (Archivo wdth 72, 600, 0.8125rem, 0.07em, uppercase): meta lines, table heads, fieldset legends, "Frame N".
-- **Edge print** (Archivo wdth 62, 600, 1.3 film units, 0.12em, uppercase): only on film.
-- **China note** (Archivo wdth 80, 800, 2.3 film units, uppercase, rotated -4deg): only on the strip's lower rebate.
+- **Display** (700, clamp(2.5rem, 9vw, 3.5rem), 1, -0.035em): the name on home only.
+- **Headline** (700, clamp(2.25rem, 7vw, 3.25rem), 1, -0.035em): page titles, case-study h1 and demo h1.
+- **Title** (650, 1.375rem, 1.2, -0.01em): h2 in case studies and demos; demo h3 runs 650 at 1.125rem.
+- **Title Item** (600, 1.03125rem, 1.35): list titles in Experience, Projects and Lab. The role after an employer drops to 400 in Graphite.
+- **Meta** (Archivo 500, 0.96875rem, 1.5): the degree and roles lines under the name.
+- **Label** (Archivo 600, 0.90625rem, 1.3, Graphite): section titles (Experience, Projects, Lab, About, Contact), sentence case.
+- **UI** (Archivo 500, 0.90625rem, 1.4): nav, footer, EV controls; buttons run 600 at line-height 1; dates and side links 500 at 0.875rem with tabular figures.
+- **Data Cell** (Archivo 600, clamp(0.5rem, 2.3vw, 0.75rem), `wdth` 75, tabular figures): hand names and EVs in the push/fold grid, the one place Archivo condenses.
+- **Lede** (Serif 400, clamp(1.1875rem, 4vw, 1.3125rem), 1.5): the paragraph right after a case-study h1.
+- **Body** (Serif 400, 1.0625rem, 1.6): default; list descriptions and section notes at 1rem.
+- **Body Reading** (Serif 400, 1.125rem rising to 1.1875rem at 720px, 1.65, 68ch): case-study prose.
 
 ### Named Rules
-**The Width Axis Rule.** Condense Archivo through `wdth`, never a second family: 72 for labels, 70 in the masthead nav, 62 for edge print, 80 for china notes. Headings stay at full width.
+**The Two Families Rule.** Archivo for names, headings and UI; Source Serif 4 for reading. No third family beyond monospace for code, and headings are never serif.
 
-**The Label Sits Below Rule.** A caps label sits beneath or inline with what it describes: the degree line under the name, the kind under an index title, "Frame N" ahead of its caption. It never sits above a heading.
+**The Quiet Section Title Rule.** Section titles are small Graphite Archivo in sentence case. The list under them carries the weight; titles never shout or sit in caps.
 
 ## Layout
 
-A single 1280px page column with 16px gutters, 32px from 720px. Home sections open with 72px of top padding; the footer sits 64px below the last section. From 900px the system uses 12-part grids: hero 7/5 (name and degree line span both), work index 4/6/2 (title, summary, links stacked), compact lab index 4/8, CV 4/5/3 on a shared baseline, about 5/7. Chapter text indents by 22% beside the pinned strip. Case studies read in a 68ch column, demos in 72ch.
+One centred column: 760px of content inside a 20px gutter, 40px from 720px. Every page shares it, so the masthead, home, the indexes, case studies and demos all start on the same left edge. The reading measure is capped on the text instead: case-study blocks at 68ch, demo paragraphs at 68ch, while tables and the EV grid may use the full column. Home stacks the intro (48px top, 96px from 720px), then sections with 28px top padding, each a small title over a ruled list. On the work and lab pages the footer sits 72px below the content under a 1px rule that spans the column; home has no footer because it ends with its own Contact section.
 
-Lists are ruled, not boxed: a 1px top rule, then 1px under every row (22px/24px row padding in the index, 16px in the CV).
-
-The film has its own geometry in film units (`--u` 6px, growing as clamp(6px, 1.1svh, 9px) from 720px; `--mu` stays 6px for masthead and footer rebates). A strip is 35u tall with 5.5u sprocket bands; frame pitch is 38u; the window is 36x24u at 1u from the frame edge. Breakpoints are 720px (film unit, gutter, reading size), 900px (grids, chapter indent) and 1100px (margin marks hang left of case-study headings). At 375px nothing scrolls horizontally; tables scroll inside themselves.
+Lists are ruled rows, not boxes: a two-column grid (title left, date or links right) with 12px row padding and a 1px rule between rows, none above the first. A description spans both columns under the title at 62ch. Below 560px the side column drops under the title and left-aligns, and the EV grid shows one decimal instead of two. Below 440px the nav keeps one line by hiding Contact, which stays reachable from home's button and the footer. The EV grid is 13 square cells across with 1px gaps, 19rem to 40rem wide, and scrolls inside itself if it must. At 375px nothing scrolls the page horizontally; tables scroll inside themselves.
 
 ## Elevation & Depth
 
-Flat and opaque. Depth comes from black film laid on a warm ground and from the lit window inside each frame. Two objects cast a shadow because they are physical things lifted off the sheet.
-
-### Shadow Vocabulary
-- **Loupe** (`filter: drop-shadow(0 calc(1.2 * var(--u)) calc(1.4 * var(--u)) rgb(0 0 0 / 0.5))`): the WebGL lens resting on the strip.
-- **Range thumb** (`box-shadow: 0 1px 3px rgb(0 0 0 / 0.4)`): the china or grease-colored slider knob in demos.
+Flat and opaque. There are no shadows anywhere in the system. Depth comes only from Raised Grey against the ground (inputs, code, blockquotes, heat cells) and from 1px Hairline rules. The masthead holds still during navigation by keeping its own view-transition name; it is not lifted or blurred.
 
 ### Named Rules
-**The Only Lifted Objects Rule.** Cards, text, buttons and sections never cast shadows. A shadow means a physical tool sitting on the sheet.
+**The No Shadow Rule.** Nothing casts a shadow: not buttons, lists, the headshot, the range thumb or the grid. A surface that needs separation gets Raised Grey or a Hairline.
 
 ## Shapes
 
-Nearly square. Buttons, inputs, fieldsets, the rebated meta line and the roll frame take a 2px corner; inline code and the headshot 3px; the light-table window 0.5 film units; the theme switch and range thumb are round. Borders are 1px rules, except buttons at 1.5px Ink. The recurring silhouettes come from the film: sprocket holes as a repeating SVG mask (a 1.98x2.6 rounded rect every 4.75 units), and hand-drawn grease strokes, Catmull-Rom loops that overshoot their start and two-stroke crosses, rendered as round-capped SVG paths seeded so server and client draw the same mark.
+Gently rounded and consistent. Buttons, inputs, selects, fieldsets, segmented controls and demo blockquotes take 6px; the headshot 8px; inline code and trace rows 4px; the focus ring and range track 2px; the theme switch and range thumb are round. Every border is a 1px Hairline. Segmented controls butt together with shared borders, rounding only their outer corners. The EV grid's cells are square with no radius. The theme switch's icon is an inline half-filled disc; the only other drawn marks are the list arrow (a 12px SVG) and the demo disclosure caret, two 1.5px borders rotated.
 
 ## Components
 
-The shared furniture (tokens, masthead, footer, buttons, film strip, loupe, index lists, grease marks) belongs to the system. The Read block (case-study prose) and the Operate block (demo controls) are owned and extended separately and live in their own stylesheets (`app/work/prose.css`, `app/lab/lab.css`), loaded from the /work and /lab layouts; they build on these tokens and add no new colors or families.
+The shared furniture (tokens, masthead, footer, buttons, lists, EV grid, view transitions, reduced motion) lives in `app/globals.css`. Case-study (Read) styles live in `app/work/prose.css` and demo (Operate) styles in `app/lab/lab.css`; both build on these tokens and add no colours or families.
 
 ### Buttons
-- **Shape:** squared off (2px), 1.5px Ink border, 46px tall, 20px sides; demo buttons 40px tall, 16px sides.
-- **Primary:** Ink fill with ground-colored text, Archivo 700 at 0.9375rem.
-- **Hover / Focus:** primary swaps to solid China Marker Yellow with Film Black text; quiet fills with Tray. 120ms ease-out color change; nothing fades or moves. Focus is a 2px ring in the focus color (yellow dark, red light) at 3px offset.
-- **Quiet:** transparent with the same border and Ink text.
-- **Segmented (demos):** buttons butt together with a shared 1.5px border; the pressed one fills Ink.
+Rounded rectangles (6px), 40px tall with 16px sides, Archivo 600 at 0.90625rem, a 1px Hairline border. The primary fills with Ink and sets ground-coloured text; on hover it swaps to a solid Soft Cobalt fill with Cobalt Ink text. The quiet button is transparent with Ink text and fills with Raised Grey on hover. Changes run 120ms ease-out and are colour swaps to a solid fill, never fades or movement. Focus is a 2px ring in the focus colour at 3px offset. Demo buttons match at 40px with 16px sides, fill Raised Grey and darken their border to Graphite on hover, and show Graphite text with a not-allowed cursor when disabled.
 
 ### Inputs / Fields
-- **Style:** Tray fill, 1px Rule border, 2px corner, 36px min height, Archivo with tabular figures. Fieldsets are 1px ruled boxes with a caps legend.
-- **Hover / Focus:** border darkens to Pencil Grey; the global focus ring applies.
-- **Controls:** radios, checkboxes and the range thumb take the control accent (`--ctl`: yellow dark, red light). Range track is a 4px Rule bar.
-- **Disabled:** Rule border, Pencil Grey text, not-allowed cursor.
+Raised Grey fill, 1px Hairline border, 6px corners, 36px minimum height, Archivo at 0.9375rem with tabular figures. The border darkens to Graphite on hover and the global focus ring applies. Radios and checkboxes take the control accent. In demos and on the EV grid's stack slider the range input is redrawn: a 4px Hairline track and a round thumb in the control accent with a ground-coloured ring. Fieldsets are 6px Hairline boxes with a Graphite Archivo legend.
 
 ### Navigation
-- **Masthead:** a film rebate across the top (sprocket band in `--mu`), name in Edge Amber at left, nav in condensed caps (wdth 70) on On-Film, theme switch at right. Links underline 2px on hover.
-- **Footer:** the matching bottom rebate, links in Archivo at 0.02em, wrapping.
-- **Theme switch:** a 36px round button, inline half-disc icon, hover to china yellow. Switching runs the "develop" wipe: the new theme's view rises out of the tray (clip-path from the bottom, 520ms, cubic-bezier(0.16, 1, 0.3, 1)); skipped under reduced motion.
+The masthead shares the column: the name in Archivo 650 at the left, then Work, Lab, Resume and Contact in Graphite Archivo 500 and the theme switch at the right. UI links carry no underline at rest; on hover a 1px Cobalt Underline draws across from the left (220ms) and the text brightens to Ink. The footer, on work and lab pages only, repeats the pattern under a Hairline: email, LinkedIn, GitHub, Resume (PDF). On phones (440px and below) the masthead drops Contact to keep one line; home's Contact button and the footer still reach it. The `theme-color` meta follows the theme (#0b0b0b dark, #ffffff light) so a phone's browser bar matches the ground. The theme switch is a 32px round button with a 20px half-disc icon; it runs the wipe described below, and skips it under reduced motion.
 
 ### Links
-Inherit text color with a 1.5px underline at 0.22em offset in the link color (amber dark, red light); hover thickens to 3px. Index titles carry no underline until hover.
+Body links inherit the text colour with a 1px underline in Underline Grey at 0.22em offset, turning Cobalt Underline on hover over 120ms.
 
-### Film Strip (signature)
-A pinned 12-frame strip of 35 mm film, advanced frame by frame by vertical scroll: each frame holds for 55% of its scroll share, then the strip moves on. Each frame has a lit window, a frame number and edge print in amber, a china-marker note on the lower rebate, and a grease mark that draws on via stroke-dashoffset as the frame passes the reading position (a cross's second stroke follows the first). A caption line below names the current frame. Under reduced motion the strip is a static, horizontally scrollable row with scroll snap, every mark drawn, no pin.
+### Lists
+Ruled rows: an Archivo 600 title, a right-aligned date or a set of side links (Demo, Code, or a "Private repo" note) in Graphite with tabular figures, and a Graphite serif description below. A linked title turns Cobalt Text on hover and its trailing arrow, a 12px inline SVG stroked in currentColor (`components/arrow.tsx`), nudges 4px right and turns cobalt (160ms). A project title is wrapped in a `<ViewTransition>` named `project-<slug>` with `share="morph"`, and its case study's h1 carries the same name, so opening a project morphs the title into the heading over 360ms. The title inside is one inline-block box so the morph moves a single shape.
 
-### Loupe (signature)
-A WebGL lens with barrel magnification, slight chromatic split and a darkened wall, resting just right of the frame being read so it previews the next one. Draggable or moved with arrow keys. It mounts on the first scroll, touch, pointer or key, so it never competes with first paint.
+### Push/Fold EV Grid (signature)
+A live 13 by 13 grid of starting hands on home and in the push/fold demo, showing EV only: each cell prints the hand and its all-in EV in big blinds. Values are lookups from showdown's export, loaded when the figure nears the viewport, with no solving in JavaScript. A stack slider (1 to 20 bb) and a two-part segmented control (Small blind jams, Big blind calls) sit above it. Hands that beat folding shade toward Heat by their EV gain, from 20% up to the 80% cap; the rest print in Graphite on the ground. The selected cell takes a 2px Ink outline; arrow keys move through the grid with a single tab stop, and a live line below states the selected hand's EV against folding in words. Cell colour changes run 180ms.
 
-### Margin Marks
-In case studies, a grease loop beside "Results" and a cross beside "What didn't work" (and its variants), inline at small widths and hanging in the left margin from 1100px.
-
-### Edge-Print Meta Line
-A case study's links, stack and date line is set as a strip of film: Film Black with a top sprocket band, condensed caps, links in Edge Amber. Full-bleed on phones, 2px corners from 720px.
-
-### Index Row
-Ruled rows: title in Archivo 700, a caps kind label below it in Pencil Grey, a serif summary at 60ch, and a column of text links (Case study, Demo, Code, or a "Private repo" label).
+### Intro and Theme Wipe
+The first visit to home plays the intro once per session: the name rises 0.35em without fading, and the degree line, roles line and actions rise 0.6em and fade in, staggered 70ms, all over 560ms on cubic-bezier(0.16, 1, 0.3, 1). The theme switch lets the new theme rise from the bottom over 520ms on the same curve, clipped from below, only while `[data-theming]` is set.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** size anything on film in film units (`--u`, 6px rising to 9px) so holes, windows, edge print and notes keep their proportions.
-- **Do** keep film Film Black in both themes and let only ground, ink and marks' surroundings change.
-- **Do** mark claims with grease: a loop for held, a cross for didn't hold, and leave crossed frames on the sheet.
-- **Do** separate list items with 1px horizontal rules and keep the work list an editorial index.
-- **Do** label every chart series in text and back it with a table; color is never the only encoding.
-- **Do** give every motion a reduced-motion state: static scrollable strip, all marks drawn, no pin, no view transition.
-- **Do** build Read and Operate styles on these tokens, adding no new colors or font families.
+- **Do** keep cobalt for interaction and heat: hover, focus, selection, the primary hover fill, and the EV grid.
+- **Do** set both themes' value for any new token; the light theme is tuned, not inverted.
+- **Do** separate list items with 1px Hairline rules and keep lists in the one centred column.
+- **Do** keep text on any heat or status fill at WCAG AA, as the 80% heat cap does for the EV grid.
+- **Do** give every motion a reduced-motion state; the global rule turns transitions, animations and view transitions off.
+- **Do** keep the name visible from the first frame; an entrance may move it but never start it at zero opacity.
+- **Do** name every chart series and status in text; colour is never the only encoding.
+- **Do** build Read and Operate styles on these tokens in their own stylesheets, adding no colours or families.
 
 ### Don't:
-- **Don't** put a caps label, badge or eyebrow above a heading.
-- **Don't** use gradients, gradient text or glassmorphism; film, paper and the tray are flat and opaque.
-- **Don't** add grain or noise to the film; edge print and grease carry its texture.
-- **Don't** fade or slide sections in on scroll; the strip is the one authored motion.
-- **Don't** box lists into cards or give them colored left borders.
+- **Don't** use gradients, gradient text, glassmorphism or grain.
+- **Don't** cast shadows from anything.
+- **Don't** fade or slide sections in on scroll; the intro plays once, on home, and nothing else enters.
+- **Don't** box lists into cards or give them coloured left borders.
 - **Don't** let a button fade on hover; it swaps to a solid fill.
-- **Don't** set headings or accent words in serif italic; headings are Archivo.
-- **Don't** add an icon set; the theme switch's inline half-disc is the only icon.
-- **Don't** cast shadows from anything but the loupe and the range thumb.
+- **Don't** set headings or accent words in serif italic.
+- **Don't** put a badge or caps eyebrow above a heading.
+- **Don't** add an icon set; the theme switch's half-disc is the one drawn icon.

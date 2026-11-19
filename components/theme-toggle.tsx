@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 
 type Theme = "dark" | "light";
 
@@ -18,6 +18,11 @@ export default function ThemeToggle() {
   const theme = useSyncExternalStore(subscribe, read, () => "dark" as Theme);
   const next: Theme = theme === "dark" ? "light" : "dark";
 
+  // Phones tint their browser bar with theme-color; keep it on the page's ground.
+  useEffect(() => {
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "light" ? "#ffffff" : "#0b0b0b");
+  }, [theme]);
+
   function toggle() {
     const apply = () => {
       document.documentElement.dataset.theme = next;
@@ -26,8 +31,11 @@ export default function ThemeToggle() {
       } catch {}
     };
     const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!still && document.startViewTransition) document.startViewTransition(apply);
-    else apply();
+    if (still || !document.startViewTransition) return apply();
+    // The flag scopes the wipe to theme changes, so page navigations keep their own transition.
+    const root = document.documentElement;
+    root.dataset.theming = "";
+    document.startViewTransition(apply).finished.finally(() => delete root.dataset.theming);
   }
 
   return (

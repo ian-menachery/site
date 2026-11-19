@@ -1,729 +1,91 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-18T17:37:26.712Z",
+  "generatedAt": "2026-11-18T12:00:00.000Z",
   "title": "Design System: Ian Menachery",
   "extensions": {
     "colorMeta": {
-      "china-marker": {
-        "role": "primary",
-        "displayName": "China Marker Yellow",
-        "canonical": "#f2c94c",
-        "cssVar": "--china",
-        "theme": "both",
-        "tonalRamp": [
-          "oklch(15.0% 0.045 90.5)",
-          "oklch(26.4% 0.099 90.5)",
-          "oklch(37.9% 0.141 90.5)",
-          "oklch(49.3% 0.146 90.5)",
-          "oklch(60.7% 0.146 90.5)",
-          "oklch(72.1% 0.141 90.5)",
-          "oklch(83.6% 0.099 90.5)",
-          "oklch(95.0% 0.045 90.5)"
-        ]
-      },
-      "grease": {
-        "role": "secondary",
-        "displayName": "Grease Pencil Red",
-        "canonical": "#d42a20",
-        "cssVar": "--grease",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.056 29.0)",
-          "oklch(26.4% 0.132 29.0)",
-          "oklch(37.9% 0.190 29.0)",
-          "oklch(49.3% 0.206 29.0)",
-          "oklch(60.7% 0.206 29.0)",
-          "oklch(72.1% 0.190 29.0)",
-          "oklch(83.6% 0.132 29.0)",
-          "oklch(95.0% 0.056 29.0)"
-        ]
-      },
-      "grease-light": {
-        "role": "secondary",
-        "displayName": "Grease Pencil Red (print)",
-        "canonical": "#c8211a",
-        "cssVar": "--grease",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.055 28.8)",
-          "oklch(26.4% 0.129 28.8)",
-          "oklch(37.9% 0.186 28.8)",
-          "oklch(49.3% 0.201 28.8)",
-          "oklch(60.7% 0.201 28.8)",
-          "oklch(72.1% 0.186 28.8)",
-          "oklch(83.6% 0.129 28.8)",
-          "oklch(95.0% 0.055 28.8)"
-        ]
-      },
-      "edge-amber": {
-        "role": "tertiary",
-        "displayName": "Edge-Print Amber",
-        "canonical": "#d9a046",
-        "cssVar": "--edge",
-        "theme": "both",
-        "tonalRamp": [
-          "oklch(15.0% 0.042 75.9)",
-          "oklch(26.4% 0.088 75.9)",
-          "oklch(37.9% 0.124 75.9)",
-          "oklch(49.3% 0.125 75.9)",
-          "oklch(60.7% 0.125 75.9)",
-          "oklch(72.1% 0.124 75.9)",
-          "oklch(83.6% 0.088 75.9)",
-          "oklch(95.0% 0.042 75.9)"
-        ]
-      },
-      "heat": {
-        "role": "data",
-        "displayName": "Heat",
-        "canonical": "#b8241b",
-        "cssVar": "--heat",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.052 29.0)",
-          "oklch(26.4% 0.120 29.0)",
-          "oklch(37.9% 0.173 29.0)",
-          "oklch(49.3% 0.185 29.0)",
-          "oklch(60.7% 0.185 29.0)",
-          "oklch(72.1% 0.173 29.0)",
-          "oklch(83.6% 0.120 29.0)",
-          "oklch(95.0% 0.052 29.0)"
-        ]
-      },
-      "heat-light": {
-        "role": "data",
-        "displayName": "Heat (print)",
-        "canonical": "#e0645a",
-        "cssVar": "--heat",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.047 26.9)",
-          "oklch(26.4% 0.105 26.9)",
-          "oklch(37.9% 0.150 26.9)",
-          "oklch(49.3% 0.157 26.9)",
-          "oklch(60.7% 0.157 26.9)",
-          "oklch(72.1% 0.150 26.9)",
-          "oklch(83.6% 0.105 26.9)",
-          "oklch(95.0% 0.047 26.9)"
-        ]
-      },
-      "ground": {
-        "role": "neutral",
-        "displayName": "Darkroom Black",
-        "canonical": "#161411",
-        "cssVar": "--ground",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.007 78.2)",
-          "oklch(26.4% 0.007 78.2)",
-          "oklch(37.9% 0.007 78.2)",
-          "oklch(49.3% 0.007 78.2)",
-          "oklch(60.7% 0.007 78.2)",
-          "oklch(72.1% 0.007 78.2)",
-          "oklch(83.6% 0.007 78.2)",
-          "oklch(95.0% 0.007 78.2)"
-        ]
-      },
-      "ground-2": {
-        "role": "neutral",
-        "displayName": "Tray",
-        "canonical": "#201d19",
-        "cssVar": "--ground-2",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.009 75.2)",
-          "oklch(26.4% 0.009 75.2)",
-          "oklch(37.9% 0.009 75.2)",
-          "oklch(49.3% 0.009 75.2)",
-          "oklch(60.7% 0.009 75.2)",
-          "oklch(72.1% 0.009 75.2)",
-          "oklch(83.6% 0.009 75.2)",
-          "oklch(95.0% 0.009 75.2)"
-        ]
-      },
-      "ink": {
-        "role": "neutral",
-        "displayName": "Ink",
-        "canonical": "#ece9e3",
-        "cssVar": "--ink",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.009 84.6)",
-          "oklch(26.4% 0.009 84.6)",
-          "oklch(37.9% 0.009 84.6)",
-          "oklch(49.3% 0.009 84.6)",
-          "oklch(60.7% 0.009 84.6)",
-          "oklch(72.1% 0.009 84.6)",
-          "oklch(83.6% 0.009 84.6)",
-          "oklch(95.0% 0.009 84.6)"
-        ]
-      },
-      "ink-2": {
-        "role": "neutral",
-        "displayName": "Pencil Grey",
-        "canonical": "#aba59b",
-        "cssVar": "--ink-2",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.016 80.7)",
-          "oklch(26.4% 0.016 80.7)",
-          "oklch(37.9% 0.016 80.7)",
-          "oklch(49.3% 0.016 80.7)",
-          "oklch(60.7% 0.016 80.7)",
-          "oklch(72.1% 0.016 80.7)",
-          "oklch(83.6% 0.016 80.7)",
-          "oklch(95.0% 0.016 80.7)"
-        ]
-      },
-      "rule": {
-        "role": "neutral",
-        "displayName": "Rule",
-        "canonical": "#38332c",
-        "cssVar": "--rule",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.014 76.4)",
-          "oklch(26.4% 0.014 76.4)",
-          "oklch(37.9% 0.014 76.4)",
-          "oklch(49.3% 0.014 76.4)",
-          "oklch(60.7% 0.014 76.4)",
-          "oklch(72.1% 0.014 76.4)",
-          "oklch(83.6% 0.014 76.4)",
-          "oklch(95.0% 0.014 76.4)"
-        ]
-      },
-      "hole": {
-        "role": "neutral",
-        "displayName": "Sprocket",
-        "canonical": "#e9e6de",
-        "cssVar": "--hole",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.011 89.7)",
-          "oklch(26.4% 0.011 89.7)",
-          "oklch(37.9% 0.011 89.7)",
-          "oklch(49.3% 0.011 89.7)",
-          "oklch(60.7% 0.011 89.7)",
-          "oklch(72.1% 0.011 89.7)",
-          "oklch(83.6% 0.011 89.7)",
-          "oklch(95.0% 0.011 89.7)"
-        ]
-      },
-      "ground-light": {
-        "role": "neutral",
-        "displayName": "Print White",
-        "canonical": "#f7f7f4",
-        "cssVar": "--ground",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.004 106.5)",
-          "oklch(26.4% 0.004 106.5)",
-          "oklch(37.9% 0.004 106.5)",
-          "oklch(49.3% 0.004 106.5)",
-          "oklch(60.7% 0.004 106.5)",
-          "oklch(72.1% 0.004 106.5)",
-          "oklch(83.6% 0.004 106.5)",
-          "oklch(95.0% 0.004 106.5)"
-        ]
-      },
-      "ground-2-light": {
-        "role": "neutral",
-        "displayName": "Tray (print)",
-        "canonical": "#ebeae5",
-        "cssVar": "--ground-2",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.007 97.4)",
-          "oklch(26.4% 0.007 97.4)",
-          "oklch(37.9% 0.007 97.4)",
-          "oklch(49.3% 0.007 97.4)",
-          "oklch(60.7% 0.007 97.4)",
-          "oklch(72.1% 0.007 97.4)",
-          "oklch(83.6% 0.007 97.4)",
-          "oklch(95.0% 0.007 97.4)"
-        ]
-      },
-      "ink-light": {
-        "role": "neutral",
-        "displayName": "Ink (print)",
-        "canonical": "#121110",
-        "cssVar": "--ink",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.003 67.7)",
-          "oklch(26.4% 0.003 67.7)",
-          "oklch(37.9% 0.003 67.7)",
-          "oklch(49.3% 0.003 67.7)",
-          "oklch(60.7% 0.003 67.7)",
-          "oklch(72.1% 0.003 67.7)",
-          "oklch(83.6% 0.003 67.7)",
-          "oklch(95.0% 0.003 67.7)"
-        ]
-      },
-      "ink-2-light": {
-        "role": "neutral",
-        "displayName": "Pencil Grey (print)",
-        "canonical": "#57534c",
-        "cssVar": "--ink-2",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.012 81.8)",
-          "oklch(26.4% 0.012 81.8)",
-          "oklch(37.9% 0.012 81.8)",
-          "oklch(49.3% 0.012 81.8)",
-          "oklch(60.7% 0.012 81.8)",
-          "oklch(72.1% 0.012 81.8)",
-          "oklch(83.6% 0.012 81.8)",
-          "oklch(95.0% 0.012 81.8)"
-        ]
-      },
-      "rule-light": {
-        "role": "neutral",
-        "displayName": "Rule (print)",
-        "canonical": "#d3d0c9",
-        "cssVar": "--rule",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.010 87.5)",
-          "oklch(26.4% 0.010 87.5)",
-          "oklch(37.9% 0.010 87.5)",
-          "oklch(49.3% 0.010 87.5)",
-          "oklch(60.7% 0.010 87.5)",
-          "oklch(72.1% 0.010 87.5)",
-          "oklch(83.6% 0.010 87.5)",
-          "oklch(95.0% 0.010 87.5)"
-        ]
-      },
-      "film": {
-        "role": "neutral",
-        "displayName": "Film Black",
-        "canonical": "#050404",
-        "cssVar": "--film",
-        "theme": "both",
-        "tonalRamp": [
-          "oklch(15.0% 0.003 17.6)",
-          "oklch(26.4% 0.003 17.6)",
-          "oklch(37.9% 0.003 17.6)",
-          "oklch(49.3% 0.003 17.6)",
-          "oklch(60.7% 0.003 17.6)",
-          "oklch(72.1% 0.003 17.6)",
-          "oklch(83.6% 0.003 17.6)",
-          "oklch(95.0% 0.003 17.6)"
-        ]
-      },
-      "on-film": {
-        "role": "neutral",
-        "displayName": "On-Film",
-        "canonical": "#ece9e3",
-        "cssVar": "--on-film",
-        "theme": "both",
-        "tonalRamp": [
-          "oklch(15.0% 0.009 84.6)",
-          "oklch(26.4% 0.009 84.6)",
-          "oklch(37.9% 0.009 84.6)",
-          "oklch(49.3% 0.009 84.6)",
-          "oklch(60.7% 0.009 84.6)",
-          "oklch(72.1% 0.009 84.6)",
-          "oklch(83.6% 0.009 84.6)",
-          "oklch(95.0% 0.009 84.6)"
-        ]
-      },
-      "window": {
-        "role": "neutral",
-        "displayName": "Light-Table Window",
-        "canonical": "#e2e0da",
-        "cssVar": "--window",
-        "theme": "both",
-        "tonalRamp": [
-          "oklch(15.0% 0.008 91.5)",
-          "oklch(26.4% 0.008 91.5)",
-          "oklch(37.9% 0.008 91.5)",
-          "oklch(49.3% 0.008 91.5)",
-          "oklch(60.7% 0.008 91.5)",
-          "oklch(72.1% 0.008 91.5)",
-          "oklch(83.6% 0.008 91.5)",
-          "oklch(95.0% 0.008 91.5)"
-        ]
-      },
-      "window-ink": {
-        "role": "neutral",
-        "displayName": "Window Ink",
-        "canonical": "#151413",
-        "cssVar": "--window-ink",
-        "theme": "both",
-        "tonalRamp": [
-          "oklch(15.0% 0.003 67.7)",
-          "oklch(26.4% 0.003 67.7)",
-          "oklch(37.9% 0.003 67.7)",
-          "oklch(49.3% 0.003 67.7)",
-          "oklch(60.7% 0.003 67.7)",
-          "oklch(72.1% 0.003 67.7)",
-          "oklch(83.6% 0.003 67.7)",
-          "oklch(95.0% 0.003 67.7)"
-        ]
-      },
-      "window-ink-2": {
-        "role": "neutral",
-        "displayName": "Window Ink Secondary",
-        "canonical": "#5d5953",
-        "cssVar": "--window-ink-2",
-        "theme": "both",
-        "tonalRamp": [
-          "oklch(15.0% 0.011 78.2)",
-          "oklch(26.4% 0.011 78.2)",
-          "oklch(37.9% 0.011 78.2)",
-          "oklch(49.3% 0.011 78.2)",
-          "oklch(60.7% 0.011 78.2)",
-          "oklch(72.1% 0.011 78.2)",
-          "oklch(83.6% 0.011 78.2)",
-          "oklch(95.0% 0.011 78.2)"
-        ]
-      },
-      "cat-politics": {
-        "role": "data",
-        "displayName": "Politics",
-        "canonical": "#3987e5",
-        "cssVar": "--cat-politics",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.048 255.1)",
-          "oklch(26.4% 0.107 255.1)",
-          "oklch(37.9% 0.153 255.1)",
-          "oklch(49.3% 0.161 255.1)",
-          "oklch(60.7% 0.161 255.1)",
-          "oklch(72.1% 0.153 255.1)",
-          "oklch(83.6% 0.107 255.1)",
-          "oklch(95.0% 0.048 255.1)"
-        ]
-      },
-      "cat-sports": {
-        "role": "data",
-        "displayName": "Sports",
-        "canonical": "#d95926",
-        "cssVar": "--cat-sports",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.050 40.1)",
-          "oklch(26.4% 0.114 40.1)",
-          "oklch(37.9% 0.163 40.1)",
-          "oklch(49.3% 0.173 40.1)",
-          "oklch(60.7% 0.173 40.1)",
-          "oklch(72.1% 0.163 40.1)",
-          "oklch(83.6% 0.114 40.1)",
-          "oklch(95.0% 0.050 40.1)"
-        ]
-      },
-      "cat-geopolitics": {
-        "role": "data",
-        "displayName": "Geopolitics",
-        "canonical": "#199e70",
-        "cssVar": "--cat-geopolitics",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.042 163.1)",
-          "oklch(26.4% 0.090 163.1)",
-          "oklch(37.9% 0.126 163.1)",
-          "oklch(49.3% 0.128 163.1)",
-          "oklch(60.7% 0.128 163.1)",
-          "oklch(72.1% 0.126 163.1)",
-          "oklch(83.6% 0.090 163.1)",
-          "oklch(95.0% 0.042 163.1)"
-        ]
-      },
-      "cat-crypto": {
-        "role": "data",
-        "displayName": "Crypto",
-        "canonical": "#c98500",
-        "cssVar": "--cat-crypto",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.045 73.2)",
-          "oklch(26.4% 0.097 73.2)",
-          "oklch(37.9% 0.138 73.2)",
-          "oklch(49.3% 0.143 73.2)",
-          "oklch(60.7% 0.143 73.2)",
-          "oklch(72.1% 0.138 73.2)",
-          "oklch(83.6% 0.097 73.2)",
-          "oklch(95.0% 0.045 73.2)"
-        ]
-      },
-      "cat-entertainment": {
-        "role": "data",
-        "displayName": "Entertainment",
-        "canonical": "#d55181",
-        "cssVar": "--cat-entertainment",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.050 0.8)",
-          "oklch(26.4% 0.113 0.8)",
-          "oklch(37.9% 0.161 0.8)",
-          "oklch(49.3% 0.171 0.8)",
-          "oklch(60.7% 0.171 0.8)",
-          "oklch(72.1% 0.161 0.8)",
-          "oklch(83.6% 0.113 0.8)",
-          "oklch(95.0% 0.050 0.8)"
-        ]
-      },
-      "cat-other": {
-        "role": "data",
-        "displayName": "Other",
-        "canonical": "#9085e9",
-        "cssVar": "--cat-other",
-        "theme": "dark",
-        "tonalRamp": [
-          "oklch(15.0% 0.045 286.8)",
-          "oklch(26.4% 0.099 286.8)",
-          "oklch(37.9% 0.140 286.8)",
-          "oklch(49.3% 0.145 286.8)",
-          "oklch(60.7% 0.145 286.8)",
-          "oklch(72.1% 0.140 286.8)",
-          "oklch(83.6% 0.099 286.8)",
-          "oklch(95.0% 0.045 286.8)"
-        ]
-      },
-      "cat-politics-light": {
-        "role": "data",
-        "displayName": "Politics (print)",
-        "canonical": "#2a78d6",
-        "cssVar": "--cat-politics",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.048 255.5)",
-          "oklch(26.4% 0.108 255.5)",
-          "oklch(37.9% 0.154 255.5)",
-          "oklch(49.3% 0.163 255.5)",
-          "oklch(60.7% 0.163 255.5)",
-          "oklch(72.1% 0.154 255.5)",
-          "oklch(83.6% 0.108 255.5)",
-          "oklch(95.0% 0.048 255.5)"
-        ]
-      },
-      "cat-sports-light": {
-        "role": "data",
-        "displayName": "Sports (print)",
-        "canonical": "#eb6834",
-        "cssVar": "--cat-sports",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.050 40.6)",
-          "oklch(26.4% 0.115 40.6)",
-          "oklch(37.9% 0.165 40.6)",
-          "oklch(49.3% 0.175 40.6)",
-          "oklch(60.7% 0.175 40.6)",
-          "oklch(72.1% 0.165 40.6)",
-          "oklch(83.6% 0.115 40.6)",
-          "oklch(95.0% 0.050 40.6)"
-        ]
-      },
-      "cat-geopolitics-light": {
-        "role": "data",
-        "displayName": "Geopolitics (print)",
-        "canonical": "#1baf7a",
-        "cssVar": "--cat-geopolitics",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.044 162.1)",
-          "oklch(26.4% 0.096 162.1)",
-          "oklch(37.9% 0.136 162.1)",
-          "oklch(49.3% 0.141 162.1)",
-          "oklch(60.7% 0.141 162.1)",
-          "oklch(72.1% 0.136 162.1)",
-          "oklch(83.6% 0.096 162.1)",
-          "oklch(95.0% 0.044 162.1)"
-        ]
-      },
-      "cat-crypto-light": {
-        "role": "data",
-        "displayName": "Crypto (print)",
-        "canonical": "#eda100",
-        "cssVar": "--cat-crypto",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.048 75.1)",
-          "oklch(26.4% 0.107 75.1)",
-          "oklch(37.9% 0.153 75.1)",
-          "oklch(49.3% 0.161 75.1)",
-          "oklch(60.7% 0.161 75.1)",
-          "oklch(72.1% 0.153 75.1)",
-          "oklch(83.6% 0.107 75.1)",
-          "oklch(95.0% 0.048 75.1)"
-        ]
-      },
-      "cat-entertainment-light": {
-        "role": "data",
-        "displayName": "Entertainment (print)",
-        "canonical": "#e87ba4",
-        "cssVar": "--cat-entertainment",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.045 357.4)",
-          "oklch(26.4% 0.097 357.4)",
-          "oklch(37.9% 0.137 357.4)",
-          "oklch(49.3% 0.141 357.4)",
-          "oklch(60.7% 0.141 357.4)",
-          "oklch(72.1% 0.137 357.4)",
-          "oklch(83.6% 0.097 357.4)",
-          "oklch(95.0% 0.045 357.4)"
-        ]
-      },
-      "cat-other-light": {
-        "role": "data",
-        "displayName": "Other (print)",
-        "canonical": "#6250d6",
-        "cssVar": "--cat-other",
-        "theme": "light",
-        "tonalRamp": [
-          "oklch(15.0% 0.054 283.4)",
-          "oklch(26.4% 0.127 283.4)",
-          "oklch(37.9% 0.183 283.4)",
-          "oklch(49.3% 0.197 283.4)",
-          "oklch(60.7% 0.197 283.4)",
-          "oklch(72.1% 0.183 283.4)",
-          "oklch(83.6% 0.127 283.4)",
-          "oklch(95.0% 0.054 283.4)"
-        ]
-      },
-      "fail-bg": {
-        "role": "status",
-        "displayName": "Fail wash",
-        "cssVar": "--fail-bg",
-        "theme": "dark"
-      },
-      "warn-bg": {
-        "role": "status",
-        "displayName": "Warn wash",
-        "cssVar": "--warn-bg",
-        "theme": "dark"
-      },
-      "ready-bg": {
-        "role": "status",
-        "displayName": "Ready wash",
-        "cssVar": "--ready-bg",
-        "theme": "dark"
-      },
-      "fail-bg-light": {
-        "role": "status",
-        "displayName": "Fail wash (print)",
-        "cssVar": "--fail-bg",
-        "theme": "light"
-      },
-      "warn-bg-light": {
-        "role": "status",
-        "displayName": "Warn wash (print)",
-        "cssVar": "--warn-bg",
-        "theme": "light"
-      },
-      "ready-bg-light": {
-        "role": "status",
-        "displayName": "Ready wash (print)",
-        "cssVar": "--ready-bg",
-        "theme": "light"
-      }
+      "ground": { "role": "neutral", "displayName": "Off-Black", "canonical": "#0b0b0b", "cssVar": "--ground", "theme": "dark", "tonalRamp": ["oklch(15.0% 0 0)", "oklch(26.4% 0 0)", "oklch(37.9% 0 0)", "oklch(49.3% 0 0)", "oklch(60.7% 0 0)", "oklch(72.1% 0 0)", "oklch(83.6% 0 0)", "oklch(95.0% 0 0)"] },
+      "ground-2": { "role": "neutral", "displayName": "Raised Grey", "canonical": "#161616", "cssVar": "--ground-2", "theme": "dark", "tonalRamp": ["oklch(15.0% 0 0)", "oklch(26.4% 0 0)", "oklch(37.9% 0 0)", "oklch(49.3% 0 0)", "oklch(60.7% 0 0)", "oklch(72.1% 0 0)", "oklch(83.6% 0 0)", "oklch(95.0% 0 0)"] },
+      "ink": { "role": "neutral", "displayName": "Bone", "canonical": "#ededeb", "cssVar": "--ink", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.001 106.5)", "oklch(26.4% 0.002 106.5)", "oklch(37.9% 0.002 106.5)", "oklch(49.3% 0.002 106.5)", "oklch(60.7% 0.002 106.5)", "oklch(72.1% 0.002 106.5)", "oklch(83.6% 0.002 106.5)", "oklch(95.0% 0.001 106.5)"] },
+      "ink-2": { "role": "neutral", "displayName": "Graphite", "canonical": "#9d9d99", "cssVar": "--ink-2", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.003 106.5)", "oklch(26.4% 0.004 106.5)", "oklch(37.9% 0.004 106.5)", "oklch(49.3% 0.005 106.5)", "oklch(60.7% 0.005 106.5)", "oklch(72.1% 0.004 106.5)", "oklch(83.6% 0.004 106.5)", "oklch(95.0% 0.003 106.5)"] },
+      "rule": { "role": "neutral", "displayName": "Hairline", "canonical": "#232323", "cssVar": "--rule", "theme": "dark", "tonalRamp": ["oklch(15.0% 0 0)", "oklch(26.4% 0 0)", "oklch(37.9% 0 0)", "oklch(49.3% 0 0)", "oklch(60.7% 0 0)", "oklch(72.1% 0 0)", "oklch(83.6% 0 0)", "oklch(95.0% 0 0)"] },
+      "accent": { "role": "primary", "displayName": "Soft Cobalt", "canonical": "#a3b3e6", "cssVar": "--accent", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.037 271.0)", "oklch(26.4% 0.048 271.0)", "oklch(37.9% 0.059 271.0)", "oklch(49.3% 0.070 271.0)", "oklch(60.7% 0.070 271.0)", "oklch(72.1% 0.059 271.0)", "oklch(83.6% 0.048 271.0)", "oklch(95.0% 0.037 271.0)"] },
+      "on-accent": { "role": "primary", "displayName": "Cobalt Ink", "canonical": "#0b1030", "cssVar": "--on-accent", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.031 272.2)", "oklch(26.4% 0.041 272.2)", "oklch(37.9% 0.050 272.2)", "oklch(49.3% 0.059 272.2)", "oklch(60.7% 0.059 272.2)", "oklch(72.1% 0.050 272.2)", "oklch(83.6% 0.041 272.2)", "oklch(95.0% 0.031 272.2)"] },
+      "accent-text": { "role": "primary", "displayName": "Cobalt Text", "canonical": "#aebce9", "cssVar": "--accent-text", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.032 271.4)", "oklch(26.4% 0.042 271.4)", "oklch(37.9% 0.051 271.4)", "oklch(49.3% 0.061 271.4)", "oklch(60.7% 0.061 271.4)", "oklch(72.1% 0.051 271.4)", "oklch(83.6% 0.042 271.4)", "oklch(95.0% 0.032 271.4)"] },
+      "link-line": { "role": "neutral", "displayName": "Underline Grey", "canonical": "#6b6b68", "cssVar": "--link-line", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.002 106.6)", "oklch(26.4% 0.003 106.6)", "oklch(37.9% 0.004 106.6)", "oklch(49.3% 0.004 106.6)", "oklch(60.7% 0.004 106.6)", "oklch(72.1% 0.004 106.6)", "oklch(83.6% 0.003 106.6)", "oklch(95.0% 0.002 106.6)"] },
+      "link-hover": { "role": "primary", "displayName": "Cobalt Underline", "canonical": "#8a9bd3", "cssVar": "--link-hover", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.042 271.1)", "oklch(26.4% 0.054 271.1)", "oklch(37.9% 0.066 271.1)", "oklch(49.3% 0.079 271.1)", "oklch(60.7% 0.079 271.1)", "oklch(72.1% 0.066 271.1)", "oklch(83.6% 0.054 271.1)", "oklch(95.0% 0.042 271.1)"] },
+      "focus": { "role": "primary", "displayName": "Focus (Soft Cobalt)", "canonical": "#a3b3e6", "cssVar": "--focus", "theme": "dark" },
+      "ctl": { "role": "primary", "displayName": "Control accent (Soft Cobalt)", "canonical": "#a3b3e6", "cssVar": "--ctl", "theme": "dark" },
+      "heat": { "role": "data", "displayName": "Heat", "canonical": "#4a5fb0", "cssVar": "--heat", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.064 270.3)", "oklch(26.4% 0.083 270.3)", "oklch(37.9% 0.102 270.3)", "oklch(49.3% 0.121 270.3)", "oklch(60.7% 0.121 270.3)", "oklch(72.1% 0.102 270.3)", "oklch(83.6% 0.083 270.3)", "oklch(95.0% 0.064 270.3)"] },
+      "ground-light": { "role": "neutral", "displayName": "Paper White", "canonical": "#ffffff", "cssVar": "--ground", "theme": "light", "tonalRamp": ["oklch(15.0% 0 0)", "oklch(26.4% 0 0)", "oklch(37.9% 0 0)", "oklch(49.3% 0 0)", "oklch(60.7% 0 0)", "oklch(72.1% 0 0)", "oklch(83.6% 0 0)", "oklch(95.0% 0 0)"] },
+      "ground-2-light": { "role": "neutral", "displayName": "Raised Grey (light)", "canonical": "#f3f3f1", "cssVar": "--ground-2", "theme": "light", "tonalRamp": ["oklch(15.0% 0.001 106.4)", "oklch(26.4% 0.002 106.4)", "oklch(37.9% 0.002 106.4)", "oklch(49.3% 0.002 106.4)", "oklch(60.7% 0.002 106.4)", "oklch(72.1% 0.002 106.4)", "oklch(83.6% 0.002 106.4)", "oklch(95.0% 0.001 106.4)"] },
+      "ink-light": { "role": "neutral", "displayName": "Near-Black", "canonical": "#141414", "cssVar": "--ink", "theme": "light", "tonalRamp": ["oklch(15.0% 0 0)", "oklch(26.4% 0 0)", "oklch(37.9% 0 0)", "oklch(49.3% 0 0)", "oklch(60.7% 0 0)", "oklch(72.1% 0 0)", "oklch(83.6% 0 0)", "oklch(95.0% 0 0)"] },
+      "ink-2-light": { "role": "neutral", "displayName": "Graphite (light)", "canonical": "#5e5e5a", "cssVar": "--ink-2", "theme": "light", "tonalRamp": ["oklch(15.0% 0.003 106.6)", "oklch(26.4% 0.004 106.6)", "oklch(37.9% 0.005 106.6)", "oklch(49.3% 0.006 106.6)", "oklch(60.7% 0.006 106.6)", "oklch(72.1% 0.005 106.6)", "oklch(83.6% 0.004 106.6)", "oklch(95.0% 0.003 106.6)"] },
+      "rule-light": { "role": "neutral", "displayName": "Hairline (light)", "canonical": "#e7e7e4", "cssVar": "--rule", "theme": "light", "tonalRamp": ["oklch(15.0% 0.002 106.5)", "oklch(26.4% 0.003 106.5)", "oklch(37.9% 0.003 106.5)", "oklch(49.3% 0.004 106.5)", "oklch(60.7% 0.004 106.5)", "oklch(72.1% 0.003 106.5)", "oklch(83.6% 0.003 106.5)", "oklch(95.0% 0.002 106.5)"] },
+      "accent-light": { "role": "primary", "displayName": "Cobalt", "canonical": "#3f58b8", "cssVar": "--accent", "theme": "light", "tonalRamp": ["oklch(15.0% 0.076 269.1)", "oklch(26.4% 0.098 269.1)", "oklch(37.9% 0.121 269.1)", "oklch(49.3% 0.143 269.1)", "oklch(60.7% 0.143 269.1)", "oklch(72.1% 0.121 269.1)", "oklch(83.6% 0.098 269.1)", "oklch(95.0% 0.076 269.1)"] },
+      "on-accent-light": { "role": "primary", "displayName": "Cobalt Ink (light)", "canonical": "#ffffff", "cssVar": "--on-accent", "theme": "light" },
+      "accent-text-light": { "role": "primary", "displayName": "Cobalt Text (light)", "canonical": "#3f58b8", "cssVar": "--accent-text", "theme": "light" },
+      "link-line-light": { "role": "neutral", "displayName": "Underline Grey (light)", "canonical": "#a3a39f", "cssVar": "--link-line", "theme": "light", "tonalRamp": ["oklch(15.0% 0.003 106.5)", "oklch(26.4% 0.004 106.5)", "oklch(37.9% 0.004 106.5)", "oklch(49.3% 0.005 106.5)", "oklch(60.7% 0.005 106.5)", "oklch(72.1% 0.004 106.5)", "oklch(83.6% 0.004 106.5)", "oklch(95.0% 0.003 106.5)"] },
+      "link-hover-light": { "role": "primary", "displayName": "Cobalt Underline (light)", "canonical": "#3f58b8", "cssVar": "--link-hover", "theme": "light" },
+      "focus-light": { "role": "primary", "displayName": "Focus (Cobalt)", "canonical": "#3f58b8", "cssVar": "--focus", "theme": "light" },
+      "ctl-light": { "role": "primary", "displayName": "Control accent (Cobalt)", "canonical": "#3f58b8", "cssVar": "--ctl", "theme": "light" },
+      "heat-light": { "role": "data", "displayName": "Heat (light)", "canonical": "#4a62bd", "cssVar": "--heat", "theme": "light", "tonalRamp": ["oklch(15.0% 0.071 269.7)", "oklch(26.4% 0.092 269.7)", "oklch(37.9% 0.113 269.7)", "oklch(49.3% 0.134 269.7)", "oklch(60.7% 0.134 269.7)", "oklch(72.1% 0.113 269.7)", "oklch(83.6% 0.092 269.7)", "oklch(95.0% 0.071 269.7)"] },
+      "fail-bg": { "role": "status", "displayName": "Fail wash", "cssVar": "--fail-bg", "theme": "dark" },
+      "warn-bg": { "role": "status", "displayName": "Warn wash", "cssVar": "--warn-bg", "theme": "dark" },
+      "ready-bg": { "role": "status", "displayName": "Ready wash", "cssVar": "--ready-bg", "theme": "dark" },
+      "fail-bg-light": { "role": "status", "displayName": "Fail wash (light)", "cssVar": "--fail-bg", "theme": "light" },
+      "warn-bg-light": { "role": "status", "displayName": "Warn wash (light)", "cssVar": "--warn-bg", "theme": "light" },
+      "ready-bg-light": { "role": "status", "displayName": "Ready wash (light)", "cssVar": "--ready-bg", "theme": "light" },
+      "cat-all": { "role": "data", "displayName": "All", "canonical": "#ededeb", "cssVar": "--cat-all", "theme": "dark" },
+      "cat-politics": { "role": "data", "displayName": "Politics", "canonical": "#3987e5", "cssVar": "--cat-politics", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.079 255.1)", "oklch(26.4% 0.103 255.1)", "oklch(37.9% 0.126 255.1)", "oklch(49.3% 0.149 255.1)", "oklch(60.7% 0.149 255.1)", "oklch(72.1% 0.126 255.1)", "oklch(83.6% 0.103 255.1)", "oklch(95.0% 0.079 255.1)"] },
+      "cat-sports": { "role": "data", "displayName": "Sports", "canonical": "#d95926", "cssVar": "--cat-sports", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.085 40.1)", "oklch(26.4% 0.110 40.1)", "oklch(37.9% 0.135 40.1)", "oklch(49.3% 0.160 40.1)", "oklch(60.7% 0.160 40.1)", "oklch(72.1% 0.135 40.1)", "oklch(83.6% 0.110 40.1)", "oklch(95.0% 0.085 40.1)"] },
+      "cat-geopolitics": { "role": "data", "displayName": "Geopolitics", "canonical": "#199e70", "cssVar": "--cat-geopolitics", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.063 163.1)", "oklch(26.4% 0.082 163.1)", "oklch(37.9% 0.100 163.1)", "oklch(49.3% 0.119 163.1)", "oklch(60.7% 0.119 163.1)", "oklch(72.1% 0.100 163.1)", "oklch(83.6% 0.082 163.1)", "oklch(95.0% 0.063 163.1)"] },
+      "cat-crypto": { "role": "data", "displayName": "Crypto", "canonical": "#c98500", "cssVar": "--cat-crypto", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.070 73.2)", "oklch(26.4% 0.091 73.2)", "oklch(37.9% 0.111 73.2)", "oklch(49.3% 0.132 73.2)", "oklch(60.7% 0.132 73.2)", "oklch(72.1% 0.111 73.2)", "oklch(83.6% 0.091 73.2)", "oklch(95.0% 0.070 73.2)"] },
+      "cat-entertainment": { "role": "data", "displayName": "Entertainment", "canonical": "#d55181", "cssVar": "--cat-entertainment", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.084 0.8)", "oklch(26.4% 0.109 0.8)", "oklch(37.9% 0.134 0.8)", "oklch(49.3% 0.159 0.8)", "oklch(60.7% 0.159 0.8)", "oklch(72.1% 0.134 0.8)", "oklch(83.6% 0.109 0.8)", "oklch(95.0% 0.084 0.8)"] },
+      "cat-other": { "role": "data", "displayName": "Other", "canonical": "#9085e9", "cssVar": "--cat-other", "theme": "dark", "tonalRamp": ["oklch(15.0% 0.071 286.8)", "oklch(26.4% 0.092 286.8)", "oklch(37.9% 0.113 286.8)", "oklch(49.3% 0.135 286.8)", "oklch(60.7% 0.135 286.8)", "oklch(72.1% 0.113 286.8)", "oklch(83.6% 0.092 286.8)", "oklch(95.0% 0.071 286.8)"] },
+      "cat-all-light": { "role": "data", "displayName": "All (light)", "canonical": "#141414", "cssVar": "--cat-all", "theme": "light" },
+      "cat-politics-light": { "role": "data", "displayName": "Politics (light)", "canonical": "#2a78d6", "cssVar": "--cat-politics", "theme": "light", "tonalRamp": ["oklch(15.0% 0.080 255.5)", "oklch(26.4% 0.103 255.5)", "oklch(37.9% 0.127 255.5)", "oklch(49.3% 0.151 255.5)", "oklch(60.7% 0.151 255.5)", "oklch(72.1% 0.127 255.5)", "oklch(83.6% 0.103 255.5)", "oklch(95.0% 0.080 255.5)"] },
+      "cat-sports-light": { "role": "data", "displayName": "Sports (light)", "canonical": "#eb6834", "cssVar": "--cat-sports", "theme": "light", "tonalRamp": ["oklch(15.0% 0.086 40.6)", "oklch(26.4% 0.111 40.6)", "oklch(37.9% 0.137 40.6)", "oklch(49.3% 0.162 40.6)", "oklch(60.7% 0.162 40.6)", "oklch(72.1% 0.137 40.6)", "oklch(83.6% 0.111 40.6)", "oklch(95.0% 0.086 40.6)"] },
+      "cat-geopolitics-light": { "role": "data", "displayName": "Geopolitics (light)", "canonical": "#1baf7a", "cssVar": "--cat-geopolitics", "theme": "light", "tonalRamp": ["oklch(15.0% 0.069 162.1)", "oklch(26.4% 0.090 162.1)", "oklch(37.9% 0.110 162.1)", "oklch(49.3% 0.131 162.1)", "oklch(60.7% 0.131 162.1)", "oklch(72.1% 0.110 162.1)", "oklch(83.6% 0.090 162.1)", "oklch(95.0% 0.069 162.1)"] },
+      "cat-crypto-light": { "role": "data", "displayName": "Crypto (light)", "canonical": "#eda100", "cssVar": "--cat-crypto", "theme": "light", "tonalRamp": ["oklch(15.0% 0.079 75.1)", "oklch(26.4% 0.103 75.1)", "oklch(37.9% 0.126 75.1)", "oklch(49.3% 0.149 75.1)", "oklch(60.7% 0.149 75.1)", "oklch(72.1% 0.126 75.1)", "oklch(83.6% 0.103 75.1)", "oklch(95.0% 0.079 75.1)"] },
+      "cat-entertainment-light": { "role": "data", "displayName": "Entertainment (light)", "canonical": "#e87ba4", "cssVar": "--cat-entertainment", "theme": "light", "tonalRamp": ["oklch(15.0% 0.069 357.4)", "oklch(26.4% 0.090 357.4)", "oklch(37.9% 0.110 357.4)", "oklch(49.3% 0.131 357.4)", "oklch(60.7% 0.131 357.4)", "oklch(72.1% 0.110 357.4)", "oklch(83.6% 0.090 357.4)", "oklch(95.0% 0.069 357.4)"] },
+      "cat-other-light": { "role": "data", "displayName": "Other (light)", "canonical": "#6250d6", "cssVar": "--cat-other", "theme": "light", "tonalRamp": ["oklch(15.0% 0.097 283.4)", "oklch(26.4% 0.125 283.4)", "oklch(37.9% 0.154 283.4)", "oklch(49.3% 0.183 283.4)", "oklch(60.7% 0.183 283.4)", "oklch(72.1% 0.154 283.4)", "oklch(83.6% 0.125 283.4)", "oklch(95.0% 0.097 283.4)"] }
     },
     "typographyMeta": {
-      "display": {
-        "displayName": "Display",
-        "purpose": "The name on home only; case-study and demo h1 run the same voice a step down."
-      },
-      "headline": {
-        "displayName": "Headline",
-        "purpose": "Home section titles."
-      },
-      "headline-chapter": {
-        "displayName": "Chapter headline",
-        "purpose": "Story chapter headings beside the pinned strip."
-      },
-      "title": {
-        "displayName": "Title",
-        "purpose": "Index-row titles."
-      },
-      "title-section": {
-        "displayName": "Section title",
-        "purpose": "Case-study h2, where margin marks attach."
-      },
-      "lede": {
-        "displayName": "Lede",
-        "purpose": "Hero line (max 30ch) and a case study's first paragraph."
-      },
-      "body": {
-        "displayName": "Body",
-        "purpose": "Default serif text."
-      },
-      "body-reading": {
-        "displayName": "Reading",
-        "purpose": "Case-study column from 720px, 68ch."
-      },
-      "ui": {
-        "displayName": "UI",
-        "purpose": "Buttons, captions, link lists, inputs and tables, with tabular figures."
-      },
-      "label": {
-        "displayName": "Label",
-        "purpose": "Uppercase meta lines, table heads, legends; beneath or inline, never above a heading."
-      },
-      "edge-print": {
-        "displayName": "Edge print",
-        "purpose": "Film manufacturer printing and frame numbers, on film only."
-      },
-      "china-note": {
-        "displayName": "China note",
-        "purpose": "KEEP / DIDN'T HOLD on the strip's lower rebate, rotated -4deg."
-      }
+      "display": { "displayName": "Display", "purpose": "The name on home only." },
+      "headline": { "displayName": "Headline", "purpose": "Page titles, case-study h1 and demo h1." },
+      "title": { "displayName": "Title", "purpose": "h2 in case studies and demos." },
+      "title-item": { "displayName": "Title Item", "purpose": "List titles in Experience, Projects and Lab." },
+      "name-mark": { "displayName": "Name Mark", "purpose": "The name in the masthead." },
+      "meta": { "displayName": "Meta", "purpose": "The degree and roles lines under the name." },
+      "label": { "displayName": "Label", "purpose": "Section titles in Graphite, sentence case." },
+      "ui": { "displayName": "UI", "purpose": "Nav, footer, EV controls and inputs." },
+      "button": { "displayName": "Button", "purpose": "Buttons and segmented controls." },
+      "data-cell": { "displayName": "Data Cell", "purpose": "Hand names and EVs in the push/fold grid; the one condensed setting." },
+      "lede": { "displayName": "Lede", "purpose": "The paragraph right after a case-study h1." },
+      "body": { "displayName": "Body", "purpose": "Default serif text." },
+      "body-reading": { "displayName": "Body Reading", "purpose": "Case-study prose, 1.125rem rising to 1.1875rem at 720px, 68ch." }
     },
-    "shadows": [
-      {
-        "name": "loupe",
-        "value": "drop-shadow(0 calc(1.2 * var(--u)) calc(1.4 * var(--u)) rgb(0 0 0 / 0.5))",
-        "purpose": "The WebGL lens resting on the strip (a CSS filter)."
-      },
-      {
-        "name": "range-thumb",
-        "value": "0 1px 3px rgb(0 0 0 / 0.4)",
-        "purpose": "Demo slider knob."
-      }
-    ],
+    "shadows": [],
     "motion": [
-      {
-        "name": "develop",
-        "value": "520ms cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "Theme switch view transition: the new theme clips up from the bottom. Off under reduced motion."
-      },
-      {
-        "name": "state-change",
-        "value": "120ms ease-out",
-        "purpose": "Button background, color and border swaps."
-      },
-      {
-        "name": "strip-hold",
-        "value": "0.55",
-        "purpose": "Share of each frame's scroll during which the pinned strip holds before advancing."
-      },
-      {
-        "name": "mark-draw",
-        "value": "stroke-dashoffset 1 to 0; a cross's second stroke starts at 44% (span 0.56)",
-        "purpose": "Grease marks drawing on as frames pass the reading position; all drawn under reduced motion."
-      }
+      { "name": "state-change", "value": "120ms ease-out", "purpose": "Button, link underline and text colour swaps." },
+      { "name": "underline-draw", "value": "background-size 220ms cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "The 1px cobalt line drawing under UI links on hover." },
+      { "name": "arrow-nudge", "value": "translateX(4px) 160ms cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "A list title's arrow on hover or focus." },
+      { "name": "intro", "value": "560ms cubic-bezier(0.16, 1, 0.3, 1), stagger 70ms", "purpose": "Once per session on home: the name rises 0.35em without fading; the lines below rise 0.6em and fade in." },
+      { "name": "title-morph", "value": "360ms cubic-bezier(0.2, 0.7, 0.2, 1)", "purpose": "A project title morphs into its case-study h1 via ViewTransition name project-<slug>, share morph." },
+      { "name": "theme-wipe", "value": "520ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The new theme clips up from the bottom, only while [data-theming] is set." },
+      { "name": "heat-cell", "value": "180ms ease-out", "purpose": "EV cell background and colour changes." },
+      { "name": "reduced-motion", "value": "transition: none; animation: none; view transitions 0s", "purpose": "Everything above is off under prefers-reduced-motion." }
     ],
     "breakpoints": [
-      {
-        "name": "film",
-        "value": "720px"
-      },
-      {
-        "name": "grid",
-        "value": "900px"
-      },
-      {
-        "name": "margin",
-        "value": "1100px"
-      }
+      { "name": "nav-compact", "value": "max-width: 440px" },
+      { "name": "list-stack", "value": "max-width: 560px" },
+      { "name": "wide", "value": "min-width: 720px" }
     ],
-    "filmUnits": {
-      "u": "6px, clamp(6px, 1.1svh, 9px) from 720px",
-      "mu": "6px fixed (masthead and footer rebates)",
-      "stripHeight": "35u",
-      "sprocketBand": "5.5u",
-      "pitch": "38u",
-      "window": "36u x 24u"
+    "heat": {
+      "mix": "color-mix(in srgb, var(--heat) t, var(--ground-2))",
+      "range": "t = 0.2 + 0.6 * min(1, gain / 1.5) for hands that beat folding; 0 otherwise",
+      "cap": "80%, so ink stays AA: 6.5:1 dark, 4.8:1 light"
     }
   },
   "components": [
@@ -731,17 +93,17 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Resume and other main actions; swaps to solid china yellow on hover.",
+      "description": "Resume and other main actions; swaps to a solid cobalt fill on hover.",
       "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Resume (PDF)</a>",
-      "css": ".ds-btn{display:inline-flex;align-items:center;gap:.5em;min-height:46px;padding:0 20px;font-family:var(--font-display);font-weight:700;font-size:.9375rem;letter-spacing:.01em;border:1.5px solid var(--ink);border-radius:2px;color:var(--ink);background:transparent;text-decoration:none;cursor:pointer;transition:background-color 120ms ease-out,color 120ms ease-out,border-color 120ms ease-out}.ds-btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px}.ds-btn-primary{background:var(--ink);color:var(--ground)}.ds-btn-primary:hover{background:var(--china);border-color:var(--china);color:var(--film)}"
+      "css": ".ds-btn{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font:600 .90625rem/1 var(--font-display);color:var(--ink);background:transparent;border:1px solid var(--rule);border-radius:6px;text-decoration:none;cursor:pointer;transition:background-color 120ms ease-out,color 120ms ease-out,border-color 120ms ease-out}.ds-btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px}.ds-btn-primary{background:var(--ink);border-color:var(--ink);color:var(--ground)}.ds-btn-primary:hover{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}"
     },
     {
       "name": "Quiet Button",
       "kind": "button",
       "refersTo": "button-quiet",
-      "description": "Secondary action beside the primary; fills with the tray on hover.",
+      "description": "Secondary action beside the primary; fills with Raised Grey on hover.",
       "html": "<a class=\"ds-btn ds-btn-quiet\" href=\"#\">Contact</a>",
-      "css": ".ds-btn{display:inline-flex;align-items:center;gap:.5em;min-height:46px;padding:0 20px;font-family:var(--font-display);font-weight:700;font-size:.9375rem;letter-spacing:.01em;border:1.5px solid var(--ink);border-radius:2px;color:var(--ink);background:transparent;text-decoration:none;cursor:pointer;transition:background-color 120ms ease-out,color 120ms ease-out,border-color 120ms ease-out}.ds-btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px}.ds-btn-quiet:hover{background:var(--ground-2)}"
+      "css": ".ds-btn{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;font:600 .90625rem/1 var(--font-display);color:var(--ink);background:transparent;border:1px solid var(--rule);border-radius:6px;text-decoration:none;cursor:pointer;transition:background-color 120ms ease-out,color 120ms ease-out,border-color 120ms ease-out}.ds-btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px}.ds-btn-quiet:hover{background:var(--ground-2)}"
     },
     {
       "name": "Demo Field",
@@ -749,97 +111,77 @@
       "refersTo": "input-field",
       "description": "Number, text and select inputs in demos.",
       "html": "<label class=\"ds-label\">Stack (bb) <input class=\"ds-input\" type=\"number\" value=\"10\"></label>",
-      "css": ".ds-label{font-family:var(--font-display);font-size:.9375rem;color:var(--ink)}.ds-input{font-family:var(--font-display);font-size:.9375rem;font-variant-numeric:tabular-nums;color:var(--ink);background:var(--ground-2);border:1px solid var(--rule);border-radius:2px;padding:6px 8px;min-height:36px}.ds-input:hover{border-color:var(--ink-2)}.ds-input:focus-visible{outline:2px solid var(--focus);outline-offset:3px}"
+      "css": ".ds-label{font-family:var(--font-display);font-size:.9375rem;color:var(--ink)}.ds-input{font-family:var(--font-display);font-size:.9375rem;font-variant-numeric:tabular-nums;color:var(--ink);background:var(--ground-2);border:1px solid var(--rule);border-radius:6px;padding:6px 8px;min-height:36px}.ds-input:hover{border-color:var(--ink-2)}.ds-input:focus-visible{outline:2px solid var(--focus);outline-offset:3px}"
     },
     {
-      "name": "Rebate Masthead",
+      "name": "Masthead",
       "kind": "nav",
       "refersTo": "nav-link",
-      "description": "Film rebate across the top: sprocket band, amber name, condensed caps nav.",
-      "html": "<header class=\"ds-rebate\"><nav class=\"ds-nav\"><a class=\"ds-name\" href=\"#\">Ian Menachery</a><span><a href=\"#\">Work</a><a href=\"#\">Lab</a><a href=\"#\">Resume</a><a href=\"#\">Contact</a></span></nav></header>",
-      "css": ".ds-rebate{position:relative;background:var(--film);color:var(--on-film);padding:24px 16px 10px}.ds-rebate::before{content:\"\";position:absolute;inset-inline:0;top:0;height:24px;background:var(--hole);-webkit-mask:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4.75 4'%3E%3Crect x='1.385' y='.7' width='1.98' height='2.6' rx='.42'/%3E%3C/svg%3E\") 0 0 / 28.5px 24px repeat-x;mask:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4.75 4'%3E%3Crect x='1.385' y='.7' width='1.98' height='2.6' rx='.42'/%3E%3C/svg%3E\") 0 0 / 28.5px 24px repeat-x}.ds-nav{display:flex;justify-content:space-between;align-items:center;gap:12px}.ds-nav span{display:flex;gap:14px}.ds-nav a{color:inherit;font-family:var(--font-display);font-variation-settings:'wdth' 70;font-weight:600;text-transform:uppercase;letter-spacing:.07em;font-size:.8125rem;text-decoration:none;padding-block:6px}.ds-nav a:hover{text-decoration:underline;text-decoration-color:var(--edge);text-decoration-thickness:2px}.ds-nav .ds-name{color:var(--edge)}.ds-nav a:focus-visible{outline:2px solid var(--focus);outline-offset:3px}"
+      "description": "Name at left, Graphite nav links that brighten and draw a cobalt underline on hover, theme switch at right.",
+      "html": "<header class=\"ds-mast\"><a class=\"ds-name ds-ui\" href=\"#\">Ian Menachery</a><nav><a class=\"ds-ui\" href=\"#\">Work</a><a class=\"ds-ui\" href=\"#\">Lab</a><a class=\"ds-ui\" href=\"#\">Resume</a><button class=\"ds-toggle\" aria-label=\"Switch to light theme\"><svg viewBox=\"0 0 20 20\" width=\"20\" height=\"20\" aria-hidden=\"true\"><circle cx=\"10\" cy=\"10\" r=\"7.25\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M10 2.75a7.25 7.25 0 0 1 0 14.5z\" fill=\"currentColor\"/></svg></button></nav></header>",
+      "css": ".ds-mast{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 20px;background:var(--ground);color:var(--ink)}.ds-mast nav{display:flex;align-items:center;gap:18px}.ds-name{font:650 .96875rem/1 var(--font-display);color:var(--ink)}.ds-mast nav a{font:500 .90625rem/1.4 var(--font-display);color:var(--ink-2);padding-block:4px}.ds-ui{text-decoration:none;background:linear-gradient(var(--link-hover),var(--link-hover)) 0 100%/0 1px no-repeat;transition:background-size 220ms cubic-bezier(.2,.7,.2,1),color 120ms ease-out}.ds-ui:hover,.ds-ui:focus-visible{background-size:100% 1px;color:var(--ink)}.ds-ui:focus-visible,.ds-toggle:focus-visible{outline:2px solid var(--focus);outline-offset:3px}.ds-toggle{display:grid;place-items:center;width:32px;height:32px;border:0;background:none;color:var(--ink-2);border-radius:50%;cursor:pointer;transition:color 120ms ease-out}.ds-toggle:hover{color:var(--ink)}"
     },
     {
-      "name": "Index Row",
+      "name": "List Row",
       "kind": "card",
-      "refersTo": "title",
-      "description": "Ruled editorial index row: title, caps kind below, serif summary, text links.",
-      "html": "<ul class=\"ds-index\"><li class=\"ds-row\"><div><p class=\"ds-title\"><a href=\"#\">Project title</a></p><p class=\"ds-caps\">Kind</p></div><p class=\"ds-sum\">One-line summary of the question and what the result was.</p><p class=\"ds-links\"><a href=\"#\">Case study</a><a href=\"#\">Demo</a></p></li></ul>",
-      "css": ".ds-index{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}.ds-row{display:grid;gap:6px 40px;padding:22px 0 24px;border-bottom:1px solid var(--rule);color:var(--ink);font-family:var(--font-text)}.ds-title{font-family:var(--font-display);font-weight:700;font-size:1.375rem;line-height:1.15;letter-spacing:-.01em;margin:0}.ds-title a{color:inherit;text-decoration:none}.ds-title a:hover{text-decoration:underline;text-decoration-color:var(--link-line);text-decoration-thickness:3px}.ds-caps{font-family:var(--font-display);font-variation-settings:'wdth' 72;font-weight:600;text-transform:uppercase;letter-spacing:.07em;font-size:.8125rem;color:var(--ink-2);margin:6px 0 0}.ds-sum{max-width:60ch;margin:0}.ds-links{display:flex;gap:4px 18px;font-family:var(--font-display);font-weight:600;font-size:.9375rem;margin:0}.ds-links a{color:inherit;text-decoration-color:var(--link-line);text-decoration-thickness:1.5px;text-underline-offset:.22em}.ds-links a:hover{text-decoration-thickness:3px}.ds-links a:focus-visible,.ds-title a:focus-visible{outline:2px solid var(--focus);outline-offset:3px}"
-    },
-    {
-      "name": "Film Frame",
-      "kind": "custom",
-      "refersTo": "frame-window",
-      "description": "One frame of the strip: lit window, amber frame number, china note, grease loop.",
-      "html": "<div class=\"ds-frame\"><div class=\"ds-window\"></div><span class=\"ds-num\">7</span><span class=\"ds-note\">Keep</span><svg class=\"ds-mark\" viewBox=\"0 0 38 35\"><ellipse cx=\"19\" cy=\"17.5\" rx=\"18.4\" ry=\"13.1\"/></svg></div>",
-      "css": ".ds-frame{--u:6px;position:relative;width:calc(38*var(--u));height:calc(35*var(--u));background:var(--film)}.ds-window{position:absolute;left:var(--u);top:calc(5.5*var(--u));width:calc(36*var(--u));height:calc(24*var(--u));border-radius:calc(.5*var(--u));background:var(--window)}.ds-num{position:absolute;left:calc(2*var(--u));top:calc(29.9*var(--u));font-family:var(--font-display);font-variation-settings:'wdth' 62;font-weight:600;font-size:calc(1.3*var(--u));letter-spacing:.12em;color:var(--edge)}.ds-note{position:absolute;right:calc(2.2*var(--u));top:calc(29.4*var(--u));font-family:var(--font-display);font-variation-settings:'wdth' 80;font-weight:800;font-size:calc(2.3*var(--u));line-height:1;text-transform:uppercase;color:var(--china);transform:rotate(-4deg);transform-origin:right center}.ds-mark{position:absolute;inset:0;width:100%;height:100%;overflow:visible;fill:none;stroke:var(--grease);stroke-width:.62;stroke-linecap:round}"
+      "refersTo": "list-title",
+      "description": "Ruled row: Archivo title with a nudging arrow, Graphite side links, serif description below.",
+      "html": "<ul class=\"ds-list\"><li><p class=\"ds-title\"><a href=\"#\">Project title<span class=\"ds-arrow\" aria-hidden=\"true\">→</span></a></p><p class=\"ds-side\">Demo · Code</p><p class=\"ds-desc\">What it is, in one line.</p></li><li><p class=\"ds-title\">EY <span class=\"ds-role\">· Technology Consulting Intern</span></p><p class=\"ds-side\">Jun–Aug 2026</p></li></ul>",
+      "css": ".ds-list{list-style:none;margin:0;padding:0;color:var(--ink)}.ds-list>li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;padding:12px 0;border-top:1px solid var(--rule)}.ds-list>li:first-child{border-top:0;padding-top:4px}.ds-list p{margin:0}.ds-title{font:600 1.03125rem/1.35 var(--font-display);letter-spacing:-.005em}.ds-title a{color:inherit;text-decoration:none}.ds-title a:hover{color:var(--accent-text)}.ds-title a:focus-visible{outline:2px solid var(--focus);outline-offset:3px}.ds-role{font-weight:400;color:var(--ink-2)}.ds-arrow{display:inline-block;margin-left:.3em;color:var(--ink-2);transition:transform 160ms cubic-bezier(.2,.7,.2,1),color 160ms ease-out}.ds-title a:hover .ds-arrow,.ds-title a:focus-visible .ds-arrow{transform:translateX(4px);color:var(--accent-text)}.ds-side{font:500 .875rem/1.6 var(--font-display);color:var(--ink-2);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}.ds-desc{grid-column:1/-1;font-family:var(--font-text);font-size:1rem;line-height:1.5;color:var(--ink-2);max-width:62ch}"
     },
     {
       "name": "Segmented Control",
       "kind": "chip",
-      "refersTo": "button-primary",
-      "description": "Demo mode switch; the pressed segment fills Ink.",
-      "html": "<div class=\"ds-seg\"><button aria-pressed=\"true\">All</button><button aria-pressed=\"false\">Politics</button><button aria-pressed=\"false\">Sports</button></div>",
-      "css": ".ds-seg{display:flex;flex-wrap:wrap}.ds-seg button{font-family:var(--font-display);font-weight:700;font-size:.9375rem;min-height:40px;padding:0 16px;border:1.5px solid var(--ink);border-radius:0;margin-left:-1.5px;background:transparent;color:var(--ink);cursor:pointer;transition:background-color 120ms ease-out,color 120ms ease-out}.ds-seg button:first-child{margin-left:0;border-radius:2px 0 0 2px}.ds-seg button:last-child{border-radius:0 2px 2px 0}.ds-seg button:hover{background:var(--ground-2)}.ds-seg button[aria-pressed=\"true\"]{background:var(--ink);color:var(--ground)}.ds-seg button:focus-visible{outline:2px solid var(--focus);outline-offset:3px}"
+      "refersTo": "segment-pressed",
+      "description": "Two or more butted buttons; the pressed one fills Ink.",
+      "html": "<span class=\"ds-seg\" role=\"group\"><button aria-pressed=\"true\">Small blind jams</button><button aria-pressed=\"false\">Big blind calls</button></span>",
+      "css": ".ds-seg{display:inline-flex}.ds-seg button{font:600 .84375rem/1 var(--font-display);color:var(--ink);background:transparent;border:1px solid var(--rule);padding:8px 11px;min-height:34px;margin-left:-1px;border-radius:0;cursor:pointer}.ds-seg button:first-child{margin-left:0;border-radius:6px 0 0 6px}.ds-seg button:last-child{border-radius:0 6px 6px 0}.ds-seg button[aria-pressed=\"true\"]{background:var(--ink);border-color:var(--ink);color:var(--ground)}.ds-seg button:focus-visible{outline:2px solid var(--focus);outline-offset:3px;position:relative}"
+    },
+    {
+      "name": "EV Cells",
+      "kind": "custom",
+      "refersTo": "ev-cell",
+      "description": "A slice of the push/fold grid: hand and EV per cell, heat capped at 80%, cold cells in Graphite.",
+      "html": "<div class=\"ds-ev\"><button class=\"ds-cell\" aria-pressed=\"true\" style=\"background-color:color-mix(in srgb,var(--heat) 80%,var(--ground-2))\"><span>AA</span><span>+9.43</span></button><button class=\"ds-cell\" style=\"background-color:color-mix(in srgb,var(--heat) 52%,var(--ground-2))\"><span>AKs</span><span>+4.10</span></button><button class=\"ds-cell\" style=\"background-color:color-mix(in srgb,var(--heat) 24%,var(--ground-2))\"><span>K9o</span><span>+0.21</span></button><button class=\"ds-cell ds-cold\"><span>72o</span><span>−0.62</span></button></div>",
+      "css": ".ds-ev{display:grid;grid-template-columns:repeat(4,3rem);gap:1px;background:var(--ground)}.ds-cell{aspect-ratio:1;padding:0;border:0;border-radius:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font:600 .75rem/1.1 var(--font-display);font-variation-settings:'wdth' 75;font-variant-numeric:tabular-nums;color:var(--ink);cursor:pointer;transition:background-color 180ms ease-out,color 180ms ease-out}.ds-cell span+span{font-weight:500}.ds-cold{color:var(--ink-2)}.ds-cell[aria-pressed=\"true\"]{outline:2px solid var(--ink);outline-offset:-2px;position:relative}.ds-cell:focus-visible{outline:2px solid var(--focus);outline-offset:-2px;position:relative;z-index:2}"
     }
   ],
   "narrative": {
-    "northStar": "The Editor's Contact Sheet",
-    "overview": "The site is a sheet of film an editor has gone over with a grease pencil. Black 35 mm strips with sprocket holes, amber edge print and frame numbers, frames lit like a light table; keepers looped in red, the claims that didn't hold crossed out and left in place. Dark is the darkroom (warm black ground, the default); light is the print (white paper). The film itself is black in both, so switching theme changes the room, never the material.\n\nDensity is editorial. Big condensed Archivo headings, a serif reading column, ruled index rows, and very little chrome. Ornament comes only from the film's own furniture: sprocket rebates on the masthead, footer and case-study meta line, edge print, grease marks, yellow china-marker notes. Motion is one authored moment, the pinned strip advancing frame by frame with its marks drawing on, plus the \"develop\" wipe when the theme changes. Nothing else animates in.\n\nHonesty is the visual idea. A crossed-out frame and a cross in a case study's margin are a finding, styled with the same care as a kept one.",
+    "northStar": "The Plain Record",
+    "overview": "Minimal black and white with a soft cobalt accent. Dark is the default and light is a real theme with its own values, not an inversion. Archivo carries names, headings and UI; Source Serif 4 carries reading. The page is one centred column, stacked in order: the name, a degree line, a roles line, Resume and Contact, then short Experience and Projects lists. Home leads with what Ian has done and keeps prose to a sentence where a sentence will do.\n\nDensity is quiet. Ruled lists, small grey section titles, generous space around the name, and almost no chrome. The cobalt is rare on purpose: it appears on hover, focus, selection, the primary button's hover fill, and the push/fold heat. Everything else is ink on ground.\n\nMotion is a handful of small, specific moments. A one-time intro entrance on the first visit to home, in which the name only moves and never starts invisible, so it paints at once and LCP is not delayed. A project title that morphs into its case-study heading through React's `<ViewTransition>` (name `project-<slug>`, `share=\"morph\"`). Hover details: the arrow nudges and the underline draws across. The theme switch wipes the new theme up from the bottom, scoped to `[data-theming]` so navigation keeps its own transition. And a live push/fold EV grid on home. All of it is off under `prefers-reduced-motion`.",
     "keyCharacteristics": [
-      "Two themes, one film: black strips (#050404) never change; only ground, ink and marks' surroundings flip.",
-      "Everything on the film is sized in film units (`--u`, one millimetre of 35 mm film).",
-      "Grease red marks verdicts; china-marker yellow carries notes, focus, selection and the primary hover.",
-      "Archivo for display, UI and condensed edge print; Source Serif 4 for reading.",
-      "Flat, ruled, opaque. Depth comes from film on ground, not shadows."
+      "Black, white and one soft cobalt; dark by default, with a real light theme.",
+      "Archivo for names, headings and UI; Source Serif 4 for reading.",
+      "One centred 760px column with ruled lists and no cards.",
+      "Flat and opaque: no shadows anywhere.",
+      "Small, authored motion, every piece of it off under reduced motion."
     ],
     "rules": [
-      {
-        "name": "The Same Film Rule",
-        "body": "Film, on-film text, the window, edge amber and china yellow are identical in both themes. A theme swaps the room, never the strip.",
-        "section": "colors"
-      },
-      {
-        "name": "The Grease Is A Verdict Rule",
-        "body": "Red grease marks one thing: a judgment on a claim (loop = held, cross = didn't hold), plus light-mode links and focus. It is never decoration, a fill, or body text.",
-        "section": "colors"
-      },
-      {
-        "name": "The Width Axis Rule",
-        "body": "Condense Archivo through `wdth`, never a second family: 72 for labels, 70 in the masthead nav, 62 for edge print, 80 for china notes. Headings stay at full width.",
-        "section": "typography"
-      },
-      {
-        "name": "The Label Sits Below Rule",
-        "body": "A caps label sits beneath or inline with what it describes: the degree line under the name, the kind under an index title, \"Frame N\" ahead of its caption. It never sits above a heading.",
-        "section": "typography"
-      },
-      {
-        "name": "The Only Lifted Objects Rule",
-        "body": "Cards, text, buttons and sections never cast shadows. A shadow means a physical tool sitting on the sheet.",
-        "section": "elevation"
-      }
+      { "name": "The One Blue Rule", "body": "Cobalt is the only hue outside the demos' data and status colours. It marks interaction (hover, focus, selection, pressed fill) and the EV heat, never decoration or a heading.", "section": "colors" },
+      { "name": "The Real Light Theme Rule", "body": "Each theme sets its own values for every token. Light is tuned for white paper (a deeper cobalt, a darker Graphite), never computed by inverting dark.", "section": "colors" },
+      { "name": "The Two Families Rule", "body": "Archivo for names, headings and UI; Source Serif 4 for reading. No third family beyond monospace for code, and headings are never serif.", "section": "typography" },
+      { "name": "The Quiet Section Title Rule", "body": "Section titles are small Graphite Archivo in sentence case. The list under them carries the weight; titles never shout or sit in caps.", "section": "typography" },
+      { "name": "The No Shadow Rule", "body": "Nothing casts a shadow: not buttons, lists, the headshot, the range thumb or the grid. A surface that needs separation gets Raised Grey or a Hairline.", "section": "elevation" }
     ],
     "dos": [
-      "**Do** size anything on film in film units (`--u`, 6px rising to 9px) so holes, windows, edge print and notes keep their proportions.",
-      "**Do** keep film Film Black in both themes and let only ground, ink and marks' surroundings change.",
-      "**Do** mark claims with grease: a loop for held, a cross for didn't hold, and leave crossed frames on the sheet.",
-      "**Do** separate list items with 1px horizontal rules and keep the work list an editorial index.",
-      "**Do** label every chart series in text and back it with a table; color is never the only encoding.",
-      "**Do** give every motion a reduced-motion state: static scrollable strip, all marks drawn, no pin, no view transition.",
-      "**Do** build Read and Operate styles on these tokens, adding no new colors or font families."
+      "**Do** keep cobalt for interaction and heat: hover, focus, selection, the primary hover fill, and the EV grid.",
+      "**Do** set both themes' value for any new token; the light theme is tuned, not inverted.",
+      "**Do** separate list items with 1px Hairline rules and keep lists in the one centred column.",
+      "**Do** keep text on any heat or status fill at WCAG AA, as the 80% heat cap does for the EV grid.",
+      "**Do** give every motion a reduced-motion state; the global rule turns transitions, animations and view transitions off.",
+      "**Do** keep the name visible from the first frame; an entrance may move it but never start it at zero opacity.",
+      "**Do** name every chart series and status in text; colour is never the only encoding.",
+      "**Do** build Read and Operate styles on these tokens in their own stylesheets, adding no colours or families."
     ],
     "donts": [
-      "**Don't** put a caps label, badge or eyebrow above a heading.",
-      "**Don't** use gradients, gradient text or glassmorphism; film, paper and the tray are flat and opaque.",
-      "**Don't** add grain or noise to the film; edge print and grease carry its texture.",
-      "**Don't** fade or slide sections in on scroll; the strip is the one authored motion.",
-      "**Don't** box lists into cards or give them colored left borders.",
+      "**Don't** use gradients, gradient text, glassmorphism or grain.",
+      "**Don't** cast shadows from anything.",
+      "**Don't** fade or slide sections in on scroll; the intro plays once, on home, and nothing else enters.",
+      "**Don't** box lists into cards or give them coloured left borders.",
       "**Don't** let a button fade on hover; it swaps to a solid fill.",
-      "**Don't** set headings or accent words in serif italic; headings are Archivo.",
-      "**Don't** add an icon set; the theme switch's inline half-disc is the only icon.",
-      "**Don't** cast shadows from anything but the loupe and the range thumb."
+      "**Don't** set headings or accent words in serif italic.",
+      "**Don't** put a badge or caps eyebrow above a heading.",
+      "**Don't** add an icon set; the theme switch's half-disc is the one drawn icon."
     ]
   }
 }

@@ -6,9 +6,9 @@ export const metadata: Metadata = { title: "Work" };
 
 export default function Work() {
   return (
-    <section className="section">
-      <h1 className="section-title">Work</h1>
+    <div className="page">
+      <h1 className="page-title">Work</h1>
       <ProjectIndex projects={projects} />
-    </section>
+    </div>
   );
 }

@@ -7,7 +7,7 @@ part", "Builds AI that's dependable" and "Explain it clearly" woven in. Optimize
 fits best (AI solutions, implementation, tech consulting, analytics, data science) and the
 projects that best help him get them.
 
-Hero line (draft):
+Hero line (draft, retired 2026-11-18: home now has no tagline):
 
 > I make data and AI dependable: I automate the tedious part, test the claims, and explain what
 > the numbers mean.
@@ -24,26 +24,19 @@ How each theme shows up:
 
 ## Home page, top to bottom
 
-0. **Hero.** Name, "Data Science + Economics, Northeastern, Dec 2026", the hero line.
-   Links: Work, Lab, Resume, Contact.
-1. **Chapter 1: Numbers people rely on (Sun Life).** Fixed figures senior stakeholders relied on
-   (duplicate enrollments, overcounted prospects, QTD goals on month-end dates); automated
-   cross-sell reporting (an estimated 5–10 hours saved per quarter) and replaced a manual VBA QA
-   task with an unattended monthly SQL job.
-2. **Chapter 2: AI that behaves (EY).** Two Copilot Studio agents routed through deterministic
-   Power Automate flows; manual onboarding, offboarding and access requests replaced with flows; a
-   role-to-course audit that caught 20 unassigned courses before go-live for a 17,300-employee
-   client; the framework presented to an 80-person engagement, with handoff docs. Internal team
-   work; never framed as client-facing.
-3. **Chapter 3: Claims, tested (personal projects).** Can an LLM beat prediction markets? (No,
-   after costs.) Are market prices calibrated? (Politics a week out, yes; sports, barely.) What is
-   a company worth from its filings? (A DCF only where free cash flow fits.) Can I solve a game
-   exactly? (Bit-for-bit against OpenSpiel; 40 of 40 pre-registered checks.)
-4. **Selected work.** Cards linking to case studies.
-5. **Lab.** The three live demos.
-6. **Experience.** EY, Sun Life, Knack tutoring (4.97/5), Northeastern.
-7. **About.** Headshot, short bio, interests (chess, poker, basketball, personal finance).
-8. **Contact.** LinkedIn, GitHub, email, resume PDF.
+Updated 2026-11-18:
+
+0. **Hero.** Name, "Data Science + Economics, Northeastern University, December 2026", the roles
+   line, Resume + Contact. No tagline (the draft hero line is retired).
+1. **Experience.** EY, Sun Life, Knack, Northeastern, one line each.
+2. **Projects.** Every project, title linking to its case study, with Demo and Code links and its kind.
+3. **Lab.** The live push/fold EV grid, then the demo list.
+4. **About.** Headshot and one sentence.
+5. **Contact.** Email, LinkedIn, GitHub, resume PDF.
+
+The old story chapters are off home. Their Sun Life and EY detail now lives in the one-line Experience
+entries and the resume; the tested claims live in the case studies. EY work is still internal team work
+and never framed as client-facing.
 
 ## Sitemap
 

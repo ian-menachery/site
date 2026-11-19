@@ -18,7 +18,7 @@ The roles in play are full-time 2027 positions: AI solutions, implementation con
 
 ## Product Purpose
 
-Ian Menachery's portfolio (Data Science + Economics, Northeastern, graduating December 2026). It tells his story and shows his work so a visitor believes the hero line: he makes data and AI dependable, automating the tedious part, testing the claims and explaining what the numbers mean.
+Ian Menachery's portfolio (Data Science + Economics, Northeastern, graduating December 2026). It shows what he has done (internships at EY and Sun Life, and checked personal projects) so a visitor can open the proof in one click.
 
 A visit succeeds when the visitor does any of these:
 - opens a case study or a demo;
@@ -34,7 +34,7 @@ A visit succeeds when the visitor does any of these:
 
 - Visitors reach the site from the resume PDF, LinkedIn's Website field, the GitHub profile README and job applications.
 - It is hosted free on a `*.vercel.app` address and deploys on every push to `main`.
-- Approved story and sitemap: `docs/story.md`. The home page runs: hero, three story chapters (Sun Life → EY → personal projects), selected work, lab, experience, about, contact.
+- Approved story and sitemap: `docs/story.md`. The home page runs: name, degree line, roles line, Resume + Contact; then Experience, Projects, Lab (with a live push/fold EV grid), About, Contact.
 
 ## Capabilities and Constraints
 
@@ -61,8 +61,8 @@ A visit succeeds when the visitor does any of these:
 
 - **Name:** Ian Menachery. **Contact:** ianmenachery@gmail.com, linkedin.com/in/ianmenachery, github.com/ian-menachery.
 - **Voice:** plain, specific, first person and takeaway-first. Every number is sourced and failures are stated. Case-study prose goes through Humanizer: no em dashes, no bold labels, no staged closers.
-- **Feel Ian chose (binding; recorded, not expanded):** clean editorial, playful and interactive, dark and cinematic.
-- **UI experiments he asked for:** live project demos, one 3D/WebGL moment, motion and scroll storytelling, unusual layouts.
+- **Feel Ian chose (binding; recorded, not expanded):** minimal and quiet; black and white with one soft cobalt accent; high quality for how simple it is. Home lists what he has done, with no tagline or claims. (2026-11-18; replaces "clean editorial, playful and interactive, dark and cinematic".)
+- **UI experiments he asked for:** live project demos, one live figure on home (the push/fold EV grid), and small motion: a one-time intro entrance, project titles morphing into case-study headings, hover details. No WebGL or scroll storytelling (dropped 2026-11-18).
 - **Don't-list** (Ian's, from `~/projects/ideas/lists/skills-to-try.md`): purple-to-blue gradients, gradient headline text, emojis in headings, Inter everywhere, colored left-border cards, glassmorphism, low-contrast dark mode, three icon boxes in a row, a badge above the headline, Lucide icons everywhere, untouched shadcn components, sections fading in on scroll, cursor spotlight effects, buttons that fade on hover, inconsistent spacing, em dashes everywhere, generic buzzword copy, serif italic accent words, the Space Grotesk + Instrument Serif pairing, grain texture.
 
 ## Evidence on Hand

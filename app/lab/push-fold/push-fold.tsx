@@ -4,13 +4,12 @@ import { useState } from "react";
 import {
   CLASS_NAMES,
   MISTAKE_BB,
-  atDepth,
-  equilibrium,
   grade,
   type Action,
   type Position,
   type PushFoldData,
 } from "@/lib/pushfold";
+import EvGrid from "@/components/ev-grid";
 
 const bb = (x: number) => `${x < 0 ? "−" : "+"}${Math.abs(x).toFixed(3)} bb`;
 const pct = (p: number) => `${Math.round(p * 1000) / 10}%`;
@@ -26,82 +25,17 @@ export default function PushFold({ data }: { data: PushFoldData }) {
 }
 
 function Chart({ data }: { data: PushFoldData }) {
-  const [depth, setDepth] = useState(10);
-  const [position, setPosition] = useState<Position>("sb");
-  const [hand, setHand] = useState("AA");
-  const selected = grade(data, depth, position, hand, "allin");
-
   return (
     <section aria-labelledby="chart-heading">
-      <h2 id="chart-heading">Equilibrium chart</h2>
+      <h2 id="chart-heading">EV chart</h2>
       <p>
-        <label>
-          Effective stack: {depth} bb{" "}
-          <input
-            type="range"
-            min={1}
-            max={20}
-            step={1}
-            value={depth}
-            onChange={(e) => setDepth(Number(e.target.value))}
-          />
-        </label>
+        Each cell is the EV of going all in with that hand, in big blinds, at
+        the equilibrium. Shaded cells beat folding (−0.5 bb for the small blind,
+        −1 bb for the big blind). Suited hands sit above the diagonal, offsuit
+        below, pairs on it. Select a cell for details; exploitability is the
+        most a perfect opponent could win against this pair of strategies.
       </p>
-      <fieldset>
-        <legend>Show</legend>
-        {(["sb", "bb"] as const).map((p) => (
-          <label key={p} className="mr-4">
-            <input
-              type="radio"
-              name="position"
-              checked={position === p}
-              onChange={() => setPosition(p)}
-            />{" "}
-            {p === "sb" ? "Small blind: jam" : "Big blind: call a jam"}
-          </label>
-        ))}
-      </fieldset>
-      <p>
-        Exploitability at {depth} bb:{" "}
-        {atDepth(data, depth).exploitability.toFixed(7)} bb per hand (the most a
-        perfect opponent could win against this pair of strategies).
-      </p>
-      <p>
-        Each cell is a percentage. Suited hands sit above the diagonal, offsuit
-        below, pairs on it. Select a cell for its EVs.
-      </p>
-      <div className="overflow-x-auto">
-        <div
-          role="group"
-          aria-label={`How often each hand should ${verb(position)} at ${depth} bb`}
-          className="grid min-w-[19rem] grid-cols-[repeat(13,minmax(0,1fr))] gap-px text-xs"
-        >
-          {CLASS_NAMES.map((name) => {
-            const { freq } = equilibrium(data, depth, position, name);
-            const whole = Math.round(freq * 100);
-            return (
-              <button
-                key={name}
-                type="button"
-                aria-label={`${name} ${whole}: ${verb(position)} ${pct(freq)}`}
-                aria-pressed={name === hand}
-                onClick={() => setHand(name)}
-                className="cell flex flex-col items-center py-1"
-                style={{ backgroundColor: `color-mix(in oklab, var(--heat) ${Math.round(freq * 100)}%, var(--ground-2))` }}
-              >
-                <span>{name}</span>
-                <span>{whole}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-      <p aria-live="polite">
-        {hand} at {depth} bb: the {position === "sb" ? "small" : "big"} blind{" "}
-        {position === "sb" ? "jams" : "calls a jam"} {pct(selected.freq)} of the
-        time. EV of {position === "sb" ? "jamming" : "calling"}{" "}
-        {bb(selected.evs.allin)}; EV of folding {bb(selected.evs.fold)}.
-      </p>
+      <EvGrid data={data} exploitability />
     </section>
   );
 }

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Ian Menachery",
   },
   description:
-    "Ian Menachery, Data Science + Economics at Northeastern (Dec 2026). I make data and AI dependable: I automate the tedious part, test the claims, and explain what the numbers mean.",
+    "Ian Menachery, Data Science + Economics at Northeastern (December 2026). Experience at EY and Sun Life, project case studies and live demos.",
   openGraph: {
     type: "website",
     siteName: "Ian Menachery",
@@ -36,11 +36,12 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#161411",
+  themeColor: "#0b0b0b",
 };
 
-// Runs before paint so a saved light theme never flashes dark first.
-const themeScript = `try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}`;
+// Runs before paint: a saved light theme never flashes dark first, and the intro
+// entrance plays once per visit, only when the visit starts on home.
+const headScript = `try{var d=document.documentElement,t=localStorage.getItem("theme");if(t==="light"||t==="dark")d.dataset.theme=t;if(location.pathname==="/"&&!sessionStorage.getItem("seen")){d.dataset.first="";setTimeout(function(){delete d.dataset.first},1200)}sessionStorage.setItem("seen","1")}catch(e){}`;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -50,51 +51,43 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script dangerouslySetInnerHTML={{ __html: headScript }} />
       </head>
       <body>
         <a className="skip" href="#main">
           Skip to content
         </a>
-        <header className="masthead rebate rebate-top">
+        <header className="masthead">
+          <Link href="/" className="masthead-name ui-link">
+            Ian Menachery
+          </Link>
           <nav aria-label="Main">
-            <Link href="/" className="masthead-name">
-              Ian Menachery
-            </Link>
             <ul>
               <li>
-                <Link href="/work">Work</Link>
+                <Link href="/work" className="ui-link">
+                  Work
+                </Link>
               </li>
               <li>
-                <Link href="/lab">Lab</Link>
+                <Link href="/lab" className="ui-link">
+                  Lab
+                </Link>
               </li>
               <li>
-                <a href={contact.resume}>Resume</a>
+                <a href={contact.resume} className="ui-link">
+                  Resume
+                </a>
               </li>
-              <li>
-                <Link href="/#contact">Contact</Link>
+              <li className="nav-contact">
+                <Link href="/#contact" className="ui-link">
+                  Contact
+                </Link>
               </li>
             </ul>
+            <ThemeToggle />
           </nav>
-          <ThemeToggle />
         </header>
         <main id="main">{children}</main>
-        <footer className="site-footer rebate rebate-bottom">
-          <ul>
-            <li>
-              <a href={`mailto:${contact.email}`}>{contact.email}</a>
-            </li>
-            <li>
-              <a href={contact.linkedin}>LinkedIn</a>
-            </li>
-            <li>
-              <a href={contact.github}>GitHub</a>
-            </li>
-            <li>
-              <a href={contact.resume}>Resume (PDF)</a>
-            </li>
-          </ul>
-        </footer>
       </body>
     </html>
   );

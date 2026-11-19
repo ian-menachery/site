@@ -25,17 +25,36 @@ export default function PushFold({ data }: { data: PushFoldData }) {
 }
 
 function Chart({ data }: { data: PushFoldData }) {
+  const [withAnte, setWithAnte] = useState(false);
+  // The ante solution (about 120 KB) loads the first time someone asks for it.
+  const [ante, setAnte] = useState<PushFoldData | null>(null);
+
+  function pick(on: boolean) {
+    setWithAnte(on);
+    if (on && !ante)
+      import("@/data/pushfold/pushfold_ante10.json").then((m) => setAnte(m.default as PushFoldData));
+  }
+
   return (
     <section aria-labelledby="chart-heading">
       <h2 id="chart-heading">EV chart</h2>
       <p>
         Each cell is the EV of going all in with that hand, in big blinds, at
-        the equilibrium. Shaded cells beat folding (−0.5 bb for the small blind,
-        −1 bb for the big blind). Suited hands sit above the diagonal, offsuit
-        below, pairs on it. Select a cell for details; exploitability is the
-        most a perfect opponent could win against this pair of strategies.
+        the equilibrium. Shaded cells beat folding, which costs the small blind
+        0.5 bb and the big blind 1 bb, or 0.6 and 1.1 bb with a 10% ante.
+        Suited hands sit above the diagonal, offsuit below, pairs on it. Select
+        a cell for details; exploitability is the most a perfect opponent could
+        win against this pair of strategies.
       </p>
-      <EvGrid data={data} exploitability />
+      <EvGrid data={withAnte ? ante : data} exploitability>
+        <span className="ev-seg" role="group" aria-label="Ante">
+          {[false, true].map((on) => (
+            <button key={String(on)} type="button" aria-pressed={withAnte === on} onClick={() => pick(on)}>
+              {on ? "10% ante" : "No ante"}
+            </button>
+          ))}
+        </span>
+      </EvGrid>
     </section>
   );
 }
@@ -75,7 +94,7 @@ function Trainer({ data }: { data: PushFoldData }) {
         <>
           <p>
             You are in the {deal.position === "sb" ? "small" : "big"} blind with{" "}
-            <strong>{deal.hand}</strong>, {deal.depth} bb effective.{" "}
+            <strong>{deal.hand}</strong>, {deal.depth} bb effective, no ante.{" "}
             {deal.position === "sb"
               ? "Jam or fold?"
               : "The small blind has gone all in. Call or fold?"}

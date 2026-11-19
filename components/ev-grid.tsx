@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useState, type KeyboardEvent } from "react";
-import { CLASS_NAMES, atDepth, type Position, type PushFoldData } from "@/lib/pushfold";
+import { useRef, useState, type KeyboardEvent, type ReactNode } from "react";
+import { CLASS_NAMES, atDepth, foldEv, type Position, type PushFoldData } from "@/lib/pushfold";
 
 // The all-in EV of every hand, looked up from showdown's export. The only arithmetic
 // is EV minus the fold EV, to shade the hands where going all in beats folding.
@@ -12,7 +12,16 @@ const sign = (x: number, digits: number) => {
   return r === 0 ? r.toFixed(digits).replace("-", "") : `${r < 0 ? "−" : "+"}${Math.abs(r).toFixed(digits)}`;
 };
 
-export default function EvGrid({ data, exploitability = false }: { data: PushFoldData | null; exploitability?: boolean }) {
+// `children` are extra controls, placed after the seat switch.
+export default function EvGrid({
+  data,
+  exploitability = false,
+  children,
+}: {
+  data: PushFoldData | null;
+  exploitability?: boolean;
+  children?: ReactNode;
+}) {
   const [depth, setDepth] = useState(10);
   const [position, setPosition] = useState<Position>("sb");
   const [hand, setHand] = useState(0);
@@ -20,7 +29,7 @@ export default function EvGrid({ data, exploitability = false }: { data: PushFol
 
   const entry = data ? atDepth(data, depth) : null;
   const evs = entry ? (position === "sb" ? entry.sb_jam_ev : entry.bb_call_ev) : null;
-  const fold = data ? (position === "sb" ? data.sb_fold_ev : data.bb_fold_ev) : 0;
+  const fold = data ? foldEv(data, depth, position) : 0;
   const who = position === "sb" ? "small blind" : "big blind";
   const act = position === "sb" ? "going all in" : "calling the all-in";
 
@@ -59,9 +68,14 @@ export default function EvGrid({ data, exploitability = false }: { data: PushFol
             </button>
           ))}
         </span>
+        {children}
       </div>
       <div className="ev-scroll">
-        <div className="ev-grid" role="group" aria-label={`All-in EV in big blinds for each hand, ${who}, ${depth} bb`}>
+        <div
+          className="ev-grid"
+          role="group"
+          aria-label={`All-in EV in big blinds for each hand, ${who}, ${depth} bb${data?.ante ? `, ${data.ante} bb ante` : ""}`}
+        >
           {CLASS_NAMES.map((name, i) => {
             const ev = evs?.[i];
             const gain = ev === undefined ? 0 : ev - fold;

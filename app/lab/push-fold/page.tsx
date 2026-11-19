@@ -26,10 +26,13 @@ export default function Page() {
       </p>
       <p>
         This is the equilibrium of the simplified push/fold game only: blinds of
-        0.5 and 1 bb, no antes, no limps and no smaller raises. It is not a
-        strategy for full no-limit hold&apos;em. EVs are the net result of the
-        hand in big blinds, so folding the small blind is −0.5 bb and folding
-        the big blind to a jam is −1 bb.
+        0.5 and 1 bb, either no ante or a 0.1 bb ante from each player (10% of
+        the big blind), no limps and no smaller raises. It is not a strategy for
+        full no-limit hold&apos;em. EVs are the net result of the hand in big
+        blinds, so folding the small blind is −0.5 bb and folding the big blind
+        to a jam is −1 bb, or −0.6 and −1.1 bb with the ante. The stack is
+        counted before anything is posted, and no one loses more than it: at
+        1 bb with the ante, the big blind&apos;s fold costs 1 bb.
       </p>
       <PushFold data={exported as PushFoldData} />
     </>

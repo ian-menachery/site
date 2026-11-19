@@ -4,10 +4,13 @@ Run from the site repo root with showdown's own interpreter:
 
     C:/Users/ianme/projects/showdown/.venv/Scripts/python.exe scripts/export_pushfold.py
 
-Writes two files into data/pushfold/:
+Writes three files into data/pushfold/:
 - pushfold.json: per depth (1 to 20 bb) the solved jam and call probabilities and
   the EV of every action for every class, so the site only looks values up and
   subtracts (showdown DECISIONS 12: no game logic in JavaScript).
+- pushfold_ante10.json: the same with each player posting a 0.1 bb ante (showdown
+  DECISIONS 48), plus "ante" and the fold EVs per depth, since at 1 bb the big
+  blind's fold is capped at its stack.
 - reference_cases.json: decisions graded by showdown's own code (policy.py,
   grade.py), which lib/pushfold.test.ts must reproduce within 1e-6.
 
@@ -35,6 +38,7 @@ from showdown.hh.grade import depth_for  # noqa: E402
 
 SHOWDOWN = Path(showdown.__file__).resolve().parents[2]
 OUT = Path(__file__).resolve().parents[1] / "data" / "pushfold"
+ANTE_SOLUTION = "data/pushfold_ante10.json"
 DECIMALS = 6
 EDGE_HANDS = ("AA", "K9s", "T8o", "72o")
 """Hands graded at depths 1 and 20, both seats and both actions."""
@@ -58,36 +62,10 @@ def main() -> None:
     with np.load(matrix_path) as npz:
         npz_class_names = [str(n) for n in npz["class_names"]]
     strategy = PushFoldStrategy(solution, PreflopMatrix.load(matrix_path))
+    ante = pushfold.PushFoldSolution.load(SHOWDOWN / ANTE_SOLUTION)
+    if (ante.matrix_path, ante.matrix_sha256) != (solution.matrix_path, solution.matrix_sha256):
+        raise SystemExit(f"{ANTE_SOLUTION} was not solved on {solution.matrix_path}")
 
-    depths = []
-    for depth in pushfold.DEPTHS:
-        result = solution.at(depth)
-        # The same calls PushFoldStrategy makes when it grades (policy.py).
-        sb_fold, sb_jam = pushfold.sb_action_values(result.call, depth, strategy.matrix)
-        bb_fold, bb_call = pushfold.bb_action_values(result.push, depth, strategy.matrix)
-        assert (sb_fold == SB_FOLD).all() and (bb_fold == -BB_FOLD).all()
-        assert np.isfinite(sb_jam).all() and np.isfinite(bb_call).all()
-        entry = {
-            "stack": depth,
-            "exploitability": float(result.exploitability),
-            "push": rounded(result.push),
-            "call": rounded(result.call),
-            "sb_jam_ev": rounded(sb_jam),
-            "bb_call_ev": rounded(bb_call),
-        }
-        check_rounding(strategy, depth, entry)
-        depths.append(entry)
-
-    export = {
-        "source": "showdown data/pushfold.json",
-        "algorithm": "cfr+",
-        "iterations": solution.iterations,
-        "matrix_sha256": solution.matrix_sha256,
-        "sb_fold_ev": SB_FOLD,
-        "bb_fold_ev": -BB_FOLD,
-        "classes": list(CLASS_NAMES),
-        "depths": depths,
-    }
     reference = {
         "mistake_bb": MISTAKE_BB,
         "pure": pushfold.PURE,
@@ -97,29 +75,71 @@ def main() -> None:
         "cases": reference_cases(strategy),
     }
     OUT.mkdir(parents=True, exist_ok=True)
-    for name, payload in (("pushfold.json", export), ("reference_cases.json", reference)):
+    for name, payload in (
+        ("pushfold.json", export(solution, pushfold.DEFAULT_SOLUTION, strategy.matrix)),
+        ("pushfold_ante10.json", export(ante, ANTE_SOLUTION, strategy.matrix)),
+        ("reference_cases.json", reference),
+    ):
         path = OUT / name
         text = json.dumps(payload, separators=(",", ":"))
         path.write_text(text + "\n", encoding="utf-8", newline="\n")
         print(f"wrote {path} ({path.stat().st_size:,} bytes)")
 
 
-def check_rounding(strategy: PushFoldStrategy, depth: int, entry: dict) -> None:
-    """Fail if rounding changes a pure/mixed label, a loss by 1e-6 or a mistake flag."""
-    for seat, probs, ev, fold in (
-        ("sb", "push", "sb_jam_ev", SB_FOLD),
-        ("bb", "call", "bb_call_ev", -BB_FOLD),
-    ):
-        raw = getattr(strategy.solution.at(depth), probs)
-        same = pushfold.classify(raw) == pushfold.classify(np.array(entry[probs]))
+def export(solution: pushfold.PushFoldSolution, source: str, matrix: PreflopMatrix) -> dict:
+    """Per depth the rounded jam and call probabilities and the EV of every action."""
+    ante = solution.ante
+    depths = []
+    for depth in pushfold.DEPTHS:
+        result = solution.at(depth)
+        # The same calls PushFoldStrategy makes when it grades (policy.py), plus the ante.
+        sb_fold, sb_jam = pushfold.sb_action_values(result.call, depth, matrix, ante=ante)
+        bb_fold, bb_call = pushfold.bb_action_values(result.push, depth, matrix, ante=ante)
+        folds = float(sb_fold[0]), float(bb_fold[0])
+        assert (sb_fold == folds[0]).all() and (bb_fold == folds[1]).all()
+        assert ante or folds == (SB_FOLD, -BB_FOLD)
+        assert np.isfinite(sb_jam).all() and np.isfinite(bb_call).all()
+        entry = {
+            "stack": depth,
+            "exploitability": float(result.exploitability),
+            "push": rounded(result.push),
+            "call": rounded(result.call),
+            "sb_jam_ev": rounded(sb_jam),
+            "bb_call_ev": rounded(bb_call),
+        }
+        if ante:
+            entry.update(sb_fold_ev=folds[0], bb_fold_ev=folds[1])
+        raw = {"sb": (result.push, folds[0], sb_jam), "bb": (result.call, folds[1], bb_call)}
+        check_rounding(depth, entry, raw)
+        depths.append(entry)
+    return {
+        "source": f"showdown {source}",
+        "algorithm": "cfr+",
+        "iterations": solution.iterations,
+        "matrix_sha256": solution.matrix_sha256,
+        **({"ante": ante} if ante else {"sb_fold_ev": SB_FOLD, "bb_fold_ev": -BB_FOLD}),
+        "classes": list(CLASS_NAMES),
+        "depths": depths,
+    }
+
+
+def check_rounding(depth: int, entry: dict, raw: dict) -> None:
+    """Fail if rounding changes a pure/mixed label, a loss by 1e-6 or a mistake flag.
+
+    `raw` holds each seat's unrounded probabilities, fold EV and all-in EVs; losses are
+    graded as policy.py grades them.
+    """
+    for seat, probs, ev in (("sb", "push", "sb_jam_ev"), ("bb", "call", "bb_call_ev")):
+        raw_probs, fold, raw_ev = raw[seat]
+        same = pushfold.classify(raw_probs) == pushfold.classify(np.array(entry[probs]))
         assert same.all(), f"rounding changes a pure/mixed label at {depth} bb ({seat})"
         for cls in range(169):
-            go = entry[ev][cls]
+            exact, go = float(raw_ev[cls]), entry[ev][cls]
             for allin in (False, True):
-                grade = strategy.grade(depth, seat, cls, allin)
+                want = max(fold, exact) - (exact if allin else fold)
                 loss = max(fold, go) - (go if allin else fold)
-                assert abs(loss - grade.loss) <= 1e-6, (depth, seat, cls, allin)
-                assert (loss > MISTAKE_BB) == grade.mistake, (depth, seat, cls, allin)
+                assert abs(loss - want) <= 1e-6, (depth, seat, cls, allin)
+                assert (loss > MISTAKE_BB) == (want > MISTAKE_BB), (depth, seat, cls, allin)
 
 
 def reference_cases(strategy: PushFoldStrategy) -> list[dict]:

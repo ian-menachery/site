@@ -13,6 +13,9 @@ export type PushFoldDepth = {
   call: number[];
   sb_jam_ev: number[];
   bb_call_ev: number[];
+  /** Ante files only: per depth, since at 1 bb a fold is capped at the stack. */
+  sb_fold_ev?: number;
+  bb_fold_ev?: number;
 };
 
 export type PushFoldData = {
@@ -20,8 +23,11 @@ export type PushFoldData = {
   algorithm: string;
   iterations: number;
   matrix_sha256: string;
-  sb_fold_ev: number;
-  bb_fold_ev: number;
+  /** Per player, in bb; absent means no ante. */
+  ante?: number;
+  /** No-ante file only. */
+  sb_fold_ev?: number;
+  bb_fold_ev?: number;
   classes: string[];
   depths: PushFoldDepth[];
 };
@@ -59,6 +65,17 @@ export function atDepth(data: PushFoldData, depth: number): PushFoldDepth {
   return entry;
 }
 
+/** The seat's EV of folding at this depth, in bb. */
+export function foldEv(data: PushFoldData, depth: number, position: Position): number {
+  const entry = atDepth(data, depth);
+  const ev =
+    position === "sb"
+      ? (entry.sb_fold_ev ?? data.sb_fold_ev)
+      : (entry.bb_fold_ev ?? data.bb_fold_ev);
+  if (ev === undefined) throw new Error(`no fold EV at ${depth} bb`);
+  return ev;
+}
+
 /** Nash probability of going all-in, and whether that is pure or mixed. */
 export function equilibrium(
   data: PushFoldData,
@@ -83,10 +100,10 @@ export function grade(
 ) {
   const entry = atDepth(data, depth);
   const i = classIndex(hand);
-  const evs =
-    position === "sb"
-      ? { fold: data.sb_fold_ev, allin: entry.sb_jam_ev[i] }
-      : { fold: data.bb_fold_ev, allin: entry.bb_call_ev[i] };
+  const evs = {
+    fold: foldEv(data, depth, position),
+    allin: (position === "sb" ? entry.sb_jam_ev : entry.bb_call_ev)[i],
+  };
   const bbLost = Math.max(evs.fold, evs.allin) - evs[action];
   const freq = (position === "sb" ? entry.push : entry.call)[i];
   return { bbLost, mistake: bbLost > MISTAKE_BB, evs, freq };

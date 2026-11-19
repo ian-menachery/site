@@ -34,4 +34,5 @@ Narrow targets ("the project grid", "the hero") cost far less than whole pages. 
 
 - The launcher (`scripts/impeccable`) is absent from the plugin cache and the engine binary is not run, so `concept-seed` and the detector never run. Read the references directly; record a skipped roll in the surface brief as `seed: none (roll skipped)` with the reason.
 - The shipped subagents `impeccable:impeccable-finish-reviewer` and `impeccable:impeccable-documenter` work in sessions started after the plugin install; use them for the finish review and DESIGN.md.
+- The finish reviewer can't render pages. Before calling it, capture home full-page in dark, light and at 390 px, a 1440x900 viewport, one case study and one demo into a new `.impeccable/review/<date>/` folder (`~/.claude/tools/site-audit/review-shots.mjs <dir>` does all six), and name the paths in the brief. Without them it stops at check 0.
 - The visual system is in `DESIGN.md`; the home page's brief is `.impeccable/surfaces/home.md`.

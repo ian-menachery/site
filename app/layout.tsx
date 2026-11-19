@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Source_Serif_4 } from "next/font/google";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
 import { contact } from "@/lib/site";
 import ThemeToggle from "@/components/theme-toggle";
 import "./globals.css";
@@ -88,6 +89,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </nav>
         </header>
         <main id="main">{children}</main>
+        <Analytics />
       </body>
     </html>
   );

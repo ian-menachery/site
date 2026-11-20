@@ -15,7 +15,7 @@ const experience = [
   {
     org: "Sun Life",
     role: "Reporting Analyst Co-op, Wellesley Hills",
-    when: "Jul–Dec 2025",
+    when: "Jul 2025 – Jan 2026",
     what: "Fixed figures in recurring reports and automated cross-sell reporting in SQL.",
   },
   {
@@ -27,7 +27,7 @@ const experience = [
   {
     org: "Northeastern University",
     role: "B.S. Data Science and B.S. Economics",
-    when: "December 2026",
+    when: "Sep 2023 – Dec 2026",
     what: "",
   },
 ];
@@ -132,8 +132,8 @@ export default function Home() {
         <div className="about">
           <Image src="/headshot.jpg" alt="Ian Menachery" width={800} height={800} sizes="104px" />
           <p>
-            I study data science and economics at Northeastern and graduate in December 2026. Outside work: chess,
-            poker, basketball and personal finance.
+            I study data science and economics at Northeastern and graduate in December 2026. In my free time I
+            play chess and poker, jump rope and read.
           </p>
         </div>
       </section>

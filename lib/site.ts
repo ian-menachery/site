@@ -74,22 +74,6 @@ export const projects: Project[] = [
     demo: "/lab/deskcheck",
   },
   {
-    slug: "rentroll",
-    title: "rentroll",
-    kind: "Rent roll tie-out checker",
-    summary:
-      "Checks that the numbers pulled from a property's rent roll and T12 actually add up, and points at the rows that don't.",
-    demo: "/lab/rentroll",
-  },
-  {
-    slug: "dealflow",
-    title: "dealflow",
-    kind: "Deal underwriting engine",
-    summary:
-      "Scores and ranks property and small-business acquisitions behind swappable data sources, within a 50-call monthly API quota.",
-    demo: "/lab/dealflow",
-  },
-  {
     slug: "burnout",
     title: "Burnout-App",
     kind: "Burnout risk classifier",
@@ -105,6 +89,4 @@ export const demos = [
   { href: "/lab/dcf", title: "DCF sliders", from: "redline" },
   { href: "/lab/cutover", title: "Migration tie-out", from: "cutover" },
   { href: "/lab/deskcheck", title: "Helpdesk agent replay", from: "deskcheck" },
-  { href: "/lab/rentroll", title: "Rent roll tie-out", from: "rentroll" },
-  { href: "/lab/dealflow", title: "Deal calculator", from: "dealflow" },
 ];

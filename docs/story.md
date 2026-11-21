@@ -46,8 +46,6 @@ and never framed as client-facing.
 /work/redline          SEC filing monitor + DCF        + DCF sliders
 /work/pmra             prediction-market research assistant (links its Pages site)
 /work/calibration      Polymarket calibration study    + calibration explorer
-/work/rentroll         private: described, no code link
-/work/dealflow         private: described, no code link
 /work/burnout          burnout risk classifier
 /lab                   demo index
 /lab/push-fold  /lab/calibration  /lab/dcf

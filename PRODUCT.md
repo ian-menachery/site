@@ -44,8 +44,7 @@ A visit succeeds when the visitor does any of these:
 - **Content rules:**
   - real numbers only;
   - never claim client-facing work at EY;
-  - rentroll and dealflow are private repos (no code links; synthetic or made-up demo inputs);
-  - Orbit Break, Job Watch/Jobfill and bellwether stay off the site;
+  - Orbit Break, Job Watch/Jobfill, bellwether, rentroll and dealflow stay off the site (the last two were removed 2026-11-20: private repos, no proof to open);
   - the redline DCF shows only ULTA and VRTX, as ranges, with no buy/sell framing;
   - the push/fold demo is lookups over showdown's export, never a JavaScript port, and never called "GTO".
 - **Never publish:** personal documents (IDs, offer letters, transcripts, tax files), job-search data, third-party property data, `.env` files, or the phone number (the resume copy in `public/` has it removed).
@@ -67,8 +66,8 @@ A visit succeeds when the visitor does any of these:
 
 ## Evidence on Hand
 
-- Case studies: `app/work/{showdown,redline,pmra,calibration,rentroll,dealflow,burnout}/page.mdx`.
-- Demos: `app/lab/{push-fold,calibration,dcf,rentroll,dealflow}`, with their data in `data/`.
+- Case studies: `app/work/{showdown,redline,pmra,calibration,burnout}/page.mdx`.
+- Demos: `app/lab/{push-fold,calibration,dcf}`, with their data in `data/`.
 - Headshot: `public/headshot.jpg` (800×800, from the December 2025 studio shoot `_SID0566`).
 - Resume: `public/ian-menachery-resume.pdf`.
 - PMRA's own project site: https://ian-menachery.github.io/prediction-market-research-assistant/
